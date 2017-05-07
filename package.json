@@ -1,8 +1,9 @@
 {
   "name": "rn-placeholder",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.3",
+  "private": false,
   "main": "index.js",
+  "homepage": "https://github.com/Skahrz/rn-placeholder",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./src",

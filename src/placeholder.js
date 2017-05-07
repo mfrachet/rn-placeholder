@@ -14,18 +14,3 @@ export default {
   Line: connect(Line),
   connect,
 };
-
-
-import { CustomPlaceholder } from '../somewhere';
-import Placeholder from 'rn-placeholder';
-
-const CustomPlaceholderContainer = Placeholder.connect(CustomPlaceholder);
-
-/* ... */
-return (
-  <CustomPlaceholderContainer onReady={this.state.isReady} animate="fade">
-    <Text>Hey guys !</Text>
-  </CustomPlaceholderContainer>
-)
-
-/* ... */
