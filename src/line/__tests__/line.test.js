@@ -5,7 +5,7 @@ import Line from './../line';
 
 /** @test {Line#render} */
 describe('Line#render', () => {
-	let wrapper;
+  let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(<Line textSize={12} color="#efefef" width="100%" />);
