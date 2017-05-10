@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/Skahrz/rn-placeholder.svg?branch=master)](https://travis-ci.org/Skahrz/rn-placeholder)
+[![Coverage Status](https://coveralls.io/repos/github/Skahrz/rn-placeholder/badge.svg?branch=master)](https://coveralls.io/github/Skahrz/rn-placeholder?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 Display some placeholder stuff before rendering your text or media content in React Native.
 
 ------

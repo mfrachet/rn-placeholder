@@ -1,13 +1,14 @@
 {
   "name": "rn-placeholder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "main": "index.js",
   "homepage": "https://github.com/Skahrz/rn-placeholder",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./src",
-    "test": "jest"
+    "test": "./node_modules/.bin/jest --coverage",
+    "test:auto": "./node_modules/.bin/jest --watch"
   },
   "dependencies": {
     "react": "16.0.0-alpha.6",
@@ -16,15 +17,20 @@
   "devDependencies": {
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "coveralls": "^2.13.1",
+    "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-react": "^7.0.0",
-    "jest": "19.0.2",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "jest": "^20.0.0",
+    "react-native-mock": "^0.3.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./setup/test.setup.js"
+    ]
   }
 }
