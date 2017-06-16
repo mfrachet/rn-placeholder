@@ -21,7 +21,7 @@ width="200" src="https://img15.hostingpics.net/pics/198734skeletonloaderandroid.
 # Usage
 
 ```
-rnpm install rn-placeholder
+npm install rn-placeholder
 ```
 
 In your code :
