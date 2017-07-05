@@ -5,12 +5,10 @@ export default () => {
   const animation = new Animated.Value(START_VALUE);
 
   function start() {
-    return Animated.sequence([
-      Animated.timing(animation, {
-        toValue: 100,
-        duration: 1500,
-      }),
-    ]).start((e) => {
+    return Animated.timing(animation, {
+      toValue: 100,
+      duration: 1500,
+    }).start((e) => {
       if (e.finished) {
         start();
       }
