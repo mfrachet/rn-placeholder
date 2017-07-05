@@ -2,26 +2,46 @@ import React, { PropTypes } from 'react';
 import { Animated } from 'react-native';
 import Animations from './animation/animations';
 
+const computeStyleForAnimation = (animation) => {
+  if (!animation.start) {
+    throw new Error('No method `start` found in the animation');
+  }
+
+  if (!animation.style) {
+    throw new Error('No property `style` found in the animation');
+  }
+  animation.start();
+  return animation.style;
+};
+
+const renderAnimation = (Component, style, props) => {
+  return (
+    <Animated.View style={style}>
+      <Component {...props} />
+    </Animated.View>
+  );
+};
+
 /**
  * Higher order component that factors animation and state ready
  * @param PlaceholderComponent
  */
 const connect = (PlaceholderComponent) => {
   function placeHolder(props) {
-    const { onReady, animate, children } = props;
+    const { onReady, animate, children, customAnimate } = props;
 
     if (onReady) {
       return children;
     }
 
+    if (customAnimate) {
+      const style = computeStyleForAnimation(customAnimate());
+      return renderAnimation(PlaceholderComponent, style, props);
+    }
+
     if (animate) {
-      const animation = Animations[animate]();
-      animation.start();
-      return (
-        <Animated.View style={animation.style}>
-          <PlaceholderComponent {...props} />
-        </Animated.View>
-      );
+      const style = computeStyleForAnimation(Animations[animate]());
+      return renderAnimation(PlaceholderComponent, style, props);
     }
     return <PlaceholderComponent {...props} />;
   }
@@ -30,12 +50,14 @@ const connect = (PlaceholderComponent) => {
     onReady: PropTypes.bool,
     children: PropTypes.element,
     animate: PropTypes.string,
+    customAnimate: PropTypes.func,
   };
 
   placeHolder.defaultProps = {
     onReady: false,
     animate: null,
     children: null,
+    customAnimate: null,
   };
 
   return placeHolder;
