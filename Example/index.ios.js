@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import Placeholder from 'rn-placeholder';
 import CustomPlacehoder from './customPlaceholder';
+import CustomAnimation from './customAnimation';
 
 const styles = StyleSheet.create({
   container: {
@@ -72,6 +73,12 @@ export default class Example extends Component {
 
         <View style={styles.block}>
           <Placeholder.Media onReady={this.state.isReadyMedia} animate="fade">
+            <Text>Media loaded</Text>
+          </Placeholder.Media>
+        </View>
+
+        <View style={styles.block}>
+          <Placeholder.Media onReady={this.state.isReadyMedia} customAnimate={CustomAnimation}>
             <Text>Media loaded</Text>
           </Placeholder.Media>
         </View>
