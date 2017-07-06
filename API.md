@@ -1,3 +1,12 @@
+<p align="center">
+<img
+width="200" src="https://img15.hostingpics.net/pics/581590skeletonloader.gif"/>
+<img
+width="200" src="https://img15.hostingpics.net/pics/999328skeletonloaderios.gif"/>
+<img
+width="200" src="https://img15.hostingpics.net/pics/198734skeletonloaderandroid.gif"/>
+</p>
+
 
 # Components
 

@@ -14,13 +14,11 @@ const computeStyleForAnimation = (animation) => {
   return animation.style;
 };
 
-const renderAnimation = (Component, style, props) => {
-  return (
-    <Animated.View style={style}>
-      <Component {...props} />
-    </Animated.View>
-  );
-};
+const renderAnimation = (Component, style, props) => (
+  <Animated.View style={style}>
+    <Component {...props} />
+  </Animated.View>
+);
 
 /**
  * Higher order component that factors animation and state ready
