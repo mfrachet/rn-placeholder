@@ -11,6 +11,7 @@ Display some placeholder stuff before rendering your text or media content in Re
 <img width="200" height="360" src="https://img4.hostingpics.net/pics/221859android.gif" />
 <img width="200" height="360" src="https://img4.hostingpics.net/pics/677705ios.gif" />
 </p>
+
 ------
 
 ## Content
