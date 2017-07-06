@@ -3,34 +3,39 @@
   "version": "0.0.5",
   "private": false,
   "main": "index.js",
-  "homepage": "https://github.com/Skahrz/rn-placeholder",
+  "homepage": "https://github.com/mfrachet/rn-placeholder",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./src",
-    "test": "./node_modules/.bin/jest --coverage",
+    "test": "./node_modules/.bin/jest --coverage --no-cache",
     "test:auto": "./node_modules/.bin/jest --watch"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0"
   },
   "devDependencies": {
-    "babel-jest": "19.0.0",
+    "babel-jest": "^20.0.3",
     "babel-preset-react-native": "1.9.1",
     "coveralls": "^2.13.1",
-    "enzyme": "^2.8.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^5.0.0",
-    "eslint-plugin-react": "^7.0.0",
-    "jest": "^20.0.0",
-    "react-native-mock": "^0.3.1"
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "react-dom": "^15.6.1",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^15.6.1"
   },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
       "./setup/test.setup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/Example/"
     ]
   }
 }

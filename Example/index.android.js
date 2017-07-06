@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -21,17 +15,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class Example extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <Appbar />
-        <View style={styles.container}>
-          <List />
-        </View>
+export default function Example() {
+  return (
+    <View style={{ flex: 1 }}>
+      <Appbar />
+      <View style={styles.container}>
+        <List />
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 AppRegistry.registerComponent('Example', () => Example);

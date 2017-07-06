@@ -8,6 +8,8 @@ import Paragraph from './../../paragraph/paragraph';
 /** @test {ImageContent#render} */
 describe('ImageContent#render', () => {
   let wrapper;
+  let mediaWrapper;
+  let paragraphWrapper;
 
   beforeEach(() => {
     wrapper = shallow(<ImageContent
@@ -23,58 +25,60 @@ describe('ImageContent#render', () => {
       lastLineWidth="50%"
       firstLineWidth="30%"
     />);
+    mediaWrapper = wrapper.find(Media);
+    paragraphWrapper = wrapper.find(Paragraph);
   });
 
   it('should have a Media', () => {
-    expect(wrapper.find(Media).length).toEqual(1);
+    expect(mediaWrapper.length).toEqual(1);
   });
 
   it('should have a Media with props color equals to #ff0000', () => {
-    expect(wrapper.find(Media).prop('color')).toEqual('#ff0000');
+    expect(mediaWrapper.prop('color')).toEqual('#ff0000');
   });
 
   it('should have a Media with props size equals to 50', () => {
-    expect(wrapper.find(Media).prop('size')).toEqual(50);
+    expect(mediaWrapper.prop('size')).toEqual(50);
   });
 
   it('should have a Media with props hasRadius equals to true', () => {
-    expect(wrapper.find(Media).prop('hasRadius')).toEqual(true);
+    expect(mediaWrapper.prop('hasRadius')).toEqual(true);
   });
 
   it('should have a Paragraph', () => {
-    expect(wrapper.find(Paragraph).length).toEqual(1);
+    expect(paragraphWrapper.length).toEqual(1);
   });
 
   it('should have a Paragraph with props animate equals to "fade"', () => {
-    expect(wrapper.find(Paragraph).prop('animate')).toEqual('fade');
+    expect(paragraphWrapper.prop('animate')).toEqual('fade');
   });
 
   it('should have a Paragraph with props lineNumber equals to 8', () => {
-    expect(wrapper.find(Paragraph).prop('lineNumber')).toEqual(8);
+    expect(paragraphWrapper.prop('lineNumber')).toEqual(8);
   });
 
   it('should have a Paragraph with props textSize equals to 13', () => {
-    expect(wrapper.find(Paragraph).prop('textSize')).toEqual(13);
+    expect(paragraphWrapper.prop('textSize')).toEqual(13);
   });
 
   it('should have a Paragraph with props color equals to #ff0000', () => {
-    expect(wrapper.find(Paragraph).prop('color')).toEqual('#ff0000');
+    expect(paragraphWrapper.prop('color')).toEqual('#ff0000');
   });
 
   it('should have a Paragraph with props width equals to 99%', () => {
-    expect(wrapper.find(Paragraph).prop('width')).toEqual('99%');
+    expect(paragraphWrapper.prop('width')).toEqual('99%');
   });
 
   it('should have a Paragraph with props lastLineWidth equals to 50%', () => {
-    expect(wrapper.find(Paragraph).prop('lastLineWidth')).toEqual('50%');
+    expect(paragraphWrapper.prop('lastLineWidth')).toEqual('50%');
   });
 
   it('should have a Paragraph with props firstLineWidth equals to 30%', () => {
-    expect(wrapper.find(Paragraph).prop('firstLineWidth')).toEqual('30%');
+    expect(paragraphWrapper.prop('firstLineWidth')).toEqual('30%');
   });
 
   it('should have a Paragraph with props lineSpacing equals to 10', () => {
-    expect(wrapper.find(Paragraph).prop('lineSpacing')).toEqual(10);
+    expect(paragraphWrapper.prop('lineSpacing')).toEqual(10);
   });
 
   it('should have the second View (corresponding to the Media) with props style equals with the concerned on', () => {
@@ -87,7 +91,7 @@ describe('ImageContent#render', () => {
   it('should have the third View (corresponding to the Media) with props style equals with the concerned on', () => {
     wrapper = shallow(<ImageContent
       position="right"
-      size="50"
+      size={50}
       hasRadius
       animate="fade"
       lineNumber={8}
