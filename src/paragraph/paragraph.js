@@ -1,6 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import Line from '../line/line';
+
+const prepareLine = (i, marginBottom, textSize, color, width) => (
+  <View key={i} style={{ marginBottom }}>
+    <Line textSize={textSize} color={color} width={width} />
+  </View>
+);
 
 /**
  * Create a paragraph
@@ -13,13 +20,13 @@ import Line from '../line/line';
  * @param firstLineWidth The first line width
  */
 function Paragraph({
-                     lineNumber,
-                     textSize,
-                     lineSpacing,
-                     color,
-                     width,
-                     lastLineWidth,
-                     firstLineWidth,
+  lineNumber,
+  textSize,
+  lineSpacing,
+  color,
+  width,
+  lastLineWidth,
+  firstLineWidth,
 }) {
   const lines = [];
   const lineRealNumber = lineNumber - 1;
@@ -32,11 +39,7 @@ function Paragraph({
         </View>,
       );
     } else if (i === 0) {
-      lines.push(
-        <View key={i} style={{ marginBottom: lineSpacing }}>
-          <Line textSize={textSize} color={color} width={firstLineWidth} />
-        </View>,
-      );
+      lines.push(prepareLine(i, lineSpacing, textSize, color, firstLineWidth));
     } else {
       lines.push(
         <View key={i} style={{ marginBottom: lineSpacing }}>

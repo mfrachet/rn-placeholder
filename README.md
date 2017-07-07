@@ -27,8 +27,8 @@ Display some placeholder stuff before rendering your text or media content in Re
 <h2 name="#usage">Usage</h2>
 
 ### Installation
-```
-npm install rn-placeholder
+```javascript
+$ npm install rn-placeholder --save
 ```
 
 ### In your code

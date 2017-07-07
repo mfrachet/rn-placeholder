@@ -7,6 +7,7 @@ import Paragraph from './../paragraph';
 /** @test {Paragraph#render} */
 describe('Paragraph#render', () => {
   let wrapper;
+  let lineWrapper;
 
   beforeEach(() => {
     wrapper = shallow(<Paragraph
@@ -18,6 +19,7 @@ describe('Paragraph#render', () => {
       lastLineWidth="40%"
       firstLineWidth="30%"
     />);
+    lineWrapper = wrapper.find(Line);
   });
 
   it('should have 11 View, 10 for the Lines and 1 for the Wrapper', () => {
@@ -25,23 +27,23 @@ describe('Paragraph#render', () => {
   });
 
   it('should have 10 Lines, like the linNumber props', () => {
-    expect(wrapper.find(Line).length).toEqual(10);
+    expect(lineWrapper.length).toEqual(10);
   });
 
   it('should have the first line with props textSize equals to 14', () => {
-    expect(wrapper.find(Line).first().prop('textSize')).toEqual(14);
+    expect(lineWrapper.first().prop('textSize')).toEqual(14);
   });
 
   it('should have the first line with props color equals to green', () => {
-    expect(wrapper.find(Line).first().prop('color')).toEqual('green');
+    expect(lineWrapper.first().prop('color')).toEqual('green');
   });
 
   it('should have the first line with props width equals to 30%', () => {
-    expect(wrapper.find(Line).first().prop('width')).toEqual('30%');
+    expect(lineWrapper.first().prop('width')).toEqual('30%');
   });
 
   it('should have the second line with props width equals to 80%', () => {
-    expect(wrapper.find(Line).at(1).prop('width')).toEqual('80%');
+    expect(lineWrapper.at(1).prop('width')).toEqual('80%');
   });
 
   it('should have the 3 View with props lineSpacing equals to 10', () => {
@@ -49,6 +51,6 @@ describe('Paragraph#render', () => {
   });
 
   it('should have the 10th Line with props width equals to 40%', () => {
-    expect(wrapper.find(Line).at(9).prop('width')).toEqual('40%');
+    expect(lineWrapper.at(9).prop('width')).toEqual('40%');
   });
 });

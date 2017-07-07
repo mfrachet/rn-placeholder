@@ -7,7 +7,8 @@
     ],
     "rules": {
       "react/jsx-filename-extension": "off",
-      "jsx-a11y/img-has-alt": "off"
+      "jsx-a11y/img-has-alt": "off",
+      "jsx-a11y/href-no-hash": "off"
     },
     "env": {
       "jest": true

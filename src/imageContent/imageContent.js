@@ -1,7 +1,18 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import Media from './../media/media';
 import Paragraph from './../paragraph/paragraph';
+
+const positionElement = (position, textSize, color, size, hasRadius) => (
+  <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
+    <Media
+      color={color}
+      size={size}
+      hasRadius={hasRadius}
+    />
+  </View>
+);
 
 /**
  * Create a new Image content
@@ -18,29 +29,21 @@ import Paragraph from './../paragraph/paragraph';
  * @param firstLineWidth the first line width
  */
 function ImageContent({
-                        position,
-                        size,
-                        hasRadius,
-                        animate,
-                        lineNumber,
-                        textSize,
-                        lineSpacing,
-                        color,
-                        width,
-                        lastLineWidth,
-                        firstLineWidth,
+  position,
+  size,
+  hasRadius,
+  animate,
+  lineNumber,
+  textSize,
+  lineSpacing,
+  color,
+  width,
+  lastLineWidth,
+  firstLineWidth,
 }) {
   return (
     <View style={{ flexDirection: 'row' }}>
-      { position === 'left' &&
-        <View style={{ marginRight: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-          <Media
-            color={color}
-            size={size}
-            hasRadius={hasRadius}
-          />
-        </View>
-      }
+      { position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius) }
       <View style={{ flex: 1 }}>
         <Paragraph
           animate={animate}
@@ -53,16 +56,7 @@ function ImageContent({
           lineSpacing={lineSpacing}
         />
       </View>
-
-      { position === 'right' &&
-      <View style={{ marginLeft: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-        <Media
-          color={color}
-          size={size}
-          hasRadius={hasRadius}
-        />
-      </View>
-      }
+      { position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius) }
     </View>
   );
 }
