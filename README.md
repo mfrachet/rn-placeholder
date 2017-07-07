@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/mfrachet/rn-placeholder.svg?branch=master)](https://travis-ci.org/Skahrz/rn-placeholder)
-[![Coverage Status](https://coveralls.io/repos/github/Skahrz/rn-placeholder/badge.svg?branch=master)](https://coveralls.io/github/Skahrz/rn-placeholder?branch=master)
+[![Build Status](https://travis-ci.org/mfrachet/rn-placeholder.svg?branch=master)](https://travis-ci.org/mfrachet/rn-placeholder)
+[![Coverage Status](https://coveralls.io/repos/github/mfrachet/rn-placeholder/badge.svg?branch=master)](https://coveralls.io/github/mfrachet/rn-placeholder?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
