@@ -29,9 +29,6 @@
     "react-native-mock": "^0.3.1",
     "react-test-renderer": "^15.6.1"
   },
-  "peerDependencies": {
-    "react-native": "0.44.0"
-  },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
