@@ -52,7 +52,7 @@ export default function Card({ image, username, content, isLoaded, date }) {
       <Placeholder.ImageContent
         onReady={isLoaded}
         lineNumber={2}
-        animate="fade"
+        animate="shine"
         lastLineWidth="40%"
       >
         <View>

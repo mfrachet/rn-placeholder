@@ -1,4 +1,5 @@
 import FadeAnimation from './fade';
+import ShineAnimation from './shine';
 
 /**
  * Animation factory
@@ -6,4 +7,5 @@ import FadeAnimation from './fade';
  */
 export default {
   fade: FadeAnimation,
+  shine: ShineAnimation,
 };
