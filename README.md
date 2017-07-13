@@ -20,9 +20,9 @@ Display some placeholder stuff before rendering your text or media content in Re
 - <a href="#usage">How to use it ?</a>
 - [Components available](./API.md)
 - [Creating a custom component](./API.md#custom)
-- [Animation API](./ANIMATIONS.md)
 - [Using default animations](./ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
+- [Animation API](./ANIMATIONS.md) <span style="color:red">(deprecated in >=v1.0.0)</span>
 
 <h2 name="#usage">Usage</h2>
 

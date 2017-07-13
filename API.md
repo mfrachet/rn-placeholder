@@ -14,9 +14,9 @@ The project currently supports 4 different placeholder components.
 
 Each of this components are wrapped in a HOC that brings two others (optional) props :
 
-- `animate: String`: An optional animation available in the `src/animations` folder (see also [Animation API](ANIMATIONS.md)
+- `animate: String`: An optional animation available in the `src/animations` folder (see also [Animations](ANIMATIONS.md)
 - `onReady: any`: A value. If it's different from `null` / `undefined` / `empty string` / `0`, the component children are rendered. This props creates the loading feeling and the component apparition when content is loaded.
-- `customAnimate: func`: An animation functions that follows the [Animation API](ANIMATIONS.md) to create your own custom animations
+- `customAnimate: React.Component`: A custom animation represented by a `React.Component`
 
 
 Navigate the API documentation :

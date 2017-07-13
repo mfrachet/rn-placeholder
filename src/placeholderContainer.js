@@ -1,25 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Animated } from 'react-native';
 import Animations from './animation/animations';
 
-const computeStyleForAnimation = (animation) => {
-  if (!animation.start) {
-    throw new Error('No method `start` found in the animation');
+const renderAnimation = (Animation, Component, props) => {
+  if (!Animation) {
+    throw new Error(`${Animation.name} doesnt exist in the current project`);
   }
-
-  if (!animation.style) {
-    throw new Error('No property `style` found in the animation');
-  }
-  animation.start();
-  return animation.style;
+  return (
+    <Animation>
+      <Component {...props} />
+    </Animation>
+  );
 };
-
-const renderAnimation = (Component, style, props) => (
-  <Animated.View style={style}>
-    <Component {...props} />
-  </Animated.View>
-);
 
 /**
  * Higher order component that factors animation and state ready
@@ -34,13 +26,11 @@ const connect = (PlaceholderComponent) => {
     }
 
     if (customAnimate) {
-      const style = computeStyleForAnimation(customAnimate());
-      return renderAnimation(PlaceholderComponent, style, props);
+      return renderAnimation(customAnimate, PlaceholderComponent, props);
     }
 
     if (animate) {
-      const style = computeStyleForAnimation(Animations[animate]());
-      return renderAnimation(PlaceholderComponent, style, props);
+      return renderAnimation(Animations[animate], PlaceholderComponent, props);
     }
     return <PlaceholderComponent {...props} />;
   }
