@@ -5,5 +5,5 @@ import FadeAnimation from './fade';
  * Get an animation by its name
  */
 export default {
-  fade: () => new FadeAnimation(),
+  fade: FadeAnimation,
 };
