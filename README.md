@@ -9,7 +9,7 @@ Display some placeholder stuff before rendering your text or media content in Re
 ------
 <p align="center">
 <img height="290" src="https://img4.hostingpics.net/pics/221859android.gif" />
-<img height="290" src="https://img4.hostingpics.net/pics/677705ios.gif" />
+<img height="290" src="https://img4.hostingpics.net/pics/197702shineanimation.gif" />
 <img height="290" src="https://img4.hostingpics.net/pics/482281tabletRecord.gif" />
 </p>
 
