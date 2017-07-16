@@ -1,7 +1,8 @@
 {
-  "name": "ExampleExpo",
+  "name": "rn-placeholder-demo",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Simple demo of rn-placeholder project",
   "devDependencies": {
     "react-native-scripts": "0.0.50",
     "jest-expo": "~18.0.0",
