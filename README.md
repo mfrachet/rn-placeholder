@@ -23,7 +23,7 @@ Display some placeholder stuff before rendering your text or media content in Re
 - [Using default animations](./ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
 - [Animation API](./ANIMATIONS.md) <span style="color:red">(deprecated in >=v1.0.0)</span>
-- [Examples from React Native and Expo](#examples)
+- [Examples from React Native and Expo](#see-examples)
 
 <h1 name="#usage">Usage</h1>
 
@@ -59,7 +59,7 @@ render() {
 
 When the value of `this.state.isReady` changes to something *existing*, the `<Text>` component will be rendered
 
-<h1 name="#examples">See examples</h1>
+<h1 name="#see-examples">See examples</h1>
 
 Get `rn-placeholder` on your computer by cloning this repo :
 
