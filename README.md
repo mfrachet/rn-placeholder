@@ -80,7 +80,7 @@ You can also scan the following QR using [Expo app](https://expo.io/) :
 
 #### Expo XDE
 
-If you're currently using [Expo XDE](https://github.com/expo/xde), simply open `./ExampleExpo` inside of it, and share your project as usual.
+If you're currently using [Expo XDE](https://github.com/expo/xde), simply open `./ExampleExpo` inside of it, and share your project as usual (don't forget to `npm install`).
 
 #### create-react-native-app
 
@@ -88,6 +88,7 @@ If you're currently using [`create-react-native-app`](https://facebook.github.io
 
 ```
 $ cd ExampleExpo
+$ npm install
 $ npm start
 ```
 
@@ -99,6 +100,7 @@ If you're currently using [`react-native-cli`](https://facebook.github.io/react-
 
 ```
 $ cd Example
+$ npm install
 $ react-native run-ios
 $ react-native run-android
 ```
