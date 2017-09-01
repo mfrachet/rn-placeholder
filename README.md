@@ -9,6 +9,8 @@ Display some placeholder stuff before rendering your text or media content in Re
 *Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)*
 
 ------
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mfrachet/rn-placeholder.svg)](https://greenkeeper.io/)
 <p align="center">
 <img height="270" src="https://img4.hostingpics.net/pics/221859android.gif" />
 <img height="270" src="https://img4.hostingpics.net/pics/197702shineanimation.gif" />
