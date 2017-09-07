@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View } from 'react-primitives';
 import Media from './../media/media';
 import Paragraph from './../paragraph/paragraph';
 

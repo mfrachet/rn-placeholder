@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { View } from 'react-native';
+import { View } from 'react-primitives';
 import Media from './../media';
 
 /** @test {Media#render} */

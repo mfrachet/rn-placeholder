@@ -8,13 +8,9 @@
     "type": "git",
     "url": "https://github.com/mfrachet/rn-placeholder"
   },
-  "description": "Display some placeholder stuff before rendering your text or media content in React Native",
-  "keywords": [
-    "react-native",
-    "ios",
-    "android",
-    "expo"
-  ],
+  "description":
+    "Display some placeholder stuff before rendering your text or media content in React Native",
+  "keywords": ["react-native", "ios", "android", "expo"],
   "author": "Marvin FRACHET <marvin.frachet@gmail.com> (https://github.com/mfrachet)",
   "scripts": {
     "format": "prettier-eslint --write \"src/**/*.js\"",
@@ -23,7 +19,8 @@
     "test:auto": "./node_modules/.bin/jest --watch"
   },
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-primitives": "^0.4.3"
   },
   "devDependencies": {
     "babel-jest": "^20.0.3",
@@ -46,12 +43,7 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": [
-      "./setup/test.setup.js"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/Example/",
-      "<rootDir>/ExampleExpo/"
-    ]
+    "setupFiles": ["./setup/test.setup.js"],
+    "modulePathIgnorePatterns": ["<rootDir>/Example/", "<rootDir>/ExampleExpo/"]
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View } from 'react-primitives';
 import computeStyle from './media.style';
 
 /**

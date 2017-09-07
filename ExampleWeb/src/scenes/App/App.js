@@ -10,7 +10,7 @@ import {
   Text,
   View,
   Image
-} from 'react-native';
+} from 'react-primitives';
 import Appbar from '../../components/Appbar';
 import List from '../../components/List';
 import Placeholder from 'rn-placeholder';

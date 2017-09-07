@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Text } from 'react-native';
+import { Text } from 'react-primitives';
 import Placeholder from 'rn-placeholder';
 
 const customPlaceholder = (props) => {
