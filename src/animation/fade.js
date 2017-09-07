@@ -28,11 +28,7 @@ const Fade = ({ children }) => {
 
   start();
   const style = { opacity: animation };
-  return (
-    <Animated.View style={style}>
-      {children}
-    </Animated.View>
-  );
+  return <Animated.View style={style}>{children}</Animated.View>;
 };
 
 Fade.propTypes = {

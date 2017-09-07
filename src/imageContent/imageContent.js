@@ -6,11 +6,7 @@ import Paragraph from './../paragraph/paragraph';
 
 const positionElement = (position, textSize, color, size, hasRadius) => (
   <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-    <Media
-      color={color}
-      size={size}
-      hasRadius={hasRadius}
-    />
+    <Media color={color} size={size} hasRadius={hasRadius} />
   </View>
 );
 
@@ -43,7 +39,7 @@ function ImageContent({
 }) {
   return (
     <View style={{ flexDirection: 'row' }}>
-      { position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius) }
+      {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
       <View style={{ flex: 1 }}>
         <Paragraph
           animate={animate}
@@ -56,7 +52,7 @@ function ImageContent({
           lineSpacing={lineSpacing}
         />
       </View>
-      { position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius) }
+      {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
     </View>
   );
 }
