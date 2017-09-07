@@ -12,19 +12,21 @@ describe('ImageContent#render', () => {
   let paragraphWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ImageContent
-      position="left"
-      size={50}
-      hasRadius
-      animate="fade"
-      lineNumber={8}
-      textSize={13}
-      lineSpacing={10}
-      color="#ff0000"
-      width="99%"
-      lastLineWidth="50%"
-      firstLineWidth="30%"
-    />);
+    wrapper = shallow(
+      <ImageContent
+        position="left"
+        size={50}
+        hasRadius
+        animate="fade"
+        lineNumber={8}
+        textSize={13}
+        lineSpacing={10}
+        color="#ff0000"
+        width="99%"
+        lastLineWidth="50%"
+        firstLineWidth="30%"
+      />,
+    );
     mediaWrapper = wrapper.find(Media);
     paragraphWrapper = wrapper.find(Paragraph);
   });
@@ -83,28 +85,44 @@ describe('ImageContent#render', () => {
 
   it('should have the second View (corresponding to the Media) with props style equals with the concerned on', () => {
     const style = {
-      marginRight: 13, flexDirection: 'column', justifyContent: 'center',
+      marginRight: 13,
+      flexDirection: 'column',
+      justifyContent: 'center',
     };
-    expect(wrapper.find(View).at(1).prop('style')).toEqual(style);
+    expect(
+      wrapper
+        .find(View)
+        .at(1)
+        .prop('style'),
+    ).toEqual(style);
   });
 
   it('should have the third View (corresponding to the Media) with props style equals with the concerned on', () => {
-    wrapper = shallow(<ImageContent
-      position="right"
-      size={50}
-      hasRadius
-      animate="fade"
-      lineNumber={8}
-      textSize={13}
-      lineSpacing={10}
-      color="#ff0000"
-      width="99%"
-      lastLineWidth="50%"
-      firstLineWidth="30%"
-    />);
+    wrapper = shallow(
+      <ImageContent
+        position="right"
+        size={50}
+        hasRadius
+        animate="fade"
+        lineNumber={8}
+        textSize={13}
+        lineSpacing={10}
+        color="#ff0000"
+        width="99%"
+        lastLineWidth="50%"
+        firstLineWidth="30%"
+      />,
+    );
     const style = {
-      marginLeft: 13, flexDirection: 'column', justifyContent: 'center',
+      marginLeft: 13,
+      flexDirection: 'column',
+      justifyContent: 'center',
     };
-    expect(wrapper.find(View).at(2).prop('style')).toEqual(style);
+    expect(
+      wrapper
+        .find(View)
+        .at(2)
+        .prop('style'),
+    ).toEqual(style);
   });
 });

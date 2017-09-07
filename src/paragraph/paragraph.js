@@ -49,11 +49,7 @@ function Paragraph({
     }
   }
 
-  return (
-    <View>
-      {lines}
-    </View>
-  );
+  return <View>{lines}</View>;
 }
 
 Paragraph.propTypes = {
