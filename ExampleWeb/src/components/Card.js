@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Placeholder from 'rn-placeholder';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-primitives';
 
 const DEFAULT_SIZE = 12;
 const IMAGE_SIZE = 40;

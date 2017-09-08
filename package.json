@@ -23,7 +23,8 @@
     "test:auto": "./node_modules/.bin/jest --watch"
   },
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-primitives": "^0.4.3"
   },
   "devDependencies": {
     "babel-jest": "^20.0.3",

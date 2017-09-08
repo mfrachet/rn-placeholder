@@ -3,7 +3,6 @@ import { StyleSheet, View } from 'react-native';
 import Appbar from './components/Appbar';
 import List from './components/List';
 
-
 const styles = StyleSheet.create({
   container: {
     marginTop: 0,

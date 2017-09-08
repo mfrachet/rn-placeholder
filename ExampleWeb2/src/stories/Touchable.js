@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import { Text } from 'react-native';
+import { Text } from 'react-primitives';
 import { Touchable } from '../components/Touchable';
 
 storiesOf('Touchable', module)
