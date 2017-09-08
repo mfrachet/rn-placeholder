@@ -11,7 +11,8 @@
   "description":
     "Display some placeholder stuff before rendering your text or media content in React Native",
   "keywords": ["react-native", "ios", "android", "expo"],
-  "author": "Marvin FRACHET <marvin.frachet@gmail.com> (https://github.com/mfrachet)",
+  "author":
+    "Marvin FRACHET <marvin.frachet@gmail.com> (https://github.com/mfrachet)",
   "scripts": {
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "lint": "eslint ./src",

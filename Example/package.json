@@ -8,7 +8,7 @@
 	"dependencies": {
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.3",
-        "rn-placeholder": "file:../"
+		"rn-placeholder": "file:../"
 	},
 	"devDependencies": {
 		"babel-preset-react-native": "2.1.0",
