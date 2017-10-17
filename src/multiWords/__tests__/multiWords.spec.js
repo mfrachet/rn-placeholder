@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import MultiWords from './../multiWords';
 import Line from './../../line/line';
@@ -55,13 +56,27 @@ describe('MultiWords#render', () => {
       ).toEqual(word.color);
     });
 
-    it(`should have the ${index} word with props width equals to ${word.width}`, () => {
+    it(`should have the ${index + 1} View with props style.width equals to ${word.width}`, () => {
       expect(
         wrapper
-          .find(Line)
-          .at(index)
-          .prop('width'),
+          .find(View)
+          .at(index + 1)
+          .prop('style')[1].width,
       ).toEqual(word.width);
+    });
+
+    it(`should have the ${index + 1} View with props style to have a special border style`, () => {
+      const realIndex = index + 1;
+      const view = wrapper.find(View).at(realIndex);
+      const lastIndex = words.length;
+      const result =
+        lastIndex === realIndex
+          ? false
+          : {
+            borderRightWidth: 12,
+            borderRightColor: 'transparent',
+          };
+      expect(view.prop('style')[0]).toEqual(result);
     });
   });
 });
