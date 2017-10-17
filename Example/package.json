@@ -13,8 +13,7 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch",
-    "postinstall": "rf -rf ./node_modules/rn-placeholder/Example/node_modules"
+    "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
     "preset": "jest-expo"
@@ -23,6 +22,6 @@
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
-    "rn-placeholder": "file:../"
+    "rn-placeholder": "file:../rn-placeholder"
   }
 }
