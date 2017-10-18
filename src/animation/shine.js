@@ -1,15 +1,15 @@
-import React from "react";
-import { Animated, View, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Animated, View, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
   shine: {
     width: 30,
-    position: "absolute",
-    height: "100%",
-    backgroundColor: "#ffffff",
-    opacity: 0.4
-  }
+    position: 'absolute',
+    height: '100%',
+    backgroundColor: '#ffffff',
+    opacity: 0.4,
+  },
 });
 /**
  * Create a repetitive Shine animation
@@ -22,8 +22,8 @@ const Shine = ({ children }) => {
     Animated.sequence([
       Animated.timing(animation, {
         toValue: 100,
-        duration: 750
-      })
+        duration: 750,
+      }),
     ]).start(() => {
       start();
     });
@@ -33,7 +33,7 @@ const Shine = ({ children }) => {
 
   const marginLeft = animation.interpolate({
     inputRange: [0, 100],
-    outputRange: ["0%", "100%"]
+    outputRange: ['0%', '100%'],
   });
 
   return (
@@ -45,11 +45,11 @@ const Shine = ({ children }) => {
 };
 
 Shine.propTypes = {
-  children: PropTypes.shape({})
+  children: PropTypes.shape({}),
 };
 
 Shine.defaultProps = {
-  children: null
+  children: null,
 };
 
 export default Shine;
