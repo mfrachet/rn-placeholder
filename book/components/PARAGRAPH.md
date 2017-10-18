@@ -1,5 +1,8 @@
 # Paragraph
 
+<p align="center">
+  <img src="./images/paragraph.gif" />
+</p>
 
 ### Usage
 

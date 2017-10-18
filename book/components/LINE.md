@@ -1,5 +1,8 @@
 # Line
 
+<p align="center">
+  <img src="./images/line.gif" />
+</p>
 
 ### Usage
 

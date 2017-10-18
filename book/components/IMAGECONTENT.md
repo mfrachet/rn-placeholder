@@ -1,5 +1,8 @@
 # ImageContent
 
+<p align="center">
+  <img src="./images/imagecontent.gif" />
+</p>
 
 ### Usage
 

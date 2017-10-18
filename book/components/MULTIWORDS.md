@@ -1,5 +1,9 @@
 # MultiWords
 
+<p align="center">
+  <img src="./images/multiwords.gif" />
+</p>
+
 ### Usage
 
 ```javascript
@@ -17,7 +21,7 @@ render() {
       onReady={this.state.isReady}
     >
       <Text>Placeholder finished</Text>
-    </Placeholder.ImageContent>
+    </Placeholder.MultiWords>
   )
 }
 ```

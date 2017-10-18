@@ -1,5 +1,9 @@
 # Media
 
+<p align="center">
+  <img src="./images/media.gif" />
+</p>
+
 ### Usage
 
 ```html
