@@ -3,10 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-
 Display some placeholder stuff before rendering your text or media content in React Native.
 
 *Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)*
+
+*New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)*
 
 ------
 <p align="center">
