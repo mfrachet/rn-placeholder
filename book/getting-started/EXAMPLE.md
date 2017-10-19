@@ -7,7 +7,9 @@ If you're familiar with Expo, you can take a look at the [rn-placeholder-demo](h
 
 You can also scan the following QR using the [Expo app](https://expo.io/) :
 
-<img src="https://img4.hostingpics.net/pics/589414Capturedecran20170716a122129.png" width="200"/>
+<p align="center">
+  <img src="https://img4.hostingpics.net/pics/589414Capturedecran20170716a122129.png" width="200"/>
+</p>
 
 ### create-react-native-app
 

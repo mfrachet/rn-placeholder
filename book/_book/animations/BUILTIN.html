@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../customize/CUSTOMCOMPONENT.html" />
+    <link rel="next" href="../customize/CUSTOMANIMATION.html" />
     
     
-    <link rel="prev" href="../components/MULTIWORDS.html" />
+    <link rel="prev" href="../customize/CUSTOMCOMPONENT.html" />
     
 
     </head>
@@ -207,6 +207,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.6" data-path="../customize/CUSTOMCOMPONENT.html">
+            
+                <a href="../customize/CUSTOMCOMPONENT.html">
+            
+                    
+                    Custom component
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -227,27 +240,7 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Customize</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../customize/CUSTOMCOMPONENT.html">
-            
-                <a href="../customize/CUSTOMCOMPONENT.html">
-            
-                    
-                    Custom component
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../customize/CUSTOMANIMATION.html">
+        <li class="chapter " data-level="4.2" data-path="../customize/CUSTOMANIMATION.html">
             
                 <a href="../customize/CUSTOMANIMATION.html">
             
@@ -306,6 +299,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="built-in">Built in</h1>
+<p>The project comes with a <code>connect</code> HOC that brings three global props to every components, <code>onReady</code>, <code>customAnimate</code> and <code>animate</code>.</p>
+<p>The <code>animate</code> props uses built in animations such as <a href="https://github.com/mfrachet/rn-placeholder/tree/master/src/animation/shine.js" target="_blank"><code>shine</code></a> or <a href="https://github.com/mfrachet/rn-placeholder/tree/master/src/animation/fade.js" target="_blank"><code>fade</code></a> to animate the placeHolder with a visual effect while waiting for the content to appear.</p>
+<p>If you want to display a built in animation, simply specify the props on your <code>Placeholder</code> component :</p>
+<p align="center">
+  <img src="images/shine.gif">
+</p>
+
+
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">Placeholder.ImageContent</span>
+  <span class="hljs-attr">onReady</span>=<span class="hljs-string">{this.state.isReady}</span>
+  <span class="hljs-attr">lineNumber</span>=<span class="hljs-string">{2}</span>
+  <span class="hljs-attr">animate</span>=<span class="hljs-string">&quot;shine&quot;</span>
+  <span class="hljs-attr">lastLineWidth</span>=<span class="hljs-string">&quot;40%&quot;</span>
+&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span>&gt;</span>Animated placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Placeholder.ImageContent</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -333,12 +343,12 @@
 
             
                 
-                <a href="../components/MULTIWORDS.html" class="navigation navigation-prev " aria-label="Previous page: MultiWords">
+                <a href="../customize/CUSTOMCOMPONENT.html" class="navigation navigation-prev " aria-label="Previous page: Custom component">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../customize/CUSTOMCOMPONENT.html" class="navigation navigation-next " aria-label="Next page: Custom component">
+                <a href="../customize/CUSTOMANIMATION.html" class="navigation navigation-next " aria-label="Next page: Custom animation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -349,7 +359,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Built in","level":"4.1","depth":1,"next":{"title":"Custom component","level":"5.1","depth":1,"path":"customize/CUSTOMCOMPONENT.md","ref":"./customize/CUSTOMCOMPONENT.md","articles":[]},"previous":{"title":"MultiWords","level":"3.5","depth":1,"path":"components/MULTIWORDS.md","ref":"./components/MULTIWORDS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"animations/BUILTIN.md","mtime":"2017-10-18T14:52:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-18T14:42:08.494Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Built in","level":"4.1","depth":1,"next":{"title":"Custom animation","level":"4.2","depth":1,"path":"customize/CUSTOMANIMATION.md","ref":"./customize/CUSTOMANIMATION.md","articles":[]},"previous":{"title":"Custom component","level":"3.6","depth":1,"path":"customize/CUSTOMCOMPONENT.md","ref":"./customize/CUSTOMCOMPONENT.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"animations/BUILTIN.md","mtime":"2017-10-19T05:42:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-19T05:28:41.272Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

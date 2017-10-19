@@ -24,7 +24,6 @@ Display some placeholder stuff before rendering your text or media content in Re
 - [Creating a custom component](./API.md#custom)
 - [Using default animations](./ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
-- [Animation API](./ANIMATIONS.md) <span style="color:red">(deprecated in >=v1.0.0)</span>
 - [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
 
 <h1 name="#usage">Usage</h1>

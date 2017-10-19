@@ -14,13 +14,9 @@
 * [Paragraph](./components/PARAGRAPH.md)
 * [ImageContent](./components/IMAGECONTENT.md)
 * [MultiWords](./components/MULTIWORDS.md)
-
+* [Custom component](./customize/CUSTOMCOMPONENT.md)
 
 ### Animations
 
 * [Built in](./animations/BUILTIN.md)
-
-### Customize
-
-* [Custom component](./customize/CUSTOMCOMPONENT.md)
 * [Custom animation](./customize/CUSTOMANIMATION.md)

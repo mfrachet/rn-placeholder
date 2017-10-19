@@ -1,4 +1,4 @@
-# RN-PLACEHOLDER
+# [RN-PLACEHOLDER](https://github.com/mfrachet/rn-placeholder)
 
 [![Build Status](https://travis-ci.org/mfrachet/rn-placeholder.svg?branch=master)](https://travis-ci.org/mfrachet/rn-placeholder)
 [![Coverage Status](https://coveralls.io/repos/github/mfrachet/rn-placeholder/badge.svg?branch=master)](https://coveralls.io/github/mfrachet/rn-placeholder?branch=master)
