@@ -3,10 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-
 Display some placeholder stuff before rendering your text or media content in React Native.
 
 *Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)*
+
+*New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)*
 
 ------
 <p align="center">
@@ -24,7 +25,6 @@ Display some placeholder stuff before rendering your text or media content in Re
 - [Creating a custom component](./API.md#custom)
 - [Using default animations](./ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
-- [Animation API](./ANIMATIONS.md) <span style="color:red">(deprecated in >=v1.0.0)</span>
 - [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
 
 <h1 name="#usage">Usage</h1>
