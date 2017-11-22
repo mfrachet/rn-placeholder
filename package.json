@@ -19,6 +19,7 @@
     "test": "./node_modules/.bin/jest --coverage --no-cache",
     "test:auto": "./node_modules/.bin/jest --watch"
   },
+  "pre-commit": ["test", "lint"],
   "dependencies": {
     "prop-types": "^15.5.10"
   },
@@ -34,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
     "jest": "21.2.1",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.6.1",
     "prettier-eslint-cli": "^4.3.0",
     "react": "16.0.0-beta.5",
