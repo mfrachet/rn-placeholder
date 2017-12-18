@@ -1,6 +1,6 @@
-export default ({ height = 40, width = 50, borderRadius = 0, color = '#efefef' }) => ({
+export default ({ height = 50, width = 50, radius = 0, color = '#efefef' }) => ({
   height,
   width,
-  borderRadius,
+  borderRadius: radius,
   backgroundColor: color,
 });

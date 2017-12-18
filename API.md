@@ -128,13 +128,13 @@ Display a Media on the left / right part of a Paragraph
 
 <h2 name="box">Box</h2>
 
-Display a generic rectangle shape with customisable width, height, color and borderRadius
+Display a generic rectangle shape with customisable width, height, color and border radius
 
 #### Props available
 - `height: Number | String`: the height of the component (default: `40`)
 - `width: Number | String`: the width of the component (default: `50`)
-- `borderRadius: Number`: the border radius of the component (default: `0`)
-- `color: String`: the background color radius of the component (default: `#efefef`)
+- `radius: Number`: the border radius of the component (default: `0`)
+- `color: String`: the background color of the component (default: `#efefef`)
 
 #### Example
 

@@ -12,7 +12,7 @@ describe('Box#render', () => {
 
   it('should own a props style that matches the default style', () => {
     const style = {
-      height: 40,
+      height: 50,
       width: 50,
       borderRadius: 0,
       backgroundColor: '#efefef',
@@ -21,7 +21,7 @@ describe('Box#render', () => {
   });
 
   it('should own a props style that matches the props', () => {
-    wrapper = shallow(<Box height={50} width={20} color="red" borderRadius={5} />);
+    wrapper = shallow(<Box height={50} width={20} color="red" radius={5} />);
     const style = {
       height: 50,
       width: 20,
