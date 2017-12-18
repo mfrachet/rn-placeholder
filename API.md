@@ -25,6 +25,7 @@ Navigate the API documentation :
 - <a href="#media">Media</a>
 - <a href="#paragraph">Paragraph</a>
 - <a href="#imgcontent">Image content</a>
+- <a href="#box">Box</a>
 - <a href="#custom">Custom components</a>
 
 <h2 name="line">Line</h2>
