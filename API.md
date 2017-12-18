@@ -10,7 +10,7 @@ width="200" src="https://img15.hostingpics.net/pics/198734skeletonloaderandroid.
 
 # Components
 
-The project currently supports 5 different placeholder components.
+The project currently supports 4 different placeholder components.
 
 Each of this components are wrapped in a HOC that brings two others (optional) props :
 
@@ -55,14 +55,28 @@ Display a shape that represent a media placeholder
 - `size: Number`: The size of the media shape (default: `40`)
 - `hasRadius: Boolean`: Is the shape rounded or not ? (default: `false`)
 - `color: String`: Color of the media shape (default: `#efefef`)
+- `width: Number | String`: Width of the component. Overrides size (no default)
+- `height: Number | String`: Height of the component. Overrides size (no default)
+- `borderRadius: Number`: Border radius of the component. Overrides hasRadius and size (no default)
 
-#### Example
+#### Example 1
 
 ```javascript
 <Placeholder.Media
   size={70}
   color="#0000ff"
   hasRadius
+/>
+```
+
+#### Example 2
+
+```javascript
+<Placeholder.Media
+  width={50}
+  height="100%"
+  color="#0000ff"
+  borderRadius={0}
 />
 ```
 
@@ -123,27 +137,6 @@ Display a Media on the left / right part of a Paragraph
   width="100%"
   lastLineWidth="30%"
   firstLineWidth="10%"
-/>
-```
-
-<h2 name="box">Box</h2>
-
-Display a generic rectangle shape with customisable width, height, color and borderRadius
-
-#### Props available
-- `height: Number | String`: the height of the component (default: `40`)
-- `width: Number | String`: the width of the component (default: `50`)
-- `borderRadius: Number`: the border radius of the component (default: `0`)
-- `color: String`: the background color radius of the component (default: `#efefef`)
-
-#### Example
-
-```javascript
-<Placeholder.Box
-  height={50}
-  width="100%"
-  borderRadius={5}
-  color="teal"
 />
 ```
 
