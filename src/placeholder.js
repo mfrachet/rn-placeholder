@@ -4,6 +4,7 @@ import Media from './media/media';
 import Line from './line/line';
 import ImageContent from './imageContent/imageContent';
 import MultiWords from './multiWords/multiWords';
+import Box from './box/box';
 
 /**
  * Export the placeholder
@@ -14,5 +15,6 @@ export default {
   Media: connect(Media),
   Line: connect(Line),
   MultiWords: connect(MultiWords),
+  Box: connect(Box),
   connect,
 };
