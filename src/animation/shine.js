@@ -2,6 +2,10 @@ import React from 'react';
 import { Animated, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
+const START_VALUE = 0;
+const END_VALUE = 100;
+const DURATION = 750;
+
 const styles = StyleSheet.create({
   shine: {
     width: 30,
@@ -18,11 +22,11 @@ const Shine = ({ children }) => {
   const animation = new Animated.Value(0);
 
   function start() {
-    animation.setValue(0);
+    animation.setValue(START_VALUE);
     Animated.sequence([
       Animated.timing(animation, {
-        toValue: 100,
-        duration: 750,
+        toValue: END_VALUE,
+        duration: DURATION,
       }),
     ]).start(() => {
       start();
@@ -32,7 +36,7 @@ const Shine = ({ children }) => {
   start();
 
   const marginLeft = animation.interpolate({
-    inputRange: [0, 100],
+    inputRange: [START_VALUE, END_VALUE],
     outputRange: ['0%', '100%'],
   });
 

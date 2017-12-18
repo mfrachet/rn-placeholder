@@ -22,6 +22,7 @@
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
+    "react-native-scripts": "^1.8.1",
     "rn-placeholder": "file:../rn-placeholder"
   },
   "devDependencies": {
