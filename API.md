@@ -142,7 +142,7 @@ Display a generic rectangle shape with customisable width, height, color and bor
 <Placeholder.Box
   height={50}
   width="100%"
-  borderRadius={5}
+  radius={5}
   color="teal"
 />
 ```
