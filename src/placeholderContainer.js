@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Animations from './animation/animations';
 
@@ -18,38 +18,40 @@ const renderAnimation = (Animation, Component, props) => {
  * @param PlaceholderComponent
  */
 const connect = (PlaceholderComponent) => {
-  function placeHolder(props) {
-    const { onReady, animate, children, customAnimate } = props;
+  class PlaceHolder extends PureComponent {
+    render() {
+      const { onReady, animate, children, customAnimate } = this.props;
 
-    if (onReady) {
-      return children;
-    }
+      if (onReady) {
+        return children;
+      }
 
-    if (customAnimate) {
-      return renderAnimation(customAnimate, PlaceholderComponent, props);
-    }
+      if (customAnimate) {
+        return renderAnimation(customAnimate, PlaceholderComponent, this.props);
+      }
 
-    if (animate) {
-      return renderAnimation(Animations[animate], PlaceholderComponent, props);
+      if (animate) {
+        return renderAnimation(Animations[animate], PlaceholderComponent, this.props);
+      }
+      return <PlaceholderComponent {...this.props} />;
     }
-    return <PlaceholderComponent {...props} />;
   }
 
-  placeHolder.propTypes = {
+  PlaceHolder.propTypes = {
     onReady: PropTypes.bool,
     children: PropTypes.element,
     animate: PropTypes.string,
     customAnimate: PropTypes.func,
   };
 
-  placeHolder.defaultProps = {
+  PlaceHolder.defaultProps = {
     onReady: false,
     animate: null,
     children: null,
     customAnimate: null,
   };
 
-  return placeHolder;
+  return PlaceHolder;
 };
 
 export default connect;
