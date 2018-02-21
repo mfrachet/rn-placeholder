@@ -103,6 +103,7 @@ Display a Media on the left / right part of a Paragraph
 
 - `position: String`: The position of the Media (left / right) (default: `left`)
 - `hasRadius: Boolean`: Is the shape of the media rounded or not ? (default: `false`)
+- `size: Number`: Size of the media (default: `40`)
 - `lineNumber: Number`: Number of line to display (mandatory)
 - `textSize: Number`: Text size of a single Line (default: `12`)
 - `lineSpacing: Number`: Space between the lines (default: `12`)
