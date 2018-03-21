@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/mfrachet/rn-placeholder"
   },
+  "license": "MIT",
   "description": "Display some placeholder stuff before rendering your text or media content in React Native",
   "keywords": [
     "react-native",
