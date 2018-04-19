@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-primitives';
 import PropTypes from 'prop-types';
 import Line from './../line/line';
 

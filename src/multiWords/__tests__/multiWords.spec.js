@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View } from 'react-primitives';
 import { shallow } from 'enzyme';
 import MultiWords from './../multiWords';
 import Line from './../../line/line';
