@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View } from 'react-primitives';
 import Line from '../line/line';
 
 const prepareLine = (i, marginBottom, textSize, color, width) => (

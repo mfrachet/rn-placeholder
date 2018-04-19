@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated } from 'react-primitives';
 import PropTypes from 'prop-types';
 
 const START_VALUE = 0.5;
