@@ -33,7 +33,7 @@ const Fade = ({ children }) => {
   }
 
   start();
-  const style = { opacity: animation };
+  const style = { opacity: animation, flex: 1 };
   return <Animated.View style={style}>{children}</Animated.View>;
 };
 
