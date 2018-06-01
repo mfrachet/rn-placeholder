@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Animations from './animation/animations';
 
-const renderAnimation = (Animation, Component, props) => {
+const renderAnimation = (Animation, Component, { children, ...otherProps }) => {
   if (!Animation) {
     throw new Error(`${Animation.name} doesnt exist in the current project`);
   }
   return (
     <Animation>
-      <Component {...props} />
+      <Component {...otherProps} />
     </Animation>
   );
 };
@@ -32,6 +32,7 @@ const connect = (PlaceholderComponent) => {
     if (animate) {
       return renderAnimation(Animations[animate], PlaceholderComponent, props);
     }
+
     return <PlaceholderComponent {...props} />;
   }
 
