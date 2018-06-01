@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Animations from './animation/animations';
 
-const renderAnimation = (Animation, Component, { children, ...otherProps }) => {
+const renderAnimation = (Animation, Component, props) => {
   if (!Animation) {
     throw new Error(`${Animation.name} doesnt exist in the current project`);
   }
   return (
     <Animation>
-      <Component {...otherProps} />
+      <Component {...props} />
     </Animation>
   );
 };
@@ -19,21 +19,21 @@ const renderAnimation = (Animation, Component, { children, ...otherProps }) => {
  */
 const connect = (PlaceholderComponent) => {
   function placeHolder(props) {
-    const { onReady, animate, children, customAnimate } = props;
+    const { onReady, animate, children, customAnimate, ...otherProps } = props;
 
     if (onReady) {
       return children;
     }
 
     if (customAnimate) {
-      return renderAnimation(customAnimate, PlaceholderComponent, props);
+      return renderAnimation(customAnimate, PlaceholderComponent, otherProps);
     }
 
     if (animate) {
-      return renderAnimation(Animations[animate], PlaceholderComponent, props);
+      return renderAnimation(Animations[animate], PlaceholderComponent, otherProps);
     }
 
-    return <PlaceholderComponent {...props} />;
+    return <PlaceholderComponent {...otherProps} />;
   }
 
   placeHolder.propTypes = {

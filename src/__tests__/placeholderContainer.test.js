@@ -13,10 +13,7 @@ describe('connect', () => {
   it('should create a connected component', () => {
     const wrapper = getWrapper({ animate: 'fade', onReady: false });
 
-    const node = wrapper.find(View);
-
-    expect(node.prop('animate')).toBe('fade');
-    expect(node.prop('onReady')).toBe(false);
+    expect(wrapper.find(View)).toBeTruthy();
   });
 
   it('should return the children if ready', () => {
@@ -67,11 +64,6 @@ describe('connect', () => {
       animate: null,
     });
 
-    expect(wrapper.props()).toEqual({
-      animate: null,
-      children: null,
-      customAnimate: null,
-      onReady: false,
-    });
+    expect(wrapper.props()).toEqual({});
   });
 });
