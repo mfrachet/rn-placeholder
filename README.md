@@ -11,9 +11,8 @@ Display some placeholder stuff before rendering your text or media content in Re
 
 ------
 <p align="center">
-<img height="270" src="https://img4.hostingpics.net/pics/221859android.gif" />
-<img height="270" src="https://img4.hostingpics.net/pics/197702shineanimation.gif" />
-<img height="270" src="https://img15.hostingpics.net/pics/449888rnweb.gif" />
+<img height="270" src="./docs/placeholder.gif" />
+<img height="270" src="./docs/shine.gif" />
 </p>
 
 ------
