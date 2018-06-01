@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const stylify = (Component, computeStyles) => {
+const stylify = computeStyles => (Component) => {
   const StyledComponent = ({ style, ...otherProps }) => {
     const styles = { ...computeStyles(otherProps), ...style };
     return <Component {...otherProps} style={styles} />;

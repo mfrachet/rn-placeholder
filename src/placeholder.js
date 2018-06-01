@@ -9,9 +9,9 @@ import Box from './box/box';
 import stylify from './placeholderStylify';
 import computeStyleLine from './line/line.style';
 import computeStyleMedia from './media/media.style';
+import computeStyleBox from './box/box.style';
 
-const StyledLine = stylify(Line, computeStyleLine);
-const StyledMedia = stylify(Media, computeStyleMedia);
+const compose = (f, g) => x => f(g(x));
 
 /**
  * Export the placeholder
@@ -19,9 +19,9 @@ const StyledMedia = stylify(Media, computeStyleMedia);
 export default {
   ImageContent: connect(ImageContent),
   Paragraph: connect(Paragraph),
-  Media: connect(StyledMedia),
-  Line: connect(StyledLine),
+  Media: compose(connect, stylify(computeStyleLine))(Media),
+  Line: compose(connect, stylify(computeStyleMedia))(Line),
   MultiWords: connect(MultiWords),
-  Box: connect(Box),
+  Box: compose(connect, stylify(computeStyleBox))(Box),
   connect,
 };

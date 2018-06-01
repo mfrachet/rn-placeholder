@@ -13,7 +13,7 @@ describe('stylify', () => {
   });
 
   it('should inject the passed style merged with the computed ones', () => {
-    const StyledComponent = stylify(Component, computeStyle);
+    const StyledComponent = stylify(computeStyle)(Component);
     const wrapper = shallow(<StyledComponent style={{ marginLeft: 100 }} />);
 
     expect(wrapper.find(Component).prop('style')).toEqual({

@@ -6,9 +6,7 @@ import Box from './../box';
 describe('Box#render', () => {
   let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<Box />);
-  });
+  const getWrapper = props => shallow(<Box {...props} />);
 
   it('should own a props style that matches the default style', () => {
     const style = {
@@ -17,17 +15,11 @@ describe('Box#render', () => {
       borderRadius: 0,
       backgroundColor: '#efefef',
     };
-    expect(wrapper.find(View).prop('style')).toEqual(style);
-  });
 
-  it('should own a props style that matches the props', () => {
-    wrapper = shallow(<Box height={50} width={20} color="red" radius={5} />);
-    const style = {
-      height: 50,
-      width: 20,
-      backgroundColor: 'red',
-      borderRadius: 5,
-    };
+    wrapper = getWrapper({
+      style,
+    });
+
     expect(wrapper.find(View).prop('style')).toEqual(style);
   });
 });
