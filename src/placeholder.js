@@ -6,14 +6,21 @@ import ImageContent from './imageContent/imageContent';
 import MultiWords from './multiWords/multiWords';
 import Box from './box/box';
 
+import stylify from './placeholderStylify';
+import computeStyleLine from './line/line.style';
+import computeStyleMedia from './media/media.style';
+
+const StyledLine = stylify(Line, computeStyleLine);
+const StyledMedia = stylify(Media, computeStyleMedia);
+
 /**
  * Export the placeholder
  */
 export default {
   ImageContent: connect(ImageContent),
   Paragraph: connect(Paragraph),
-  Media: connect(Media),
-  Line: connect(Line),
+  Media: connect(StyledMedia),
+  Line: connect(StyledLine),
   MultiWords: connect(MultiWords),
   Box: connect(Box),
   connect,

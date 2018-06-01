@@ -8,7 +8,16 @@ describe('Media#render', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Media />);
+    wrapper = shallow(
+      <Media
+        style={{
+          height: 40,
+          width: 40,
+          backgroundColor: '#efefef',
+          borderRadius: 12 / 4,
+        }}
+      />,
+    );
   });
 
   it('should own a props style that matches the default style', () => {
@@ -17,17 +26,6 @@ describe('Media#render', () => {
       width: 40,
       backgroundColor: '#efefef',
       borderRadius: 12 / 4,
-    };
-    expect(wrapper.find(View).prop('style')).toEqual(style);
-  });
-
-  it('should own a props style that matches the props', () => {
-    wrapper = shallow(<Media size={70} color="red" hasRadius />);
-    const style = {
-      height: 70,
-      width: 70,
-      backgroundColor: 'red',
-      borderRadius: 35,
     };
     expect(wrapper.find(View).prop('style')).toEqual(style);
   });
