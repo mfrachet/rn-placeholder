@@ -1,7 +1,7 @@
+import { View } from 'react-native';
 import connect from './placeholderContainer';
 import Paragraph from './paragraph/paragraph';
 import Media from './media/media';
-import Line from './line/line';
 import ImageContent from './imageContent/imageContent';
 import MultiWords from './multiWords/multiWords';
 import Box from './box/box';
@@ -20,7 +20,7 @@ export default {
   ImageContent: connect(ImageContent),
   Paragraph: connect(Paragraph),
   Media: compose(connect, stylify(computeStyleLine))(Media),
-  Line: compose(connect, stylify(computeStyleMedia))(Line),
+  Line: compose(connect, stylify(computeStyleMedia))(View),
   MultiWords: connect(MultiWords),
   Box: compose(connect, stylify(computeStyleBox))(Box),
   connect,

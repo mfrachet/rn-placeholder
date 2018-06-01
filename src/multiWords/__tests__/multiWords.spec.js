@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import MultiWords from './../multiWords';
-import Line from './../../line/line';
+import Placeholder from './../../placeholder';
 
 const TEXT_SIZE = 12;
 const words = [
@@ -30,18 +30,18 @@ describe('MultiWords#render', () => {
 
   it('shouldnt have any line', () => {
     wrapper = shallow(<MultiWords />);
-    expect(wrapper.find(Line).length).toEqual(0);
+    expect(wrapper.find(Placeholder.Line).length).toEqual(0);
   });
 
   it('should have 3 lines', () => {
-    expect(wrapper.find(Line).length).toEqual(3);
+    expect(wrapper.find(Placeholder.Line).length).toEqual(3);
   });
 
   words.forEach((word, index) => {
     it(`should have the ${index} word with props textSize equals to ${TEXT_SIZE}`, () => {
       expect(
         wrapper
-          .find(Line)
+          .find(Placeholder.Line)
           .at(index)
           .prop('textSize'),
       ).toEqual(TEXT_SIZE);
@@ -50,7 +50,7 @@ describe('MultiWords#render', () => {
     it(`should have the ${index} word with props colors equals to ${word.color}`, () => {
       expect(
         wrapper
-          .find(Line)
+          .find(Placeholder.Line)
           .at(index)
           .prop('color'),
       ).toEqual(word.color);
