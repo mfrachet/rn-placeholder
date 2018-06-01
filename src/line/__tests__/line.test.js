@@ -7,8 +7,11 @@ import Line from './../line';
 describe('Line#render', () => {
   let wrapper;
 
+  const getWrapper = props =>
+    shallow(<Line textSize={12} color="#efefef" width="100%" {...props} />);
+
   beforeEach(() => {
-    wrapper = shallow(<Line textSize={12} color="#efefef" width="100%" />);
+    wrapper = getWrapper();
   });
 
   it('should have a style props equals to the default one', () => {
@@ -20,5 +23,18 @@ describe('Line#render', () => {
       backgroundColor: '#efefef',
     };
     expect(wrapper.find(View).prop('style')).toEqual(style);
+  });
+
+  it("should extends the additional prop style if it's added", () => {
+    wrapper = getWrapper({ style: { marginLeft: 100 } });
+
+    const style = {
+      alignSelf: 'stretch',
+      height: 12,
+      width: '100%',
+      borderRadius: 3,
+      backgroundColor: '#efefef',
+    };
+    expect(wrapper.find(View).prop('style')).toEqual({ ...style, marginLeft: 100 });
   });
 });
