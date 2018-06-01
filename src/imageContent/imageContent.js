@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-import Media from './../media/media';
+import Placeholder from './../placeholder';
 import Paragraph from './../paragraph/paragraph';
 
 const positionElement = (position, textSize, color, size, hasRadius) => (
   <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-    <Media color={color} size={size} hasRadius={hasRadius} />
+    <Placeholder.Media color={color} size={size} hasRadius={hasRadius} />
   </View>
 );
 
