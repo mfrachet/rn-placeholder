@@ -19,9 +19,10 @@
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
     "test:auto": "./node_modules/.bin/jest --watch",
-    "build:doc": "./node_modules/.bin/gitbook build ./book && mv ./book/_book ./docs"
+    "build:doc":
+      "rm -rf ./docs && ./node_modules/.bin/gitbook build ./book && mv ./book/_book ./docs"
   },
-  "pre-commit": ["test", "lint", "build:doc"],
+  "pre-commit": ["test", "lint"],
   "dependencies": {
     "prop-types": "^15.5.10"
   },
