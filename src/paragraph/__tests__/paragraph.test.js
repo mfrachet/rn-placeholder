@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';
-import Line from './../../line/line';
+import Placeholder from '../../placeholder';
 import Paragraph from './../paragraph';
 
 /** @test {Paragraph#render} */
@@ -21,7 +21,7 @@ describe('Paragraph#render', () => {
         firstLineWidth="30%"
       />,
     );
-    lineWrapper = wrapper.find(Line);
+    lineWrapper = wrapper.find(Placeholder.Line);
   });
 
   it('should have 11 View, 10 for the Lines and 1 for the Wrapper', () => {

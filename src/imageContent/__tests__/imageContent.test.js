@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';
 import ImageContent from './../imageContent';
-import Media from './../../media/media';
+import Placeholder from './../../placeholder';
 import Paragraph from './../../paragraph/paragraph';
 
 /** @test {ImageContent#render} */
@@ -27,7 +27,7 @@ describe('ImageContent#render', () => {
         firstLineWidth="30%"
       />,
     );
-    mediaWrapper = wrapper.find(Media);
+    mediaWrapper = wrapper.find(Placeholder.Media);
     paragraphWrapper = wrapper.find(Paragraph);
   });
 

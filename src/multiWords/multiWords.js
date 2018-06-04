@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import Line from './../line/line';
+import Placeholder from './../placeholder';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,7 +22,7 @@ function MultiWords({ words, textSize }) {
     <View style={styles.container}>
       {words.map((word, index) => (
         <View key={index} style={[lastIndex !== index && borderStyle, { width: word.width }]}>
-          <Line textSize={textSize} color={word.color} />
+          <Placeholder.Line textSize={textSize} color={word.color} />
         </View>
       ))}
     </View>

@@ -2,34 +2,34 @@
 [![Coverage Status](https://coveralls.io/repos/github/mfrachet/rn-placeholder/badge.svg?branch=master)](https://coveralls.io/github/mfrachet/rn-placeholder?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 Display some placeholder stuff before rendering your text or media content in React Native.
 
-*Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)*
+_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)_
 
-*New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)*
+_New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)_
 
-------
+---
+
 <p align="center">
-<img height="270" src="https://img4.hostingpics.net/pics/221859android.gif" />
-<img height="270" src="https://img4.hostingpics.net/pics/197702shineanimation.gif" />
-<img height="270" src="https://img15.hostingpics.net/pics/449888rnweb.gif" />
+<img height="270" src="./book/placeholder.gif" />
+<img height="270" src="./book/shine.gif" />
 </p>
 
-------
+---
 
 # Content
 
-- <a href="#usage">How to use it ?</a>
-- [Components available](./API.md)
-- [Creating a custom component](./API.md#custom)
-- [Using default animations](./ANIMATIONS.md#default)
-- [Using a custom animation](./ANIMATIONS.md#custom)
-- [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
+* <a href="#usage">How to use it ?</a>
+* [Components available](./API.md)
+* [Creating a custom component](./API.md#custom)
+* [Using default animations](./ANIMATIONS.md#default)
+* [Using a custom animation](./ANIMATIONS.md#custom)
+* [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
 
 <h1 name="#usage">Usage</h1>
 
 ### Installation
+
 ```javascript
 $ npm install rn-placeholder --save
 ```
@@ -59,4 +59,4 @@ render() {
 /*...*/
 ```
 
-When the value of `this.state.isReady` changes to something *existing*, the `<Text>` component will be rendered
+When the value of `this.state.isReady` changes to something _existing_, the `<Text>` component will be rendered

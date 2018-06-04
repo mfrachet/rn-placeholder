@@ -19,20 +19,21 @@ const renderAnimation = (Animation, Component, props) => {
  */
 const connect = (PlaceholderComponent) => {
   function placeHolder(props) {
-    const { onReady, animate, children, customAnimate } = props;
+    const { onReady, animate, children, customAnimate, ...otherProps } = props;
 
     if (onReady) {
       return children;
     }
 
     if (customAnimate) {
-      return renderAnimation(customAnimate, PlaceholderComponent, props);
+      return renderAnimation(customAnimate, PlaceholderComponent, otherProps);
     }
 
     if (animate) {
-      return renderAnimation(Animations[animate], PlaceholderComponent, props);
+      return renderAnimation(Animations[animate], PlaceholderComponent, otherProps);
     }
-    return <PlaceholderComponent {...props} />;
+
+    return <PlaceholderComponent {...otherProps} />;
   }
 
   placeHolder.propTypes = {

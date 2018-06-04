@@ -6,13 +6,13 @@
 
 Display some placeholder stuff before rendering your text or media content in React Native.
 
-*Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web)*
+_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web)_
 
-------
+---
+
 <p align="center">
-<img height="240" src="https://img4.hostingpics.net/pics/221859android.gif" />
-<img height="240" src="https://img4.hostingpics.net/pics/197702shineanimation.gif" />
-<img height="240" src="https://img15.hostingpics.net/pics/449888rnweb.gif" />
+<img height="240" src="./placeholder.gif" />
+<img height="240" src="./shine.gif" />
 </p>
 
-------
+---

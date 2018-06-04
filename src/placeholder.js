@@ -1,10 +1,15 @@
+import { View } from 'react-native';
 import connect from './placeholderContainer';
 import Paragraph from './paragraph/paragraph';
-import Media from './media/media';
-import Line from './line/line';
 import ImageContent from './imageContent/imageContent';
 import MultiWords from './multiWords/multiWords';
-import Box from './box/box';
+
+import stylify from './placeholderStylify';
+import computeStyleLine from './line/line.style';
+import computeStyleMedia from './media/media.style';
+import computeStyleBox from './box/box.style';
+
+const compose = (f, g) => x => f(g(x));
 
 /**
  * Export the placeholder
@@ -12,9 +17,9 @@ import Box from './box/box';
 export default {
   ImageContent: connect(ImageContent),
   Paragraph: connect(Paragraph),
-  Media: connect(Media),
-  Line: connect(Line),
+  Media: compose(connect, stylify(computeStyleMedia))(View),
+  Line: compose(connect, stylify(computeStyleLine))(View),
   MultiWords: connect(MultiWords),
-  Box: connect(Box),
+  Box: compose(connect, stylify(computeStyleBox))(View),
   connect,
 };
