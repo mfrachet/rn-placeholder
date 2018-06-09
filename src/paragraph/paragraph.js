@@ -4,9 +4,13 @@ import { View } from 'react-native';
 import Placeholder from '../placeholder';
 
 const prepareLine = (i, marginBottom, textSize, color, width) => (
-  <View key={i} style={{ marginBottom }}>
-    <Placeholder.Line textSize={textSize} color={color} width={width} />
-  </View>
+  <Placeholder.Line
+    textSize={textSize}
+    color={color}
+    width={width}
+    key={i}
+    style={{ marginBottom }}
+  />
 );
 
 /**
@@ -27,29 +31,33 @@ function Paragraph({
   width,
   lastLineWidth,
   firstLineWidth,
+  style,
 }) {
-  const lines = [];
   const lineRealNumber = lineNumber - 1;
 
-  for (let i = 0; i < lineNumber; i += 1) {
-    if (i === lineRealNumber) {
-      lines.push(
-        <View key={i}>
-          <Placeholder.Line textSize={textSize} color={color} width={lastLineWidth} />
-        </View>,
-      );
-    } else if (i === 0) {
-      lines.push(prepareLine(i, lineSpacing, textSize, color, firstLineWidth));
-    } else {
-      lines.push(
-        <View key={i} style={{ marginBottom: lineSpacing }}>
-          <Placeholder.Line textSize={textSize} color={color} width={width} />
-        </View>,
-      );
-    }
-  }
+  const lines = Array(lineNumber)
+    .fill(null)
+    .map((_, i) => {
+      if (i === lineRealNumber) {
+        return <Placeholder.Line textSize={textSize} color={color} width={lastLineWidth} key={i} />;
+      }
 
-  return <View>{lines}</View>;
+      if (i === 0) {
+        return prepareLine(i, lineSpacing, textSize, color, firstLineWidth);
+      }
+
+      return (
+        <Placeholder.Line
+          textSize={textSize}
+          color={color}
+          width={width}
+          key={i}
+          style={{ marginBottom: lineSpacing }}
+        />
+      );
+    });
+
+  return <View style={style}>{lines}</View>;
 }
 
 Paragraph.propTypes = {
@@ -60,6 +68,7 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
 };
 
 Paragraph.defaultProps = {
@@ -69,6 +78,7 @@ Paragraph.defaultProps = {
   width: '100%',
   lastLineWidth: '100%',
   firstLineWidth: '100%',
+  style: {},
 };
 
 export default Paragraph;

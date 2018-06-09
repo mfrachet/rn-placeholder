@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Placeholder from './../placeholder';
-import Paragraph from './../paragraph/paragraph';
+
+const styles = StyleSheet.create({
+  row: { flexDirection: 'row' },
+  container: { flex: 1 },
+});
 
 const positionElement = (position, textSize, color, size, hasRadius) => (
   <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
@@ -38,20 +42,19 @@ function ImageContent({
   firstLineWidth,
 }) {
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={styles.row}>
       {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
-      <View style={{ flex: 1 }}>
-        <Paragraph
-          animate={animate}
-          lineNumber={lineNumber}
-          textSize={textSize}
-          color={color}
-          width={width}
-          lastLineWidth={lastLineWidth}
-          firstLineWidth={firstLineWidth}
-          lineSpacing={lineSpacing}
-        />
-      </View>
+      <Placeholder.Paragraph
+        animate={animate}
+        lineNumber={lineNumber}
+        textSize={textSize}
+        color={color}
+        width={width}
+        lastLineWidth={lastLineWidth}
+        firstLineWidth={firstLineWidth}
+        lineSpacing={lineSpacing}
+        style={styles.container}
+      />
       {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
     </View>
   );
