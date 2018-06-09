@@ -17,9 +17,18 @@ const compose = (f, g) => x => f(g(x));
 export default {
   ImageContent: connect(ImageContent),
   Paragraph: connect(Paragraph),
-  Media: compose(connect, stylify(computeStyleMedia))(View),
-  Line: compose(connect, stylify(computeStyleLine))(View),
+  Media: compose(
+    connect,
+    stylify(computeStyleMedia),
+  )(View),
+  Line: compose(
+    connect,
+    stylify(computeStyleLine),
+  )(View),
   MultiWords: connect(MultiWords),
-  Box: compose(connect, stylify(computeStyleBox))(View),
+  Box: compose(
+    connect,
+    stylify(computeStyleBox),
+  )(View),
   connect,
 };
