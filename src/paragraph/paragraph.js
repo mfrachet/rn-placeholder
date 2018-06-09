@@ -31,6 +31,7 @@ function Paragraph({
   width,
   lastLineWidth,
   firstLineWidth,
+  style,
 }) {
   const lineRealNumber = lineNumber - 1;
 
@@ -56,7 +57,7 @@ function Paragraph({
       );
     });
 
-  return <View>{lines}</View>;
+  return <View style={style}>{lines}</View>;
 }
 
 Paragraph.propTypes = {
@@ -67,6 +68,7 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
+  style: PropTypes.shape({}),
 };
 
 Paragraph.defaultProps = {
@@ -76,6 +78,7 @@ Paragraph.defaultProps = {
   width: '100%',
   lastLineWidth: '100%',
   firstLineWidth: '100%',
+  style: {},
 };
 
 export default Paragraph;

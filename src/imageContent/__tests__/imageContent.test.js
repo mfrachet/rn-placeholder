@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { View } from 'react-native';
 import ImageContent from './../imageContent';
 import Placeholder from './../../placeholder';
-import Paragraph from './../../paragraph/paragraph';
 
 /** @test {ImageContent#render} */
 describe('ImageContent#render', () => {
@@ -28,7 +27,7 @@ describe('ImageContent#render', () => {
       />,
     );
     mediaWrapper = wrapper.find(Placeholder.Media);
-    paragraphWrapper = wrapper.find(Paragraph);
+    paragraphWrapper = wrapper.find(Placeholder.Paragraph);
   });
 
   it('should have a Media', () => {
@@ -121,7 +120,7 @@ describe('ImageContent#render', () => {
     expect(
       wrapper
         .find(View)
-        .at(2)
+        .at(1)
         .prop('style'),
     ).toEqual(style);
   });
