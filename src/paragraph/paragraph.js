@@ -68,7 +68,7 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
-  style: PropTypes.shape({}),
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
 };
 
 Paragraph.defaultProps = {
