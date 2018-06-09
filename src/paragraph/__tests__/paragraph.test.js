@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { View } from 'react-native';
 import Placeholder from '../../placeholder';
 import Paragraph from './../paragraph';
 
@@ -22,10 +21,6 @@ describe('Paragraph#render', () => {
       />,
     );
     lineWrapper = wrapper.find(Placeholder.Line);
-  });
-
-  it('should have 11 View, 10 for the Lines and 1 for the Wrapper', () => {
-    expect(wrapper.find(View).length).toEqual(11);
   });
 
   it('should have 10 Lines, like the linNumber props', () => {
@@ -51,7 +46,7 @@ describe('Paragraph#render', () => {
   it('should have the 3 View with props lineSpacing equals to 10', () => {
     expect(
       wrapper
-        .find(View)
+        .find(Placeholder.Line)
         .at(2)
         .prop('style').marginBottom,
     ).toEqual(10);

@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import Placeholder from '../placeholder';
 
 const prepareLine = (i, marginBottom, textSize, color, width) => (
-  <View key={i} style={{ marginBottom }}>
-    <Placeholder.Line textSize={textSize} color={color} width={width} />
-  </View>
+  <Placeholder.Line
+    textSize={textSize}
+    color={color}
+    width={width}
+    key={i}
+    style={{ marginBottom }}
+  />
 );
 
 /**
@@ -34,22 +37,24 @@ function Paragraph({
   for (let i = 0; i < lineNumber; i += 1) {
     if (i === lineRealNumber) {
       lines.push(
-        <View key={i}>
-          <Placeholder.Line textSize={textSize} color={color} width={lastLineWidth} />
-        </View>,
+        <Placeholder.Line textSize={textSize} color={color} width={lastLineWidth} key={i} />,
       );
     } else if (i === 0) {
       lines.push(prepareLine(i, lineSpacing, textSize, color, firstLineWidth));
     } else {
       lines.push(
-        <View key={i} style={{ marginBottom: lineSpacing }}>
-          <Placeholder.Line textSize={textSize} color={color} width={width} />
-        </View>,
+        <Placeholder.Line
+          textSize={textSize}
+          color={color}
+          width={width}
+          key={i}
+          style={{ marginBottom: lineSpacing }}
+        />,
       );
     }
   }
 
-  return <View>{lines}</View>;
+  return <React.Fragment>{lines}</React.Fragment>;
 }
 
 Paragraph.propTypes = {
