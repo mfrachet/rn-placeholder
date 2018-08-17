@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { View } from 'react-native';
-import ImageContent from './../imageContent';
-import Placeholder from './../../placeholder';
+import ImageContent from '../imageContent';
+import Placeholder from '../../placeholder';
 
 /** @test {ImageContent#render} */
 describe('ImageContent#render', () => {

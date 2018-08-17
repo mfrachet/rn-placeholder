@@ -4,7 +4,12 @@ import Placeholder from 'rn-placeholder';
 
 const customPlaceholder = (props) => {
   const style = { backgroundColor: props.bgColor };
-  return <Text style={style}>I m a custom loader with props bgColor = {props.bgColor}</Text>;
+  return (
+    <Text style={style}>
+I m a custom loader with props bgColor =
+      {props.bgColor}
+    </Text>
+  );
 };
 
 customPlaceholder.propTypes = {

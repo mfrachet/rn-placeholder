@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Placeholder from '../../placeholder';
-import Paragraph from './../paragraph';
+import Paragraph from '../paragraph';
 
 /** @test {Paragraph#render} */
 describe('Paragraph#render', () => {

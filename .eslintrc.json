@@ -1,12 +1,17 @@
 {
   "extends": "airbnb",
-  "plugins": ["react", "jsx-a11y", "import"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
   "rules": {
     "react/jsx-filename-extension": "off",
     "jsx-a11y/img-has-alt": "off",
     "jsx-a11y/href-no-hash": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "import/no-cycle": "off"
   },
   "env": {
     "jest": true

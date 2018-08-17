@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import Placeholder from 'rn-placeholder';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import {
+  View, Text, Image, StyleSheet,
+} from 'react-native';
 
 const DEFAULT_SIZE = 12;
 const IMAGE_SIZE = 40;
@@ -57,7 +59,9 @@ const words = [
   },
 ];
 
-export default function Card({ image, username, content, isLoaded, date }) {
+export default function Card({
+  image, username, content, isLoaded, date,
+}) {
   const heightStyle = { height: 150 };
   return (
     <View style={[styles.card, !isLoaded && heightStyle]}>
