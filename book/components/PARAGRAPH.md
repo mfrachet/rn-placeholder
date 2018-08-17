@@ -6,7 +6,7 @@
 
 ### Usage
 
-```html
+```jsx
 <Placeholder.Paragraph
   lineNumber={3}
   textSize={16}

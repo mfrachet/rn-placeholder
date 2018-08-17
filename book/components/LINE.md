@@ -6,7 +6,7 @@
 
 ### Usage
 
-```html
+```jsx
 <Placeholder.Line
   color="#ffff00"
   width="77%"

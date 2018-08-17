@@ -10,8 +10,7 @@ If you want to display a built in animation, simply specify the props on your `P
   <img src ="./images/shine.gif" />
 </p>
 
-
-```html
+```jsx
 <Placeholder.ImageContent
   onReady={this.state.isReady}
   lineNumber={2}

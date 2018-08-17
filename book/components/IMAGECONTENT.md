@@ -6,7 +6,7 @@
 
 ### Usage
 
-```html
+```jsx
 <Placeholder.ImageContent
   position="right"
   hasRadius

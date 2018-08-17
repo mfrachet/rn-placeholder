@@ -18,7 +18,7 @@ $ yarn add rn-placeholder
 
 Import the module and display a placeholder inside your component:
 
-```javascript
+```jsx
 import Placeholder from 'rn-placeholder';
 
 /*...*/

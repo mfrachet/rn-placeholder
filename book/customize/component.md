@@ -23,7 +23,7 @@ export default Placeholder.connect(customPlaceholder);
 
 provides a custom component that we can use as a placeholder :
 
-```html
+```jsx
 <CustomPlaceholder onReady={isLoaded} bgColor="red" animate="fade">
   <ComponentToRenderAfterAsyncStuff />
 </CustomPlaceholder>

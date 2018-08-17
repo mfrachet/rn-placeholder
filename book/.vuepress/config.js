@@ -1,6 +1,7 @@
 module.exports = {
   base: '/rn-placeholder/',
   title: 'rn-placeholder',
+  head: [['script', { src: 'https://snack.expo.io/embed.js' }]],
   description:
     'Display some placeholder stuff before rendering your text or media content in React Native',
   serviceWorker: true,
@@ -15,7 +16,6 @@ module.exports = {
       { text: 'Medium', link: 'https://medium.com/@mfrachet' },
     ],
     sidebar: [
-      '/',
       {
         title: 'Getting started',
         collapsable: false,
