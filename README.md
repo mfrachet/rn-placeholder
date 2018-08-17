@@ -12,7 +12,6 @@ _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrache
 
 <p align="center">
 <img height="270" src="./book/placeholder.gif" />
-<img height="270" src="./book/shine.gif" />
 </p>
 
 ---
