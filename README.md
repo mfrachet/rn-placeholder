@@ -19,12 +19,12 @@ _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrache
 
 # Content
 
-* <a href="#usage">How to use it ?</a>
-* [Components available](./API.md)
-* [Creating a custom component](./API.md#custom)
-* [Using default animations](./ANIMATIONS.md#default)
-* [Using a custom animation](./ANIMATIONS.md#custom)
-* [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
+- <a href="#usage">How to use it ?</a>
+- [Components available](./API.md)
+- [Creating a custom component](./API.md#custom)
+- [Using default animations](./ANIMATIONS.md#default)
+- [Using a custom animation](./ANIMATIONS.md#custom)
+- [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
 
 <h1 name="#usage">Usage</h1>
 
