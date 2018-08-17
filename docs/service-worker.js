@@ -33,7 +33,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.html",
-    "revision": "c4781bd1451de92046f9ba41e6572bf6"
+    "revision": "b4bb66fe4645bcfcf87e6a9f78865954"
   },
   {
     "url": "48885636649741bf2951e403075102a8.gif",
@@ -45,7 +45,7 @@ self.__precacheManifest = [
   },
   {
     "url": "animations/builtin.html",
-    "revision": "b35b829af4c1891035be0fa4847d1a00"
+    "revision": "2003648879396b25d509768c31e51f08"
   },
   {
     "url": "assets/css/0.styles.8edcaad7.css",
@@ -108,36 +108,36 @@ self.__precacheManifest = [
     "revision": "f93cfea41cb0dd60f0f0d38738c1d4ec"
   },
   {
-    "url": "assets/js/app.dd6c4374.js",
-    "revision": "802b811e724512bed8f59d89d1801714"
+    "url": "assets/js/app.ac03fca3.js",
+    "revision": "5cf66d988dfecf42b58bb2509e0c97bd"
   },
   {
     "url": "components/imagecontent.html",
-    "revision": "f57f622ba96fbf93afa6160209fd212e"
+    "revision": "43cc5e8210aba2a6d8bd0b322f788cf8"
   },
   {
     "url": "components/line.html",
-    "revision": "6f598f3d4edbc7e6bd4ba4c696f027ce"
+    "revision": "5a2108105c7c6a515242e19688254a36"
   },
   {
     "url": "components/media.html",
-    "revision": "c107905666e9e4962da82d3ba646c038"
+    "revision": "f75fde55039d3ed142ebf981c32a0b54"
   },
   {
     "url": "components/multiwords.html",
-    "revision": "cf8d7543973185d40ef748d0e9ede95d"
+    "revision": "a403ec9d173da3260abad917d236c4c4"
   },
   {
     "url": "components/paragraph.html",
-    "revision": "4bba294474b5a0edcf9051d745ad649c"
+    "revision": "4e6688e404c0289d437dd47006b4ed56"
   },
   {
     "url": "customize/animation.html",
-    "revision": "bef3cd4f92dd3a53e765788890b2dd72"
+    "revision": "b7989bc48c860312da81016e11ca9127"
   },
   {
     "url": "customize/component.html",
-    "revision": "b76c386a7e2f6a87dae8c81ccbecf760"
+    "revision": "06c95e66992e21c7b71acc247afa7a10"
   },
   {
     "url": "e56399e6c801b375ed2a1c2e314d74c6.gif",
@@ -153,15 +153,15 @@ self.__precacheManifest = [
   },
   {
     "url": "getting-started/example.html",
-    "revision": "303144bc57c2df2a13eedcffa63eca2d"
+    "revision": "aeb60923fe90079242f20098afda56a6"
   },
   {
     "url": "getting-started/installation.html",
-    "revision": "13f0e33a39710ac6d4763d64df964401"
+    "revision": "e2044fccf1ccd7b9f2627038516a8dcb"
   },
   {
     "url": "index.html",
-    "revision": "18a6299384090e88935d83b43d082208"
+    "revision": "a2e8b850cbebfdfb3df01226fcadd0f4"
   },
   {
     "url": "shine.gif",
