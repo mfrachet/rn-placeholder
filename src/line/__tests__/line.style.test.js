@@ -1,4 +1,4 @@
-import lineStyle from './../line.style';
+import lineStyle from '../line.style';
 
 /** @test {LineStyle} */
 describe('LineStyle', () => {

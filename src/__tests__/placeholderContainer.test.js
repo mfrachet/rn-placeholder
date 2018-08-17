@@ -49,12 +49,10 @@ describe('connect', () => {
   });
 
   it('should  throw an error if the animate prop doesnt exist in the Animations dictionnary', () => {
-    expect(() =>
-      getWrapper({
-        onReady: false,
-        animate: 'not-existing-one',
-      }),
-    ).toThrow();
+    expect(() => getWrapper({
+      onReady: false,
+      animate: 'not-existing-one',
+    })).toThrow();
   });
 
   it('should return a default component with specified props when no animations set', () => {

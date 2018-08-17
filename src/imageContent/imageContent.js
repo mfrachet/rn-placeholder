@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
-import Placeholder from './../placeholder';
+import Placeholder from '../placeholder';
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row' },

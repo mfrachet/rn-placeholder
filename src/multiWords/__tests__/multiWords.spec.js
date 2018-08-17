@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
-import MultiWords from './../multiWords';
-import Placeholder from './../../placeholder';
+import MultiWords from '../multiWords';
+import Placeholder from '../../placeholder';
 
 const TEXT_SIZE = 12;
 const words = [
@@ -69,13 +69,12 @@ describe('MultiWords#render', () => {
       const realIndex = index + 1;
       const view = wrapper.find(View).at(realIndex);
       const lastIndex = words.length;
-      const result =
-        lastIndex === realIndex
-          ? false
-          : {
-            borderRightWidth: 12,
-            borderRightColor: 'transparent',
-          };
+      const result = lastIndex === realIndex
+        ? false
+        : {
+          borderRightWidth: 12,
+          borderRightColor: 'transparent',
+        };
       expect(view.prop('style')[0]).toEqual(result);
     });
   });
