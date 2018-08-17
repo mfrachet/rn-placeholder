@@ -19,8 +19,8 @@
 
 ### API
 
-| Props  | Type | Default value | Description |
-| ------------- | ------------- |------------- |
-| `textSize`  | `Number` | `12`  | Text size of the line |
-| `color`  | `String` | `#efefef`  | The color of the line |
-| `width`  | `String` | `100%`  | The line width in percentage |
+| Props      | Type     | Default value | Description                  |
+| ---------- | -------- | ------------- | ---------------------------- |
+| `textSize` | `Number` | `12`          | Text size of the line        |
+| `color`    | `String` | `#efefef`     | The color of the line        |
+| `width`    | `String` | `100%`        | The line width in percentage |

@@ -19,8 +19,8 @@
 
 ### API
 
-| Props  | Type | Default value | Description |
-| ------------- | ------------- |------------- |
-| `size`  | `Number` | `40`  | Text media shape size |
-| `hasRadius`  | `Boolean` | `false`  | Do the shape have radius |
-| `color`  | `String` | `#efefef`  | The media shape color |
+| Props       | Type      | Default value | Description              |
+| ----------- | --------- | ------------- | ------------------------ |
+| `size`      | `Number`  | `40`          | Text media shape size    |
+| `hasRadius` | `Boolean` | `false`       | Do the shape have radius |
+| `color`     | `String`  | `#efefef`     | The media shape color    |

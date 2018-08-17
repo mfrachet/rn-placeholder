@@ -1,0 +1,59 @@
+$accentColor = #3F51B5
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282a36
+
+header.navbar {
+	background-color: $accentColor;
+}
+
+.navbar .site-name {
+	color: white;
+}
+
+div.custom-block.tip {
+	border-color: #E91E63;
+}
+
+a.nav-link {
+	color white;
+}
+
+a.nav-link:hover{
+	color white;
+	text-decoration: underline;
+}
+
+div.sidebar {
+	background-color: $borderColor;
+}
+
+@media (max-width: 719px)  {
+	.sidebar .nav-links {
+		display: none;
+	}
+}
+
+
+.language-html,
+.language-javascript,
+.language-jsx {
+
+	span.token.string {
+		color: #f1fa8c;
+	}
+	
+	span.token.tag .punctuation {
+		color: white;
+	}
+	span.token.keyword,span.token.operator, span.token.tag{
+		color: #ff79c6;
+	}
+	span.token.punctuation {
+		color: #ffb86c;
+	}
+
+	span.token.function {
+		color: #50fa7b;
+	}
+}

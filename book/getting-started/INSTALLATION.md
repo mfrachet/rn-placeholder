@@ -43,4 +43,4 @@ render() {
 
 The `onReady` props is available on every component. It manages the React element to display.
 
-In this example, when the value of `this.state.isReady` will change to something *existing*, the `<Text>` component will be rendered instead of the `Placeholder.ImageContent`.
+In this example, when the value of `this.state.isReady` will change to something _existing_, the `<Text>` component will be rendered instead of the `Placeholder.ImageContent`.

@@ -28,13 +28,13 @@ render() {
 
 ### API
 
-| Props  | Type | Default value | Description |
-| ------------- | ------------- |------------- |
-| `words`  | `Array<Word>` | `[]`  | An array of word definition |
-| `textSize`  | `Number` | `12`  | Text size of the line |
+| Props      | Type          | Default value | Description                 |
+| ---------- | ------------- | ------------- | --------------------------- |
+| `words`    | `Array<Word>` | `[]`          | An array of word definition |
+| `textSize` | `Number`      | `12`          | Text size of the line       |
 
 **Word**
 
 ```javascript
-const word = { color: 'red', width: '30%' };
+const word = { color: "red", width: "30%" };
 ```
