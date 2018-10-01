@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const START_VALUE = 0;
 const END_VALUE = 100;
 const DURATION = 750;
+const useNativeDriver = true;
 
 const styles = StyleSheet.create({
   shine: {
@@ -27,9 +28,12 @@ const Shine = ({ children }) => {
       Animated.timing(animation, {
         toValue: END_VALUE,
         duration: DURATION,
+        useNativeDriver,
       }),
-    ]).start(() => {
-      start();
+    ]).start((e) => {
+      if (e.finished) {
+        start();
+      }
     });
   }
 
