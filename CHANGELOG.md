@@ -1,13 +1,46 @@
 # Change Log
 
+## [Unreleased](https://github.com/mfrachet/rn-placeholder/tree/HEAD)
+
+[Full Changelog](https://github.com/mfrachet/rn-placeholder/compare/v1.2.0...HEAD)
+
+**Fixed bugs:**
+
+- Cannot get Paragraph to render [\#46](https://github.com/mfrachet/rn-placeholder/issues/46)
+- Placeholder if child is responsible for the progress [\#30](https://github.com/mfrachet/rn-placeholder/issues/30)
+
+**Closed issues:**
+
+- Fix broken images [\#44](https://github.com/mfrachet/rn-placeholder/issues/44)
+- Add a license file [\#41](https://github.com/mfrachet/rn-placeholder/issues/41)
+- Placeholder.Media repeat and some requests [\#39](https://github.com/mfrachet/rn-placeholder/issues/39)
+
+**Merged pull requests:**
+
+- fix\(leak\): fixing shine animation to avoid leak [\#57](https://github.com/mfrachet/rn-placeholder/pull/57) ([mfrachet](https://github.com/mfrachet))
+- fix\(dependencies\): update dependencies [\#54](https://github.com/mfrachet/rn-placeholder/pull/54) ([mfrachet](https://github.com/mfrachet))
+- docs\(chore\): fixing chore documentation [\#53](https://github.com/mfrachet/rn-placeholder/pull/53) ([mfrachet](https://github.com/mfrachet))
+- fix\(docs\): removing docs [\#52](https://github.com/mfrachet/rn-placeholder/pull/52) ([mfrachet](https://github.com/mfrachet))
+- fix\(docs\): fix capitalization [\#51](https://github.com/mfrachet/rn-placeholder/pull/51) ([mfrachet](https://github.com/mfrachet))
+- fix\(doc\): fixing documentation [\#50](https://github.com/mfrachet/rn-placeholder/pull/50) ([mfrachet](https://github.com/mfrachet))
+- docs\(update\): moving to vuepress [\#49](https://github.com/mfrachet/rn-placeholder/pull/49) ([mfrachet](https://github.com/mfrachet))
+- refacor\(views\): flatten some view layers [\#48](https://github.com/mfrachet/rn-placeholder/pull/48) ([mfrachet](https://github.com/mfrachet))
+- feat\(deps\): updgrade rn and react deps [\#47](https://github.com/mfrachet/rn-placeholder/pull/47) ([mfrachet](https://github.com/mfrachet))
+- feat\(style\): capabilities to style on components [\#45](https://github.com/mfrachet/rn-placeholder/pull/45) ([mfrachet](https://github.com/mfrachet))
+- License [\#42](https://github.com/mfrachet/rn-placeholder/pull/42) ([mfrachet](https://github.com/mfrachet))
+- Update API.md [\#40](https://github.com/mfrachet/rn-placeholder/pull/40) ([nonotest](https://github.com/nonotest))
+- Changelog v1.2.0 [\#37](https://github.com/mfrachet/rn-placeholder/pull/37) ([mfrachet](https://github.com/mfrachet))
+
 ## [v1.2.0](https://github.com/mfrachet/rn-placeholder/tree/v1.2.0) (2017-12-20)
 [Full Changelog](https://github.com/mfrachet/rn-placeholder/compare/v1.1.0...v1.2.0)
 
+**Implemented enhancements:**
+
+- Adding primitives [\#17](https://github.com/mfrachet/rn-placeholder/issues/17)
 
 **Closed issues:**
 
 - Add useNativeDriver to improve performance [\#32](https://github.com/mfrachet/rn-placeholder/issues/32)
-- Adding primitives [\#17](https://github.com/mfrachet/rn-placeholder/issues/17)
 
 **Merged pull requests:**
 
