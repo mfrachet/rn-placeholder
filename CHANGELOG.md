@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/mfrachet/rn-placeholder/tree/HEAD)
-
-[Full Changelog](https://github.com/mfrachet/rn-placeholder/compare/v1.2.0...HEAD)
+## [v1.3.0](https://github.com/mfrachet/rn-placeholder/tree/v1.3.0) (2018-10-10)
+[Full Changelog](https://github.com/mfrachet/rn-placeholder/compare/v1.2.0...v1.3.0)
 
 **Fixed bugs:**
 
@@ -17,6 +16,7 @@
 
 **Merged pull requests:**
 
+- feat\(release\): 1.3.0 [\#58](https://github.com/mfrachet/rn-placeholder/pull/58) ([mfrachet](https://github.com/mfrachet))
 - fix\(leak\): fixing shine animation to avoid leak [\#57](https://github.com/mfrachet/rn-placeholder/pull/57) ([mfrachet](https://github.com/mfrachet))
 - fix\(dependencies\): update dependencies [\#54](https://github.com/mfrachet/rn-placeholder/pull/54) ([mfrachet](https://github.com/mfrachet))
 - docs\(chore\): fixing chore documentation [\#53](https://github.com/mfrachet/rn-placeholder/pull/53) ([mfrachet](https://github.com/mfrachet))
