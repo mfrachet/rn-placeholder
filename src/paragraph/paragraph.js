@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-import Placeholder from '../placeholder';
+import { Line } from '../components';
 
 const prepareLine = (i, marginBottom, textSize, color, width) => (
-  <Placeholder.Line
-    textSize={textSize}
-    color={color}
-    width={width}
-    key={i}
-    style={{ marginBottom }}
-  />
+  <Line textSize={textSize} color={color} width={width} key={i} style={{ marginBottom }} />
 );
 
 /**
@@ -39,7 +33,7 @@ function Paragraph({
     .fill(null)
     .map((_, i) => {
       if (i === lineRealNumber) {
-        return <Placeholder.Line textSize={textSize} color={color} width={lastLineWidth} key={i} />;
+        return <Line textSize={textSize} color={color} width={lastLineWidth} key={i} />;
       }
 
       if (i === 0) {
@@ -47,7 +41,7 @@ function Paragraph({
       }
 
       return (
-        <Placeholder.Line
+        <Line
           textSize={textSize}
           color={color}
           width={width}

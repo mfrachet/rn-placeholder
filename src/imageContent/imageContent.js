@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
-import Placeholder from '../placeholder';
+import Paragraph from '../paragraph/paragraph';
+import { Media } from '../components';
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row' },
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
 
 const positionElement = (position, textSize, color, size, hasRadius) => (
   <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-    <Placeholder.Media color={color} size={size} hasRadius={hasRadius} />
+    <Media color={color} size={size} hasRadius={hasRadius} />
   </View>
 );
 
@@ -44,7 +45,7 @@ function ImageContent({
   return (
     <View style={styles.row}>
       {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
-      <Placeholder.Paragraph
+      <Paragraph
         animate={animate}
         lineNumber={lineNumber}
         textSize={textSize}
