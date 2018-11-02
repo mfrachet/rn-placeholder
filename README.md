@@ -4,7 +4,7 @@
 
 Display some placeholder stuff before rendering your text or media content in React Native.
 
-_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web), [see examples](./EXAMPLE.md)_
+\_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
 
 _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)_
 
@@ -23,7 +23,6 @@ _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrache
 - [Creating a custom component](./API.md#custom)
 - [Using default animations](./ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
-- [Examples from React Native, Expo or React Native Web](./EXAMPLE.md)
 
 <h1 name="#usage">Usage</h1>
 

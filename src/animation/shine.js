@@ -28,9 +28,7 @@ const Shine = ({ children }) => {
         toValue: END_VALUE,
         duration: DURATION,
       }),
-    ]).start(() => {
-      start();
-    });
+    ]).start(e => e.finished && start());
   }
 
   start();
