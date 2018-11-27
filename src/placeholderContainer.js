@@ -7,7 +7,7 @@ const renderAnimation = (Animation, Component, props) => {
     throw new Error(`${Animation.name} doesnt exist in the current project`);
   }
   return (
-    <Animation>
+    <Animation {...props}>
       <Component {...props} />
     </Animation>
   );
