@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 /**
  * Create a repetitive Shine animation
  */
-const Shine = ({ backgroundColor, children }) => {
+const Shine = ({ animationColor, children }) => {
   const animation = new Animated.Value(0);
 
   function start() {
@@ -40,7 +40,7 @@ const Shine = ({ backgroundColor, children }) => {
   return (
     <View>
       {children}
-      <Animated.View style={[styles.shine, { marginLeft, backgroundColor }]} />
+      <Animated.View style={[styles.shine, { marginLeft, backgroundColor: animationColor }]} />
     </View>
   );
 };
@@ -52,7 +52,7 @@ Shine.propTypes = {
 
 Shine.defaultProps = {
   children: null,
-  backgroundColor: '#FFFFFF',
+  animationColor: '#FFFFFF',
 };
 
 export default Shine;
