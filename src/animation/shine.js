@@ -47,7 +47,7 @@ const Shine = ({ animationColor, children }) => {
 
 Shine.propTypes = {
   children: PropTypes.shape({}),
-  backgroundColor: PropTypes.string,
+  animationColor: PropTypes.string,
 };
 
 Shine.defaultProps = {
