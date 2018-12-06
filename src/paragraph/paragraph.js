@@ -4,7 +4,13 @@ import { View } from 'react-native';
 import { Line } from '../components';
 
 const prepareLine = (i, marginBottom, textSize, color, width) => (
-  <Line textSize={textSize} color={color} width={width} key={i} style={{ marginBottom }} />
+  <Line
+    textSize={textSize}
+    color={color}
+    width={width}
+    key={i}
+    style={{ marginBottom }}
+  />
 );
 
 /**
@@ -25,6 +31,7 @@ function Paragraph({
   width,
   lastLineWidth,
   firstLineWidth,
+  backgroundColor,
   style,
 }) {
   const lineRealNumber = lineNumber - 1;
@@ -51,7 +58,7 @@ function Paragraph({
       );
     });
 
-  return <View style={style}>{lines}</View>;
+  return <View style={(style, { backgroundColor })}>{lines}</View>;
 }
 
 Paragraph.propTypes = {
@@ -62,6 +69,7 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
+  backgroundColor: PropTypes.string,
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
 };
 
@@ -73,6 +81,7 @@ Paragraph.defaultProps = {
   lastLineWidth: '100%',
   firstLineWidth: '100%',
   style: {},
+  backgroundColor: '#FFFFFF',
 };
 
 export default Paragraph;

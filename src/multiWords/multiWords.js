@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function MultiWords({ words, textSize }) {
+function MultiWords({ words, textSize, backgroundColor }) {
   const borderStyle = {
     borderRightWidth: textSize,
     borderRightColor: 'transparent',
@@ -19,7 +19,7 @@ function MultiWords({ words, textSize }) {
   const lastIndex = words.length - 1;
 
   return (
-    <View style={styles.container}>
+    <View style={(styles.container, { backgroundColor })}>
       {words.map((word, index) => (
         <View key={index} style={[lastIndex !== index && borderStyle, { width: word.width }]}>
           <Line textSize={textSize} color={word.color} />
@@ -37,11 +37,13 @@ MultiWords.propTypes = {
     }),
   ),
   textSize: PropTypes.number,
+  backgroundColor: PropTypes.string,
 };
 
 MultiWords.defaultProps = {
   words: [],
   textSize: 12,
+  backgroundColor: '#FFFFFF',
 };
 
 export default MultiWords;

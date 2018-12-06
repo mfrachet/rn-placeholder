@@ -41,9 +41,10 @@ function ImageContent({
   width,
   lastLineWidth,
   firstLineWidth,
+  backgroundColor,
 }) {
   return (
-    <View style={styles.row}>
+    <View style={(styles.row, { backgroundColor })}>
       {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
       <Paragraph
         animate={animate}
@@ -54,6 +55,7 @@ function ImageContent({
         lastLineWidth={lastLineWidth}
         firstLineWidth={firstLineWidth}
         lineSpacing={lineSpacing}
+        backgroundColor={backgroundColor}
         style={styles.container}
       />
       {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
@@ -73,6 +75,7 @@ ImageContent.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
+  backgroundColor: PropTypes.string,
 };
 
 ImageContent.defaultProps = {
@@ -86,6 +89,7 @@ ImageContent.defaultProps = {
   width: '100%',
   lastLineWidth: '100%',
   firstLineWidth: '100%',
+  backgroundColor: '#FFFFFF',
 };
 
 export default ImageContent;
