@@ -1,2 +1,6 @@
-./Example
-./book
+docs
+book
+ANIMATIONS.md
+API.md
+src/**/*.test.js
+src/**/*.spec.js
