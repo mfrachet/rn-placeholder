@@ -1,3 +1,6 @@
-import Placeholder from './src/placeholder';
-
-export default Placeholder;
+/* eslint-disable global-require */
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./lib/prod');
+} else {
+  module.exports = require('./lib/dev');
+}

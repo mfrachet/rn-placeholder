@@ -22,7 +22,11 @@
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
     "test:auto": "./node_modules/.bin/jest --watch",
-    "build:doc": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
+    "build:doc": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "prepublishOnly": "npm run release",
+    "release": "npm run build:dev && npm run build:prod"
   },
   "pre-commit": [
     "test",
@@ -31,9 +35,14 @@
   "dependencies": {
     "prop-types": "15.6.2"
   },
+  "peerDependencies": {
+    "react": "^16.4.2"
+  },
   "devDependencies": {
-    "babel-jest": "23.4.2",
-    "babel-preset-react-native": "4.0.0",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.4.0",
     "coveralls": "2.13.1",
     "enzyme": "3.4.3",
     "enzyme-adapter-react-16": "1.2.0",
@@ -42,7 +51,8 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
-    "jest": "23.5.0",
+    "jest": "^24.4.0",
+    "metro-react-native-babel-preset": "^0.53.0",
     "pre-commit": "1.2.2",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
@@ -50,6 +60,11 @@
     "react-dom": "16.4.2",
     "react-native": "0.56.0",
     "react-test-renderer": "16.4.2",
+    "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-replace": "^2.1.0",
     "vuepress": "0.13.1"
   },
   "jest": {
