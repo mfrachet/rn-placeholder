@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`placeholder should be wrapped with a CustomAnimation when the customAnimation prop is set 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should be wrapped with a custom animation when customAnimation prop do exist 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should be wrapped with a custom when animate prop is se to "fade" 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should be wrapped with an Animation when animate prop is se to "fade" 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should be wrapped with an Animation when animate prop is se to "fade" 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should be wrapped with an Animation when animate prop is se to "fade" 3`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    animation="fade"
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    isReady={true}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <placeHolder
+          animate={null}
+          customAnimate={null}
+          onReady={false}
+        />,
+        <placeHolder
+          animate={null}
+          customAnimate={null}
+          onReady={false}
+        />,
+        <placeHolder
+          animate={null}
+          customAnimate={null}
+          onReady={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "animate": null,
+          "children": null,
+          "customAnimate": null,
+          "onReady": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "animate": null,
+          "children": null,
+          "customAnimate": null,
+          "onReady": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "animate": null,
+          "children": null,
+          "customAnimate": null,
+          "onReady": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <placeHolder
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+          />,
+          <placeHolder
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+          />,
+          <placeHolder
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "animate": null,
+            "children": null,
+            "customAnimate": null,
+            "onReady": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "animate": null,
+            "children": null,
+            "customAnimate": null,
+            "onReady": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "animate": null,
+            "children": null,
+            "customAnimate": null,
+            "onReady": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`placeholder shouldnt display anything when the isReady prop is false 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Placeholder
+    isReady={false}
+  >
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+    />
+  </Placeholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
