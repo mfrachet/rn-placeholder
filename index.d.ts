@@ -61,11 +61,7 @@
      /**
      * Number of lines to display.
      */
-    lineNumber?: number;
-     /**
-     * Space between the lines.
-     */
-    lineSpacing?: number;
+    lineNumber?: number;   
      /**
      * Text size of the lines.
      */

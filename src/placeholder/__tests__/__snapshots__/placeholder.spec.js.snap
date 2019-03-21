@@ -46,6 +46,8 @@ exports[`placeholder should be wrapped with an Animation when animate prop is se
 </Fade>
 `;
 
+exports[`placeholder should display the whenReadyRender when isReady is true 1`] = `<whenReadyRender />`;
+
 exports[`placeholder should match snapshot 1`] = `
 <View>
   <placeHolder
@@ -69,4 +71,4 @@ exports[`placeholder should match snapshot 1`] = `
 </View>
 `;
 
-exports[`placeholder shouldnt display nothing when the isReady prop is false 1`] = `""`;
+exports[`placeholder shouldnt display anything when whenReadyRender is undefined 1`] = `""`;

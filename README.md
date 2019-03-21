@@ -45,7 +45,6 @@ render() {
           size={60}
           animate="fade"
           lineNumber={4}
-          lineSpacing={5}
           lastLineWidth="30%"
           onReady={this.state.isReady}
         >

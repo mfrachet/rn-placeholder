@@ -20,7 +20,6 @@ describe('ImageContent#render', () => {
         animate="fade"
         lineNumber={8}
         textSize={13}
-        lineSpacing={10}
         color="#ff0000"
         width="99%"
         lastLineWidth="50%"
@@ -79,10 +78,6 @@ describe('ImageContent#render', () => {
     expect(paragraphWrapper.prop('firstLineWidth')).toEqual('30%');
   });
 
-  it('should have a Paragraph with props lineSpacing equals to 10', () => {
-    expect(paragraphWrapper.prop('lineSpacing')).toEqual(10);
-  });
-
   it('should have the second View (corresponding to the Media) with props style equals with the concerned on', () => {
     const style = {
       marginRight: 13,
@@ -106,7 +101,6 @@ describe('ImageContent#render', () => {
         animate="fade"
         lineNumber={8}
         textSize={13}
-        lineSpacing={10}
         color="#ff0000"
         width="99%"
         lastLineWidth="50%"

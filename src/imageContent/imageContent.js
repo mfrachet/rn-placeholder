@@ -23,7 +23,6 @@ const positionElement = (position, textSize, color, size, hasRadius) => (
  * @param animate Animation to do
  * @param lineNumber The number of line to display
  * @param textSize The line text size
- * @param lineSpacing The line spacing distance
  * @param color The media / line color
  * @param width The global lines width
  * @param lastLineWidth The last line width
@@ -36,7 +35,6 @@ function ImageContent({
   animate,
   lineNumber,
   textSize,
-  lineSpacing,
   color,
   width,
   lastLineWidth,
@@ -53,7 +51,6 @@ function ImageContent({
         width={width}
         lastLineWidth={lastLineWidth}
         firstLineWidth={firstLineWidth}
-        lineSpacing={lineSpacing}
         style={styles.container}
       />
       {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
@@ -68,7 +65,6 @@ ImageContent.propTypes = {
   animate: PropTypes.string,
   lineNumber: PropTypes.number.isRequired,
   textSize: PropTypes.number,
-  lineSpacing: PropTypes.number,
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
@@ -81,7 +77,6 @@ ImageContent.defaultProps = {
   hasRadius: false,
   animate: null,
   textSize: 12,
-  lineSpacing: 12,
   color: '#efefef',
   width: '100%',
   lastLineWidth: '100%',

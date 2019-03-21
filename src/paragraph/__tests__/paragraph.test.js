@@ -15,7 +15,6 @@ describe('Paragraph#render', () => {
         textSize={14}
         color="green"
         width="80%"
-        lineSpacing={10}
         lastLineWidth="40%"
         firstLineWidth="30%"
       />,
@@ -41,15 +40,6 @@ describe('Paragraph#render', () => {
 
   it('should have the second line with props width equals to 80%', () => {
     expect(lineWrapper.at(1).prop('width')).toEqual('80%');
-  });
-
-  it('should have the 3 View with props lineSpacing equals to 10', () => {
-    expect(
-      wrapper
-        .find(Line)
-        .at(2)
-        .prop('style').marginBottom,
-    ).toEqual(10);
   });
 
   it('should have the 10th Line with props width equals to 40%', () => {

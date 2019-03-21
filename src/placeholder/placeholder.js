@@ -17,16 +17,23 @@ const makeRoot = (animation) => {
 };
 
 const Placeholder = ({
-  isReady, animation, customAnimation, children, ...props
+  isReady,
+  animation,
+  customAnimation,
+  children,
+  whenReadyRender: WhenReadyRender,
+  ...props
 }) => {
   const Root = customAnimation || makeRoot(animation);
 
+  if (isReady) {
+    return WhenReadyRender ? <WhenReadyRender /> : null;
+  }
+
   return (
-    !isReady ? (
-      <Root {...props}>
-        {React.Children.toArray(children).map(element => React.cloneElement(element))}
-      </Root>
-    ) : null
+    <Root {...props}>
+      {React.Children.toArray(children).map(element => React.cloneElement(element))}
+    </Root>
   );
 };
 

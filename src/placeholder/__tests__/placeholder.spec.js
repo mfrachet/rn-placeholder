@@ -17,7 +17,8 @@ describe('placeholder', () => {
 
   beforeEach(() => {
     props = {
-      isReady: true,
+      isReady: false,
+      whenReadyRender: () => <View testID="when-ready-render" />,
     };
   });
 
@@ -25,8 +26,14 @@ describe('placeholder', () => {
     expect(getWrapper()).toMatchSnapshot();
   });
 
-  it('shouldnt display nothing when the isReady prop is false', () => {
-    props.isReady = false;
+  it('shouldnt display anything when whenReadyRender is undefined', () => {
+    props.isReady = true;
+    props.whenReadyRender = undefined;
+    expect(getWrapper()).toMatchSnapshot();
+  });
+
+  it('should display the whenReadyRender when isReady is true', () => {
+    props.isReady = true;
     expect(getWrapper()).toMatchSnapshot();
   });
 

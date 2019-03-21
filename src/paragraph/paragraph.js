@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Line } from '../components';
 
-const prepareLine = (i, marginBottom, textSize, color, width) => (
-  <Line textSize={textSize} color={color} width={width} key={i} style={{ marginBottom }} />
+const prepareLine = (i, textSize, color, width) => (
+  <Line textSize={textSize} color={color} width={width} key={i}  />
 );
 
 /**
  * Create a paragraph
  * @param lineNumber The number of lines
  * @param textSize The text size (for lines)
- * @param lineSpacing The line spacing size (for lines)
  * @param color The paragraph color
  * @param width The paragraph width
  * @param lastLineWidth The last line width
@@ -20,7 +19,6 @@ const prepareLine = (i, marginBottom, textSize, color, width) => (
 function Paragraph({
   lineNumber,
   textSize,
-  lineSpacing,
   color,
   width,
   lastLineWidth,
@@ -37,7 +35,7 @@ function Paragraph({
       }
 
       if (i === 0) {
-        return prepareLine(i, lineSpacing, textSize, color, firstLineWidth);
+        return prepareLine(i, textSize, color, firstLineWidth);
       }
 
       return (
@@ -46,7 +44,6 @@ function Paragraph({
           color={color}
           width={width}
           key={i}
-          style={{ marginBottom: lineSpacing }}
         />
       );
     });
@@ -57,7 +54,6 @@ function Paragraph({
 Paragraph.propTypes = {
   lineNumber: PropTypes.number.isRequired,
   textSize: PropTypes.number,
-  lineSpacing: PropTypes.number,
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
@@ -67,7 +63,6 @@ Paragraph.propTypes = {
 
 Paragraph.defaultProps = {
   textSize: 12,
-  lineSpacing: 12,
   color: '#efefef',
   width: '100%',
   lastLineWidth: '100%',
