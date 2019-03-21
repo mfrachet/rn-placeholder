@@ -1,73 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`placeholder should be wrapped with a CustomAnimation when the customAnimation prop is set 1`] = `
-<Component>
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".0"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".1"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".2"
-    onReady={false}
-  />
+<Component
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".0"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".1"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".2"
+      onReady={false}
+    />
+  </View>
 </Component>
 `;
 
 exports[`placeholder should be wrapped with an Animation when animate prop is set to "fade" 1`] = `
-<Fade>
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".0"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".1"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".2"
-    onReady={false}
-  />
+<Fade
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".0"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".1"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".2"
+      onReady={false}
+    />
+  </View>
 </Fade>
 `;
 
 exports[`placeholder should display the whenReadyRender when isReady is true 1`] = `<whenReadyRender />`;
 
+exports[`placeholder should have a component on the left side when renderLeft is provided 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Component />
+  <View>
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".0"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".1"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".2"
+      onReady={false}
+    />
+  </View>
+</View>
+`;
+
+exports[`placeholder should have a component on the right side when renderRight is provided 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".0"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".1"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".2"
+      onReady={false}
+    />
+  </View>
+  <Component />
+</View>
+`;
+
 exports[`placeholder should match snapshot 1`] = `
-<View>
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".0"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".1"
-    onReady={false}
-  />
-  <placeHolder
-    animate={null}
-    customAnimate={null}
-    key=".2"
-    onReady={false}
-  />
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".0"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".1"
+      onReady={false}
+    />
+    <placeHolder
+      animate={null}
+      customAnimate={null}
+      key=".2"
+      onReady={false}
+    />
+  </View>
 </View>
 `;
 

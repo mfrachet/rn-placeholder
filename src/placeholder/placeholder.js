@@ -1,6 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Animations from '../animation/animations';
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+  },
+});
 
 const makeRoot = (animation) => {
   if (animation) {
@@ -22,6 +28,8 @@ const Placeholder = ({
   customAnimation,
   children,
   whenReadyRender: WhenReadyRender,
+  renderLeft: Left,
+  renderRight: Right,
   ...props
 }) => {
   const Root = customAnimation || makeRoot(animation);
@@ -31,8 +39,10 @@ const Placeholder = ({
   }
 
   return (
-    <Root {...props}>
-      {React.Children.toArray(children).map(element => React.cloneElement(element))}
+    <Root style={styles.container} {...props}>
+      {Left && <Left />}
+      <View>{React.Children.toArray(children).map(element => React.cloneElement(element))}</View>
+      {Right && <Right />}
     </Root>
   );
 };

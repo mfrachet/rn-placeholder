@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { shallow } from 'enzyme';
 import { Line } from '../../components';
 import Placeholder from '../placeholder';
@@ -53,6 +53,18 @@ describe('placeholder', () => {
     props.customAnimation = componentProps => (
       <View testID="custom-animation" {...componentProps} />
     );
+
+    expect(getWrapper()).toMatchSnapshot();
+  });
+
+  it('should have a component on the left side when renderLeft is provided', () => {
+    props.renderLeft = () => <Text>Left content</Text>;
+
+    expect(getWrapper()).toMatchSnapshot();
+  });
+
+  it('should have a component on the right side when renderRight is provided', () => {
+    props.renderRight = () => <Text>Right content</Text>;
 
     expect(getWrapper()).toMatchSnapshot();
   });
