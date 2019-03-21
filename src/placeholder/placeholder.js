@@ -22,11 +22,11 @@ const Placeholder = ({
   const Root = customAnimation || makeRoot(animation);
 
   return (
-    isReady && (
+    !isReady ? (
       <Root {...props}>
         {React.Children.toArray(children).map(element => React.cloneElement(element))}
       </Root>
-    )
+    ) : null
   );
 };
 

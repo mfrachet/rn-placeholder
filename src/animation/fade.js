@@ -10,7 +10,7 @@ const useNativeDriver = true;
 /**
  * Create a repetitive fadein / fadeout animation
  */
-const Fade = ({ children }) => {
+const Fade = ({ children, style = {}, ...props }) => {
   const animation = new Animated.Value(START_VALUE);
 
   function start() {
@@ -33,8 +33,10 @@ const Fade = ({ children }) => {
   }
 
   start();
-  const style = { opacity: animation };
-  return <Animated.View style={style}>{children}</Animated.View>;
+
+  const customStyle = { opacity: animation };
+
+  return <Animated.View  style={[style, customStyle]} {...props}>{children}</Animated.View>;
 };
 
 Fade.propTypes = {

@@ -103,6 +103,7 @@
      */
     width?: number | string;
 }
+
  declare namespace Placeholder {
     /**
      * A React component for displaying a line placeholder.
@@ -124,6 +125,8 @@
      * A React component for displaying a box placeholder.
      */
     const Box: SFC<BoxProps>;
-     const connect: () => ReactNode;
+    const connect: () => ReactNode;
+
+   const Placeholder: SFC<GenericPlaceholderProps>;
 }
  export default Placeholder;
