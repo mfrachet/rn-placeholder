@@ -17,11 +17,17 @@ const makeRoot = (animation) => {
 };
 
 const Placeholder = ({
-  isReady, animation, customAnimation, ...props
+  isReady, animation, customAnimation, children, ...props
 }) => {
   const Root = customAnimation || makeRoot(animation);
 
-  return isReady && <Root {...props} />;
+  return (
+    isReady && (
+      <Root {...props}>
+        {React.Children.toArray(children).map(element => React.cloneElement(element))}
+      </Root>
+    )
+  );
 };
 
 export default Placeholder;
