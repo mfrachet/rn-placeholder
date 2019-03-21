@@ -32,9 +32,8 @@
     "prop-types": "15.6.2"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
+    "babel-core": "^7.2.0-bridge.0",
     "babel-jest": "24.1.0",
-    "babel-preset-react-native": "4.0.0",
     "coveralls": "2.13.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
@@ -45,13 +44,14 @@
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
     "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.52.0",
     "pre-commit": "1.2.2",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
-    "react-native": "0.56.0",
-    "react-test-renderer": "16.4.2",
+    "react": "16.6.3",
+    "react-dom": "16.8.3",
+    "react-native": "0.58.5",
+    "react-test-renderer": "16.6.3",
     "vuepress": "0.13.1"
   },
   "jest": {
@@ -61,6 +61,9 @@
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/Example/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }

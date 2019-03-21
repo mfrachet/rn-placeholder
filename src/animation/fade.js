@@ -38,7 +38,7 @@ const Fade = ({ children }) => {
 };
 
 Fade.propTypes = {
-  children: PropTypes.shape({}),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 };
 
 Fade.defaultProps = {

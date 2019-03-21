@@ -16,10 +16,12 @@ const makeRoot = (animation) => {
   return View;
 };
 
-export const Placeholder = ({
+const Placeholder = ({
   isReady, animation, customAnimation, ...props
 }) => {
-  const Root = customAnimation || makeRoot(animation, customAnimation);
+  const Root = customAnimation || makeRoot(animation);
 
   return isReady && <Root {...props} />;
 };
+
+export default Placeholder;
