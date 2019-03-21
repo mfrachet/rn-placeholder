@@ -5,7 +5,12 @@ import Animations from '../animation/animations';
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    flexDirection: 'row',
+    flex: 1
   },
+  centerElement: {
+    flex: 1,
+  }
 });
 
 const makeRoot = (animation) => {
@@ -41,7 +46,7 @@ const Placeholder = ({
   return (
     <Root style={styles.container} {...props}>
       {Left && <Left />}
-      <View>{React.Children.toArray(children).map(element => React.cloneElement(element))}</View>
+      <View style={styles.centerElement}>{React.Children.toArray(children).map(element => React.cloneElement(element))}</View>
       {Right && <Right />}
     </Root>
   );
