@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<Placeholder
+  style={Object {}}
+>
+  <Component
+    color="green"
+    textSize={14}
+    width="30%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="80%"
+  />
+  <Component
+    color="green"
+    textSize={14}
+    width="40%"
+  />
+</Placeholder>
+`;

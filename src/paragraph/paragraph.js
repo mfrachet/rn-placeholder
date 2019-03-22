@@ -1,21 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
-import { Line } from '../components';
+import Pl from '../placeholderContainer';
+import Placeholder from '../placeholder/placeholder';
 
-const prepareLine = (i, textSize, color, width) => (
-  <Line textSize={textSize} color={color} width={width} key={i}  />
-);
-
-/**
- * Create a paragraph
- * @param lineNumber The number of lines
- * @param textSize The text size (for lines)
- * @param color The paragraph color
- * @param width The paragraph width
- * @param lastLineWidth The last line width
- * @param firstLineWidth The first line width
- */
 function Paragraph({
   lineNumber,
   textSize,
@@ -23,32 +10,20 @@ function Paragraph({
   width,
   lastLineWidth,
   firstLineWidth,
-  style,
+  ...props
 }) {
-  const lineRealNumber = lineNumber - 1;
+  const lines = [];
 
-  const lines = Array(lineNumber)
-    .fill(null)
-    .map((_, i) => {
-      if (i === lineRealNumber) {
-        return <Line textSize={textSize} color={color} width={lastLineWidth} key={i} />;
-      }
-
-      if (i === 0) {
-        return prepareLine(i, textSize, color, firstLineWidth);
-      }
-
-      return (
-        <Line
-          textSize={textSize}
-          color={color}
-          width={width}
-          key={i}
-        />
-      );
-    });
-
-  return <View style={style}>{lines}</View>;
+  for (let i = 0; i < lineNumber; i++) {
+    if (i === 0) {
+      lines.push(<Pl.Line textSize={textSize} color={color} width={firstLineWidth} />);
+    } else if (i === lineNumber - 1) {
+      lines.push(<Pl.Line textSize={textSize} color={color} width={lastLineWidth} />);
+    } else {
+      lines.push(<Pl.Line textSize={textSize} color={color} width={width} />);
+    }
+  }
+  return <Placeholder {...props}>{lines}</Placeholder>;
 }
 
 Paragraph.propTypes = {
