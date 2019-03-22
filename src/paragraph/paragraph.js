@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Pl from '../placeholderContainer';
+import Pl from '../placeholder';
 import Placeholder from '../placeholder/placeholder';
 
 function Paragraph({
