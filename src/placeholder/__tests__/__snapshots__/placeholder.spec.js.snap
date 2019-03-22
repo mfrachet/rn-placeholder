@@ -4,28 +4,27 @@ exports[`placeholder should be wrapped with a CustomAnimation when the customAni
 <Component
   style={
     Object {
+      "flex": 1,
+      "flexDirection": "row",
       "width": "100%",
     }
   }
 >
-  <View>
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
       key=".0"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".1"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".2"
-      onReady={false}
     />
   </View>
 </Component>
@@ -35,28 +34,27 @@ exports[`placeholder should be wrapped with an Animation when animate prop is se
 <Fade
   style={
     Object {
+      "flex": 1,
+      "flexDirection": "row",
       "width": "100%",
     }
   }
 >
-  <View>
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
       key=".0"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".1"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".2"
-      onReady={false}
     />
   </View>
 </Fade>
@@ -68,29 +66,36 @@ exports[`placeholder should have a component on the left side when renderLeft is
 <View
   style={
     Object {
+      "flex": 1,
+      "flexDirection": "row",
       "width": "100%",
     }
   }
 >
-  <Component />
-  <View>
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+  <Text
+    style={
+      Object {
+        "marginRight": 12,
+      }
+    }
+  >
+    Left content
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
       key=".0"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".1"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".2"
-      onReady={false}
     />
   </View>
 </View>
@@ -100,31 +105,38 @@ exports[`placeholder should have a component on the right side when renderRight 
 <View
   style={
     Object {
+      "flex": 1,
+      "flexDirection": "row",
       "width": "100%",
     }
   }
 >
-  <View>
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
       key=".0"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".1"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".2"
-      onReady={false}
     />
   </View>
-  <Component />
+  <Text
+    style={
+      Object {
+        "marginLeft": 12,
+      }
+    }
+  >
+    Right content
+  </Text>
 </View>
 `;
 
@@ -132,28 +144,27 @@ exports[`placeholder should match snapshot 1`] = `
 <View
   style={
     Object {
+      "flex": 1,
+      "flexDirection": "row",
       "width": "100%",
     }
   }
 >
-  <View>
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Component
       key=".0"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".1"
-      onReady={false}
     />
-    <placeHolder
-      animate={null}
-      customAnimate={null}
+    <Component
       key=".2"
-      onReady={false}
     />
   </View>
 </View>

@@ -6,11 +6,17 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    flex: 1
+    flex: 1,
   },
   centerElement: {
     flex: 1,
-  }
+  },
+  leftSide: {
+    marginRight: 12,
+  },
+  rightSide: {
+    marginLeft: 12,
+  },
 });
 
 const makeRoot = (animation) => {
@@ -33,8 +39,8 @@ const Placeholder = ({
   customAnimation,
   children,
   whenReadyRender: WhenReadyRender,
-  renderLeft: Left,
-  renderRight: Right,
+  renderLeft,
+  renderRight,
   ...props
 }) => {
   const Root = customAnimation || makeRoot(animation);
@@ -45,9 +51,11 @@ const Placeholder = ({
 
   return (
     <Root style={styles.container} {...props}>
-      {Left && <Left />}
-      <View style={styles.centerElement}>{React.Children.toArray(children).map(element => React.cloneElement(element))}</View>
-      {Right && <Right />}
+      {renderLeft && renderLeft({ style: styles.leftSide })}
+      <View style={styles.centerElement}>
+        {React.Children.toArray(children).map(element => React.cloneElement(element))}
+      </View>
+      {renderRight && renderRight({ style: styles.rightSide })}
     </Root>
   );
 };

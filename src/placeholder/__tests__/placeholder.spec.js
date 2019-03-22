@@ -58,13 +58,13 @@ describe('placeholder', () => {
   });
 
   it('should have a component on the left side when renderLeft is provided', () => {
-    props.renderLeft = () => <Text>Left content</Text>;
+    props.renderLeft = otherProps => <Text {...otherProps}>Left content</Text>;
 
     expect(getWrapper()).toMatchSnapshot();
   });
 
   it('should have a component on the right side when renderRight is provided', () => {
-    props.renderRight = () => <Text>Right content</Text>;
+    props.renderRight = otherProps => <Text {...otherProps}>Right content</Text>;
 
     expect(getWrapper()).toMatchSnapshot();
   });
