@@ -49,11 +49,14 @@ const Placeholder = ({
     return WhenReadyRender ? <WhenReadyRender /> : null;
   }
 
+  const childrenArray = React.Children.toArray(children);
+  const sizeOfChildren = childrenArray.length;
+
   return (
     <Root style={styles.container} {...props}>
       {renderLeft && renderLeft({ style: styles.leftSide })}
       <View style={styles.centerElement}>
-        {React.Children.toArray(children).map(element => React.cloneElement(element))}
+        {childrenArray.map((element, index) => React.cloneElement(element, { noMargin: index === sizeOfChildren - 1 }))}
       </View>
       {renderRight && renderRight({ style: styles.rightSide })}
     </Root>
