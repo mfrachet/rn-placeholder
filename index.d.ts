@@ -3,6 +3,8 @@
 // Definitions by: Jan Hesters <https://github.com/janhesters>
 
  import { SFC, Component, ComponentType, ReactNode } from "react";
+ import { StyleProp, ViewStyle } from "react-native";
+
  export interface GenericPlaceholderProps {
     /**
      * How to animate the placeholder.
@@ -30,6 +32,10 @@
      * Width of the line, percentage available;
      */
     width?: string;
+     /**
+     * Arbitrary style object to pass to the Line.
+     */
+    style?: StyleProp<ViewStyle>
 }
  export interface MediaProps extends GenericPlaceholderProps {
     /**
@@ -44,6 +50,10 @@
      * The size of the media shape.
      */
     size?: number;
+     /**
+     * Arbitrary style object to pass to the Media.
+     */
+    style?: StyleProp<ViewStyle>
 }
  export interface ParagraphProps extends GenericPlaceholderProps {
     /**
@@ -102,6 +112,10 @@
      * The width of the component.
      */
     width?: number | string;
+     /**
+     * Arbitrary style object to pass to the Box.
+     */
+    style?: StyleProp<ViewStyle>
 }
  declare namespace Placeholder {
     /**
