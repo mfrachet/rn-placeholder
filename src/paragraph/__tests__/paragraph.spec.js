@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Paragraph from '../paragraph';
 
-describe('', () => {
+describe('Paragraph', () => {
   let props;
 
   const getWrapper = () => shallow(<Paragraph {...props} />);

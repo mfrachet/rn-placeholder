@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageContent should match snapshot 1`] = `
+<Placeholder
+  animate="fade"
+  renderLeft={[Function]}
+  renderRight={[Function]}
+>
+  <Paragraph
+    color="#ff0000"
+    firstLineWidth="30%"
+    lastLineWidth="50%"
+    lineNumber={8}
+    style={Object {}}
+    textSize={13}
+    width="99%"
+  />
+</Placeholder>
+`;
+
+exports[`ImageContent should match snapshot with left element 1`] = `
+<Placeholder
+  animate="fade"
+  renderLeft={[Function]}
+  renderRight={[Function]}
+>
+  <Paragraph
+    color="#ff0000"
+    firstLineWidth="30%"
+    lastLineWidth="50%"
+    lineNumber={8}
+    style={Object {}}
+    textSize={13}
+    width="99%"
+  />
+</Placeholder>
+`;
+
+exports[`ImageContent should match snapshot with right element 1`] = `
+<Placeholder
+  animate="fade"
+  renderLeft={[Function]}
+  renderRight={[Function]}
+>
+  <Paragraph
+    color="#ff0000"
+    firstLineWidth="30%"
+    lastLineWidth="50%"
+    lineNumber={8}
+    style={Object {}}
+    textSize={13}
+    width="99%"
+  />
+</Placeholder>
+`;

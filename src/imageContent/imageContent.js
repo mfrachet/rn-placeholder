@@ -1,23 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Paragraph from "../paragraph/paragraph";
-import { Media } from "../components";
-import Placeholder from "../placeholder/placeholder";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Paragraph from '../paragraph/paragraph';
+import { Media } from '../shapes';
+import Placeholder from '../placeholder/placeholder';
 
-/**
- * Create a new Image content
- * @param position Set the image position
- * @param size Media size
- * @param hasRadius Does the media contains radius ?
- * @param animate Animation to do
- * @param lineNumber The number of line to display
- * @param textSize The line text size
- * @param color The media / line color
- * @param width The global lines width
- * @param lastLineWidth The last line width
- * @param firstLineWidth the first line width
- */
-function ImageContent({
+const ImageContent = ({
   position,
   size,
   hasRadius,
@@ -28,17 +15,12 @@ function ImageContent({
   lastLineWidth,
   firstLineWidth,
   ...props
-}) {
+}) => {
+  const LeftComponent = mediaProps => position === 'left' && <Media hasRadius={hasRadius} {...mediaProps} />;
+  const RightComponent = mediaProps => position === 'right' && <Media hasRadius={hasRadius} {...mediaProps} />;
+
   return (
-    <Placeholder
-      {...props}
-      renderLeft={mediaProps =>
-        position === "left" && <Media hasRadius={hasRadius} {...mediaProps} />
-      }
-      renderRight={mediaProps =>
-        position === "right" && <Media hasRadius={hasRadius} {...mediaProps} />
-      }
-    >
+    <Placeholder {...props} renderLeft={LeftComponent} renderRight={RightComponent}>
       <Paragraph
         lineNumber={lineNumber}
         textSize={textSize}
@@ -49,7 +31,7 @@ function ImageContent({
       />
     </Placeholder>
   );
-}
+};
 
 ImageContent.propTypes = {
   position: PropTypes.string,
@@ -61,19 +43,19 @@ ImageContent.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
-  firstLineWidth: PropTypes.string
+  firstLineWidth: PropTypes.string,
 };
 
 ImageContent.defaultProps = {
-  position: "left",
+  position: 'left',
   size: 40,
   hasRadius: false,
   animate: null,
   textSize: 12,
-  color: "#efefef",
-  width: "100%",
-  lastLineWidth: "100%",
-  firstLineWidth: "100%"
+  color: '#efefef',
+  width: '100%',
+  lastLineWidth: '100%',
+  firstLineWidth: '100%',
 };
 
 export default ImageContent;

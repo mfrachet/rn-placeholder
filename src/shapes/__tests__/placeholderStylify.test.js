@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
-import stylify from '../placeholderStylify';
+import stylify from '../stylify';
 
 describe('stylify', () => {
   let computeStyle;

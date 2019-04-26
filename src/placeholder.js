@@ -1,19 +1,17 @@
-import connect from './placeholderContainer';
+import connect from './connect';
 import Paragraph from './paragraph/paragraph';
 import ImageContent from './imageContent/imageContent';
 import Line from './line/line';
-import MultiWords from './multiWords/multiWords';
 import Placeholder from './placeholder/placeholder';
-import { Media, Box } from './components';
+import { Media, Box } from './shapes';
 
 /**
  * Export the placeholder
  */
 export default {
   Placeholder,
-  ImageContent: connect(ImageContent),
-  Paragraph: connect(Paragraph),
-  MultiWords: connect(MultiWords),
+  ImageContent,
+  Paragraph,
   Media,
   Line,
   Box,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { shallow } from 'enzyme';
-import connect from '../placeholderContainer';
+import connect from '../connect';
 
 describe('connect', () => {
   const getWrapper = (props = {}) => {

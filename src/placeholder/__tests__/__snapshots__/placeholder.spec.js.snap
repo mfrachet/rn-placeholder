@@ -17,15 +17,15 @@ exports[`placeholder should be wrapped with a CustomAnimation when the customAni
       }
     }
   >
-    <Component
+    <Line
       key=".0"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".1"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".2"
       noMargin={true}
     />
@@ -50,15 +50,15 @@ exports[`placeholder should be wrapped with an Animation when animate prop is se
       }
     }
   >
-    <Component
+    <Line
       key=".0"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".1"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".2"
       noMargin={true}
     />
@@ -94,15 +94,15 @@ exports[`placeholder should have a component on the left side when renderLeft is
       }
     }
   >
-    <Component
+    <Line
       key=".0"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".1"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".2"
       noMargin={true}
     />
@@ -127,15 +127,15 @@ exports[`placeholder should have a component on the right side when renderRight 
       }
     }
   >
-    <Component
+    <Line
       key=".0"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".1"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".2"
       noMargin={true}
     />
@@ -169,15 +169,15 @@ exports[`placeholder should match snapshot 1`] = `
       }
     }
   >
-    <Component
+    <Line
       key=".0"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".1"
       noMargin={false}
     />
-    <Component
+    <Line
       key=".2"
       noMargin={true}
     />

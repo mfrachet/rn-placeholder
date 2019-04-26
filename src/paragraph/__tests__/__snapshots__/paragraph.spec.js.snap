@@ -1,56 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot 1`] = `
+exports[`Paragraph should match snapshot 1`] = `
 <Placeholder
   style={Object {}}
 >
-  <Component
+  <Line
     color="green"
+    key="0"
     textSize={14}
     width="30%"
   />
-  <Component
+  <Line
     color="green"
+    key="1"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="2"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="3"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="4"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="5"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="6"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="7"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="8"
     textSize={14}
     width="80%"
   />
-  <Component
+  <Line
     color="green"
+    key="9"
     textSize={14}
     width="40%"
   />
