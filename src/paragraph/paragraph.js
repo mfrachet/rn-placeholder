@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Pl from '../placeholder';
-import Placeholder from '../placeholder/placeholder';
+import React from "react";
+import PropTypes from "prop-types";
+import Pl from "../placeholder";
+import Placeholder from "../placeholder/placeholder";
 
-function Paragraph({
+const Paragraph = ({
   lineNumber,
   textSize,
   color,
@@ -11,20 +11,36 @@ function Paragraph({
   lastLineWidth,
   firstLineWidth,
   ...props
-}) {
+}) => {
   const lines = [];
 
   for (let i = 0; i < lineNumber; i++) {
     if (i === 0) {
-      lines.push(<Pl.Line textSize={textSize} color={color} width={firstLineWidth} />);
+      lines.push(
+        <Pl.Line
+          textSize={textSize}
+          color={color}
+          width={firstLineWidth}
+          key={i}
+        />
+      );
     } else if (i === lineNumber - 1) {
-      lines.push(<Pl.Line textSize={textSize} color={color} width={lastLineWidth} />);
+      lines.push(
+        <Pl.Line
+          textSize={textSize}
+          color={color}
+          width={lastLineWidth}
+          key={i}
+        />
+      );
     } else {
-      lines.push(<Pl.Line textSize={textSize} color={color} width={width} />);
+      lines.push(
+        <Pl.Line textSize={textSize} color={color} width={width} key={i} />
+      );
     }
   }
   return <Placeholder {...props}>{lines}</Placeholder>;
-}
+};
 
 Paragraph.propTypes = {
   lineNumber: PropTypes.number.isRequired,
@@ -33,16 +49,16 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})])
 };
 
 Paragraph.defaultProps = {
   textSize: 12,
-  color: '#efefef',
-  width: '100%',
-  lastLineWidth: '100%',
-  firstLineWidth: '100%',
-  style: {},
+  color: "#efefef",
+  width: "100%",
+  lastLineWidth: "100%",
+  firstLineWidth: "100%",
+  style: {}
 };
 
 export default Paragraph;

@@ -1,19 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
-import Paragraph from '../paragraph/paragraph';
-import { Media } from '../components';
-
-const styles = StyleSheet.create({
-  row: { flexDirection: 'row' },
-  container: { flex: 1 },
-});
-
-const positionElement = (position, textSize, color, size, hasRadius) => (
-  <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-    <Media color={color} size={size} hasRadius={hasRadius} />
-  </View>
-);
+import React from "react";
+import PropTypes from "prop-types";
+import Paragraph from "../paragraph/paragraph";
+import { Media } from "../components";
+import Placeholder from "../placeholder/placeholder";
 
 /**
  * Create a new Image content
@@ -32,29 +21,33 @@ function ImageContent({
   position,
   size,
   hasRadius,
-  animate,
   lineNumber,
   textSize,
   color,
   width,
   lastLineWidth,
   firstLineWidth,
+  ...props
 }) {
   return (
-    <View style={styles.row}>
-      {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
+    <Placeholder
+      {...props}
+      renderLeft={mediaProps =>
+        position === "left" && <Media hasRadius={hasRadius} {...mediaProps} />
+      }
+      renderRight={mediaProps =>
+        position === "right" && <Media hasRadius={hasRadius} {...mediaProps} />
+      }
+    >
       <Paragraph
-        animate={animate}
         lineNumber={lineNumber}
         textSize={textSize}
         color={color}
         width={width}
         lastLineWidth={lastLineWidth}
         firstLineWidth={firstLineWidth}
-        style={styles.container}
       />
-      {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
-    </View>
+    </Placeholder>
   );
 }
 
@@ -68,19 +61,19 @@ ImageContent.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
-  firstLineWidth: PropTypes.string,
+  firstLineWidth: PropTypes.string
 };
 
 ImageContent.defaultProps = {
-  position: 'left',
+  position: "left",
   size: 40,
   hasRadius: false,
   animate: null,
   textSize: 12,
-  color: '#efefef',
-  width: '100%',
-  lastLineWidth: '100%',
-  firstLineWidth: '100%',
+  color: "#efefef",
+  width: "100%",
+  lastLineWidth: "100%",
+  firstLineWidth: "100%"
 };
 
 export default ImageContent;
