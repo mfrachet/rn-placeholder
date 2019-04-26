@@ -4,9 +4,7 @@
 
 Display some placeholder stuff before rendering your text or media content in React Native.
 
-\_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
-
-_New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)_
+Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
 
 ---
 
@@ -19,9 +17,9 @@ _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrache
 # Content
 
 - <a href="#usage">How to use it ?</a>
-- [Components available](./API.md)
-- [Creating a custom component](./API.md#custom)
-- [Using default animations](./ANIMATIONS.md#default)
+- [Components available](./docs/COMPONENTS.md)
+- [Creating a custom component](./docs/CUSTOM_COMPONENT.md)
+- [Using default animations](./docs/ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
 
 <h1 name="#usage">Usage</h1>
@@ -29,31 +27,38 @@ _New documentation available [mfrachet.github.io/rn-placeholder](https://mfrache
 ### Installation
 
 ```javascript
-$ npm install rn-placeholder --save
+$ yarn add rn-placeholder
 ```
 
 ### In your code
 
-```javascript
-import Placeholder from 'rn-placeholder';
+_This is a new API coming from v2. However, the v1 APIs are still available in [components available](./docs/COMPONENTS.md)_
 
-/*...*/
-render() {
-    return (
-      <View>
-        <Placeholder.ImageContent
-          size={60}
-          animate="fade"
-          lineNumber={4}
-          lastLineWidth="30%"
-          onReady={this.state.isReady}
-        >
-          <Text>Placeholder has finished :D</Text>
-        </Placeholder.ImageContent>
-      </View>
-    );
-  }
-/*...*/
+```jsx
+import Placeholder, { Line, Media } from "rn-placeholder";
+
+const ComponentLoaded = () => <Text>I'm loaded!</Text>;
+
+const MyComponent = () => {
+  const [isReady, setReady] = useState(false);
+
+  // your logic
+
+  return (
+    <Placeholder
+      isReady={isReady}
+      animation="fade"
+      whenReadyRender={ComponentLoaded}
+      renderLeft={mediaProps => <Media hasRadius {...mediaProps} />}
+      renderLeft={mediaProps => <Media {...mediaProps} />}
+    >
+      <Line width="70%" />
+      <Line />
+      <Line />
+      <Line width="30%" />
+    </Placeholder>
+  );
+};
 ```
 
-When the value of `this.state.isReady` changes to something _existing_, the `<Text>` component will be rendered
+When the value of `this.state.isReady` changes to something _existing_, the `ComponentLoaded` component will be rendered

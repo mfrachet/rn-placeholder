@@ -1,23 +1,4 @@
-<p align="center">
-<img
-width="200" src="https://img15.hostingpics.net/pics/581590skeletonloader.gif"/>
-<img
-width="200" src="https://img15.hostingpics.net/pics/999328skeletonloaderios.gif"/>
-<img
-width="200" src="https://img15.hostingpics.net/pics/198734skeletonloaderandroid.gif"/>
-</p>
-
-
 # Components
-
-The project currently supports 5 different placeholder components.
-
-Each of this components are wrapped in a HOC that brings two others (optional) props :
-
-- `animate: String`: An optional animation available in the `src/animations` folder (see also [Animations](ANIMATIONS.md)
-- `onReady: any`: A value. If it's different from `null` / `undefined` / `empty string` / `0`, the component children are rendered. This props creates the loading feeling and the component apparition when content is loaded.
-- `customAnimate: React.Component`: A custom animation represented by a `React.Component`
-
 
 Navigate the API documentation :
 
@@ -41,10 +22,7 @@ Display a simple line on the screen.
 #### Example
 
 ```javascript
-<Placeholder.Line
-  color="#ffff00"
-  width="77%"
-/>
+<Line color="#ffff00" width="77%" />
 ```
 
 <h2 name="media">Media</h2>
@@ -60,11 +38,7 @@ Display a shape that represent a media placeholder
 #### Example
 
 ```javascript
-<Placeholder.Media
-  size={70}
-  color="#0000ff"
-  hasRadius
-/>
+<Media size={70} color="#0000ff" hasRadius />
 ```
 
 <h2 name="paragraph">Paragraph</h2>
@@ -84,7 +58,7 @@ Display a set of lines called a Paragraph
 #### Example
 
 ```javascript
-<Placeholder.Paragraph
+<Paragraph
   lineNumber={3}
   textSize={16}
   lineSpacing={5}
@@ -115,7 +89,7 @@ Display a Media on the left / right part of a Paragraph
 #### Example
 
 ```javascript
-<Placeholder.ImageContent
+<ImageContent
   position="right"
   hasRadius
   lineNumber={5}
@@ -133,6 +107,7 @@ Display a Media on the left / right part of a Paragraph
 Display a generic rectangle shape with customisable width, height, color and border radius
 
 #### Props available
+
 - `height: Number | String`: the height of the component (default: `50`)
 - `width: Number | String`: the width of the component (default: `50`)
 - `radius: Number`: the border radius of the component (default: `0`)
@@ -141,31 +116,30 @@ Display a generic rectangle shape with customisable width, height, color and bor
 #### Example
 
 ```javascript
-<Placeholder.Box
-  height={50}
-  width="100%"
-  radius={5}
-  color="teal"
-/>
+<Box height={50} width="100%" radius={5} color="teal" />
 ```
 
 <h2 name="custom">Custom components</h2>
 
-You can create your own placeholder component based on your own ones. Based on that, we're exposing a `Placeholder.connect` function that returns a new `ComponentContainer`.
+You can create your own placeholder component based on your own ones. Based on that, we're exposing a `connect` function that returns a new `ComponentContainer`.
 
-This container allows you to use the `onReady` props that will automatically display the placeholder children when its value is true. It also gives you access to the `animate` props that works just as described before, and so, you can take advent from the prebuilt animations of this project.
+This container allows you to use the `onReady` props that will automatically display the placeholder children when its value is true. It also gives you access to the `animation` props that works just as described before, and so, you can take advent from the prebuilt animations of this project.
 
-Taken from the [Example/customPlaceholder.js](./Example/customPlaceholder.js) :
+Taken from the [Example/customjs](./Example/customjs) :
 
 ```javascript
-import React from 'react';
-import { Text } from 'react-native';
-import Placeholder from 'rn-placeholder';
+import React from "react";
+import { Text } from "react-native";
+import Placeholder from "rn-placeholder";
 
-const customPlaceholder = (props) => {
+const customPlaceholder = props => {
   const style = { backgroundColor: props.bgColor };
-  return <Text style={style}>I m a custom loader with props bgColor = {props.bgColor}</Text>;
+  return (
+    <Text style={style}>
+      I m a custom loader with props bgColor = {props.bgColor}
+    </Text>
+  );
 };
 
-export default Placeholder.connect(customPlaceholder);
+export default connect(customPlaceholder);
 ```
