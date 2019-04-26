@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Paragraph from '../paragraph/paragraph';
-import { Media } from '../shapes';
-import Placeholder from '../placeholder/placeholder';
+import React from "react";
+import PropTypes from "prop-types";
+import Paragraph from "../paragraph/paragraph";
+import { Media } from "../shapes";
 
 const ImageContent = ({
   position,
@@ -16,20 +15,31 @@ const ImageContent = ({
   firstLineWidth,
   ...props
 }) => {
-  const LeftComponent = mediaProps => position === 'left' && <Media hasRadius={hasRadius} {...mediaProps} />;
-  const RightComponent = mediaProps => position === 'right' && <Media hasRadius={hasRadius} {...mediaProps} />;
+  const LeftComponent = mediaProps =>
+    position === "left" ? (
+      <Media hasRadius={hasRadius} {...mediaProps} />
+    ) : (
+      false
+    );
+  const RightComponent = mediaProps =>
+    position === "right" ? (
+      <Media hasRadius={hasRadius} {...mediaProps} />
+    ) : (
+      false
+    );
 
   return (
-    <Placeholder {...props} renderLeft={LeftComponent} renderRight={RightComponent}>
-      <Paragraph
-        lineNumber={lineNumber}
-        textSize={textSize}
-        color={color}
-        width={width}
-        lastLineWidth={lastLineWidth}
-        firstLineWidth={firstLineWidth}
-      />
-    </Placeholder>
+    <Paragraph
+      {...props}
+      lineNumber={lineNumber}
+      textSize={textSize}
+      color={color}
+      width={width}
+      lastLineWidth={lastLineWidth}
+      firstLineWidth={firstLineWidth}
+      renderLeft={LeftComponent}
+      renderRight={RightComponent}
+    />
   );
 };
 
@@ -43,19 +53,19 @@ ImageContent.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
-  firstLineWidth: PropTypes.string,
+  firstLineWidth: PropTypes.string
 };
 
 ImageContent.defaultProps = {
-  position: 'left',
+  position: "left",
   size: 40,
   hasRadius: false,
   animate: null,
   textSize: 12,
-  color: '#efefef',
-  width: '100%',
-  lastLineWidth: '100%',
-  firstLineWidth: '100%',
+  color: "#efefef",
+  width: "100%",
+  lastLineWidth: "100%",
+  firstLineWidth: "100%"
 };
 
 export default ImageContent;

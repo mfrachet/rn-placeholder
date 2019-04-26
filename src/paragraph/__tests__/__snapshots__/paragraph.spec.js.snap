@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph should match snapshot 1`] = `
-<Placeholder
-  style={Object {}}
->
+<Placeholder>
   <Line
     color="green"
     key="0"

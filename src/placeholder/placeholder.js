@@ -1,25 +1,25 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Animations from '../animation/animations';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Animations from "../animation/animations";
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    flexDirection: 'row',
-    flex: 1,
+    width: "100%",
+    flexDirection: "row",
+    flex: 1
   },
   centerElement: {
-    flex: 1,
+    flex: 1
   },
   leftSide: {
-    marginRight: 12,
+    marginRight: 12
   },
   rightSide: {
-    marginLeft: 12,
-  },
+    marginLeft: 12
+  }
 });
 
-const makeRoot = (animation) => {
+const makeRoot = animation => {
   if (animation) {
     const Animation = Animations[animation];
 
@@ -56,9 +56,11 @@ const Placeholder = ({
     <Root style={styles.container} {...props}>
       {renderLeft && renderLeft({ style: styles.leftSide })}
       <View style={styles.centerElement}>
-        {childrenArray.map((element, index) => React.cloneElement(element, {
-          noMargin: index === sizeOfChildren - 1,
-        }))}
+        {childrenArray.map((element, index) =>
+          React.cloneElement(element, {
+            noMargin: index === sizeOfChildren - 1
+          })
+        )}
       </View>
       {renderRight && renderRight({ style: styles.rightSide })}
     </Root>

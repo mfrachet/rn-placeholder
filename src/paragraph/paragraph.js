@@ -23,6 +23,7 @@ const Paragraph = ({
       lines.push(<Line textSize={textSize} color={color} width={width} key={i} />);
     }
   }
+
   return <Placeholder {...props}>{lines}</Placeholder>;
 };
 
@@ -33,7 +34,6 @@ Paragraph.propTypes = {
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
   firstLineWidth: PropTypes.string,
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
 };
 
 Paragraph.defaultProps = {
@@ -42,7 +42,6 @@ Paragraph.defaultProps = {
   width: '100%',
   lastLineWidth: '100%',
   firstLineWidth: '100%',
-  style: {},
 };
 
 export default Paragraph;
