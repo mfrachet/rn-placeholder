@@ -19,7 +19,7 @@ Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://gi
 - <a href="#usage">How to use it ?</a>
 - [Components available](./docs/COMPONENTS.md)
 - [Using default animations](./docs/ANIMATIONS.md#default)
-- [Using a custom animation](./ANIMATIONS.md#custom)
+- [Using a custom animation](./docs/ANIMATIONS.md#custom-animations)
 
 <h1 name="#usage">Usage</h1>
 

@@ -2,17 +2,26 @@
 
 ## Default animations
 
-The project comes with some default animations located in [src/animation](./src/animation). It simply animates the placeholder with visual effects while waiting the real content to appear.
+There are two built-in animations inside this library `shine` and `fade`. They can be used by passing them inside the `animation` prop:
 
-Adding an animation is possible using the [React Native Animated](https://facebook.github.io/react-native/docs/animations.html) component.
-
-You can contribute by creating your own placeholder animations and submitting a pull request.
+```javascript
+<Placeholder
+  animation="fade"
+  isReady={isReady}
+  whenReadyRender={ComponentLoaded}
+>
+  <Line width="70%" />
+  <Line />
+  <Line />
+  <Line width="30%" />
+</Placeholder>
+```
 
 ## Custom animations
 
 It's also possible to create custom animations using the `customAnimation` props of the `Placeholder` component:
 
-```jsx
+```javascript
 <Placeholder
   customAnimation={ColorAnimation}
   isReady={isReady}
