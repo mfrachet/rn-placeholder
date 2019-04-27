@@ -1,16 +1,16 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
 export const Line = ({
   textSize = 12,
-  color = "#efefef",
-  width = "100%",
+  color = '#efefef',
+  width = '100%',
   style,
   noMargin = false,
   ...props
 }) => {
   const height = textSize;
-  const alignSelf = "stretch";
+  const alignSelf = 'stretch';
   const backgroundColor = color;
   const borderRadius = textSize / 4;
   const marginBottom = noMargin ? 0 : textSize;
@@ -21,7 +21,7 @@ export const Line = ({
     backgroundColor,
     borderRadius,
     width,
-    marginBottom
+    marginBottom,
   };
 
   return <View style={[computedStyle, style]} {...props} />;

@@ -11,7 +11,9 @@
     "jsx-a11y/href-no-hash": "off",
     "import/no-extraneous-dependencies": "off",
     "react/no-array-index-key": "off",
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off"
   },
   "env": {
     "jest": true

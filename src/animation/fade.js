@@ -36,7 +36,11 @@ const Fade = ({ children, style = {}, ...props }) => {
 
   const customStyle = { opacity: animation };
 
-  return <Animated.View  style={[style, customStyle]} {...props}>{children}</Animated.View>;
+  return (
+    <Animated.View style={[style, customStyle]} {...props}>
+      {children}
+    </Animated.View>
+  );
 };
 
 Fade.propTypes = {

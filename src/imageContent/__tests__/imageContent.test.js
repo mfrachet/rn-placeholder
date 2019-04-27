@@ -12,7 +12,7 @@ describe('ImageContent', () => {
       position: 'left',
       size: 50,
       hasRadius: true,
-      animate: 'fade',
+      animation: 'fade',
       lineNumber: 8,
       textSize: 13,
       color: '#ff0000',

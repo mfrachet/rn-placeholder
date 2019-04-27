@@ -13,7 +13,10 @@ describe('computeStyleBox', () => {
 
   it('should have retrieved the computed styles', () => {
     const styles = computeStyleBox({
-      height: 1000, width: 1000, radius: 10, color: 'blue',
+      height: 1000,
+      width: 1000,
+      radius: 10,
+      color: 'blue',
     });
     expect(styles).toEqual({
       height: 1000,

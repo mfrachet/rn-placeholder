@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Paragraph } from "../paragraph/paragraph";
-import { Media } from "../shapes";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Paragraph } from '../paragraph/paragraph';
+import { Media } from '../shapes';
 
 export const ImageContent = ({
   position,
@@ -15,10 +15,8 @@ export const ImageContent = ({
   firstLineWidth,
   ...props
 }) => {
-  const LeftComponent = () =>
-    position === "left" ? <Media hasRadius={hasRadius} /> : null;
-  const RightComponent = () =>
-    position === "right" ? <Media hasRadius={hasRadius} /> : null;
+  const LeftComponent = () => (position === 'left' ? <Media hasRadius={hasRadius} /> : null);
+  const RightComponent = () => (position === 'right' ? <Media hasRadius={hasRadius} /> : null);
 
   return (
     <Paragraph
@@ -45,17 +43,17 @@ ImageContent.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
-  firstLineWidth: PropTypes.string
+  firstLineWidth: PropTypes.string,
 };
 
 ImageContent.defaultProps = {
-  position: "left",
+  position: 'left',
   size: 40,
   hasRadius: false,
   animation: null,
   textSize: 12,
-  color: "#efefef",
-  width: "100%",
-  lastLineWidth: "100%",
-  firstLineWidth: "100%"
+  color: '#efefef',
+  width: '100%',
+  lastLineWidth: '100%',
+  firstLineWidth: '100%',
 };

@@ -9,9 +9,14 @@ describe('MediaStyle', () => {
       borderRadius: 40,
       backgroundColor: 'blue',
     };
-    expect(mediaStyle({
-      size: 80, color: 'blue', width: '100%', hasRadius: true,
-    })).toEqual(style);
+    expect(
+      mediaStyle({
+        size: 80,
+        color: 'blue',
+        width: '100%',
+        hasRadius: true,
+      }),
+    ).toEqual(style);
   });
 
   it('should provide a style object that respects the constraints and parameters', () => {

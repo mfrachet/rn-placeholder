@@ -24,7 +24,7 @@ const makeRoot = (animation) => {
     const Animation = Animations[animation];
 
     if (!Animation) {
-      throw new Error(`Animation "${animation}" doesn\'t exist in the library`);
+      throw new Error(`Animation "${animation}" doesn't exist in the library`);
     }
 
     return Animation;
