@@ -10,17 +10,50 @@ You can contribute by creating your own placeholder animations and submitting a 
 
 ## Custom animations
 
-Recently, the project has allowed to use custom animations by using the HoC props : `customAnimate`. It accepts a `React.Component` representing an Animation.
+It's also possible to create custom animations using the `customAnimation` props of the `Placeholder` component:
 
-From the [Example Folder](./Example/customAnimation.js), we have created a simple animation based on color transitions.
+```jsx
+<Placeholder
+  customAnimation={ColorAnimation}
+  isReady={isReady}
+  whenReadyRender={ComponentLoaded}
+>
+  <Line width="70%" />
+  <Line />
+  <Line />
+  <Line width="30%" />
+</Placeholder>
+```
 
-To use this in the code, simply use a `Placeholder` component with the `customAnimate` props :
+The `ColorAnimation` can be defined this way:
 
 ```javascript
-<Placeholder.Media
-  onReady={this.state.isReadyMedia}
-  customAnimate={CustomAnimation}
->
-  <Text>Media loaded</Text>
-</Placeholder.Media>
+import React from "react";
+import { Animated } from "react-native";
+
+export const ColorAnimation = ({ children }) => {
+  const animation = new Animated.Value(0);
+
+  function start() {
+    return Animated.timing(animation, {
+      toValue: 100,
+      duration: 1500
+    }).start(e => {
+      if (e.finished) {
+        start();
+      }
+    });
+  }
+
+  start();
+
+  const backgroundColor = animation.interpolate({
+    inputRange: [0, 50, 100],
+    outputRange: ["yellow", "orange", "blue"]
+  });
+
+  const style = { backgroundColor, padding: 20 };
+
+  return <Animated.View style={style}>{children}</Animated.View>;
+};
 ```

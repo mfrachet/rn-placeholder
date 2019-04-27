@@ -15,7 +15,7 @@
 
 ### Composable API
 
-```jsx
+```javascript
 import Placeholder, { Line, Media } from "rn-placeholder";
 
 export const Compo = () => {
@@ -42,7 +42,7 @@ export const Compo = () => {
 
 ### Paragraph
 
-```jsx
+```javascript
 import { Paragraph } from "rn-placeholder";
 
 export const Compo = () => {
@@ -70,7 +70,7 @@ export const Compo = () => {
 
 ### ImageContent
 
-```jsx
+```javascript
 import { ImageContent } from "rn-placeholder";
 
 export const Compo = () => {
@@ -102,7 +102,7 @@ export const Compo = () => {
 
 #### By composing
 
-```jsx
+```javascript
 <Placeholder
   animation="fade"
   isReady={isReady}
@@ -116,7 +116,7 @@ export const Compo = () => {
 
 #### Using an HoC
 
-```jsx
+```javascript
 import { connect } from "rn-placeholder";
 
 const TextHoc = connect(() => <Text>Hello world</Text>);

@@ -2,6 +2,7 @@
   "name": "rn-placeholder",
   "version": "1.3.3",
   "private": false,
+  "license": "./LICENSE.md",
   "main": "./src/index.js",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
   "repository": {
