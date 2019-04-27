@@ -6,13 +6,9 @@ Display some placeholder stuff before rendering your text or media content in Re
 
 Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
 
----
-
 <p align="center">
 <img src="./docs/demo.gif" />
 </p>
-
----
 
 # Content
 

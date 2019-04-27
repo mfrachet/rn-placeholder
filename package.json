@@ -2,14 +2,13 @@
   "name": "rn-placeholder",
   "version": "1.3.3",
   "private": false,
-  "license": "./LICENSE.md",
+  "license": "MIT",
   "main": "./src/index.js",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
   "repository": {
     "type": "git",
     "url": "https://github.com/mfrachet/rn-placeholder"
   },
-  "license": "MIT",
   "description": "Display some placeholder stuff before rendering your text or media content in React Native",
   "keywords": [
     "react-native",
@@ -25,10 +24,11 @@
     "test:auto": "./node_modules/.bin/jest --watch",
     "build:doc": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
   },
-  "pre-commit": [
-    "test",
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
   "dependencies": {
     "prop-types": "15.6.2"
   },
@@ -44,9 +44,9 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
+    "husky": "^2.1.0",
     "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.52.0",
-    "pre-commit": "1.2.2",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
     "react": "16.6.3",
