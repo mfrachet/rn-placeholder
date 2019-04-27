@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageContent render should match snapshot 1`] = `
+<Paragraph
+  animation="fade"
+  color="#ff0000"
+  firstLineWidth="30%"
+  lastLineWidth="50%"
+  lineNumber={8}
+  renderLeft={[Function]}
+  renderRight={[Function]}
+  textSize={13}
+  width="99%"
+/>
+`;

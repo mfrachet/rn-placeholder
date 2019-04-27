@@ -1,74 +1,65 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
-import Paragraph from '../paragraph/paragraph';
-import { Media } from '../components';
+import { Paragraph } from '../paragraph/paragraph';
+import { Media } from '../shapes';
 
-const styles = StyleSheet.create({
-  row: { flexDirection: 'row' },
-  container: { flex: 1 },
-});
+export class ImageContent extends React.Component {
+  constructor(props) {
+    super(props);
 
-const positionElement = (position, textSize, color, size, hasRadius) => (
-  <View style={{ [position]: textSize, flexDirection: 'column', justifyContent: 'center' }}>
-    <Media color={color} size={size} hasRadius={hasRadius} />
-  </View>
-);
+    this.renderLeft = this.renderLeft.bind(this);
+    this.renderRight = this.renderRight.bind(this);
+  }
 
-/**
- * Create a new Image content
- * @param position Set the image position
- * @param size Media size
- * @param hasRadius Does the media contains radius ?
- * @param animate Animation to do
- * @param lineNumber The number of line to display
- * @param textSize The line text size
- * @param lineSpacing The line spacing distance
- * @param color The media / line color
- * @param width The global lines width
- * @param lastLineWidth The last line width
- * @param firstLineWidth the first line width
- */
-function ImageContent({
-  position,
-  size,
-  hasRadius,
-  animate,
-  lineNumber,
-  textSize,
-  lineSpacing,
-  color,
-  width,
-  lastLineWidth,
-  firstLineWidth,
-}) {
-  return (
-    <View style={styles.row}>
-      {position === 'left' && positionElement('marginRight', textSize, color, size, hasRadius)}
+  renderLeft() {
+    const { position, hasRadius } = this.props;
+
+    return position === 'left' ? <Media hasRadius={hasRadius} /> : null;
+  }
+
+  renderRight() {
+    const { position, hasRadius } = this.props;
+
+    return position === 'right' ? <Media hasRadius={hasRadius} /> : null;
+  }
+
+  render() {
+    const {
+      position,
+      size,
+      hasRadius,
+      lineNumber,
+      textSize,
+      color,
+      width,
+      lastLineWidth,
+      firstLineWidth,
+      ...props
+    } = this.props;
+
+    return (
       <Paragraph
-        animate={animate}
+        {...props}
         lineNumber={lineNumber}
         textSize={textSize}
         color={color}
         width={width}
         lastLineWidth={lastLineWidth}
         firstLineWidth={firstLineWidth}
-        lineSpacing={lineSpacing}
-        style={styles.container}
+        renderLeft={this.renderLeft}
+        renderRight={this.renderRight}
       />
-      {position === 'right' && positionElement('marginLeft', textSize, color, size, hasRadius)}
-    </View>
-  );
+    );
+  }
 }
 
 ImageContent.propTypes = {
   position: PropTypes.string,
   size: PropTypes.number,
   hasRadius: PropTypes.bool,
-  animate: PropTypes.string,
+  animation: PropTypes.string,
   lineNumber: PropTypes.number.isRequired,
   textSize: PropTypes.number,
-  lineSpacing: PropTypes.number,
   color: PropTypes.string,
   width: PropTypes.string,
   lastLineWidth: PropTypes.string,
@@ -79,13 +70,10 @@ ImageContent.defaultProps = {
   position: 'left',
   size: 40,
   hasRadius: false,
-  animate: null,
+  animation: null,
   textSize: 12,
-  lineSpacing: 12,
   color: '#efefef',
   width: '100%',
   lastLineWidth: '100%',
   firstLineWidth: '100%',
 };
-
-export default ImageContent;

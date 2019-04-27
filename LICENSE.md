@@ -1,4 +1,4 @@
-Copyright (c) 2004-2018 Marvin Frachet
+Copyright (c) 2004-Today Marvin Frachet
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

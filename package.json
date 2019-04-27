@@ -1,14 +1,14 @@
 {
   "name": "rn-placeholder",
-  "version": "1.3.3",
+  "version": "2.0.0",
   "private": false,
-  "main": "index.js",
+  "license": "MIT",
+  "main": "./src/index.js",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
   "repository": {
     "type": "git",
     "url": "https://github.com/mfrachet/rn-placeholder"
   },
-  "license": "MIT",
   "description": "Display some placeholder stuff before rendering your text or media content in React Native",
   "keywords": [
     "react-native",
@@ -21,36 +21,37 @@
     "format": "prettier-eslint --write \"src/**/*.js\" && prettier-eslint --write \"Example/components/**/*.js\"",
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
-    "test:auto": "./node_modules/.bin/jest --watch",
-    "build:doc": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
+    "test:auto": "./node_modules/.bin/jest --watch"
   },
-  "pre-commit": [
-    "test",
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
   "dependencies": {
     "prop-types": "15.6.2"
   },
   "devDependencies": {
-    "babel-jest": "23.4.2",
-    "babel-preset-react-native": "4.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
     "coveralls": "2.13.1",
-    "enzyme": "3.4.3",
-    "enzyme-adapter-react-16": "1.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
-    "jest": "23.5.0",
-    "pre-commit": "1.2.2",
+    "husky": "^2.1.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.52.0",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
-    "react-native": "0.56.0",
-    "react-test-renderer": "16.4.2",
-    "vuepress": "0.13.1"
+    "react": "16.6.3",
+    "react-dom": "16.8.3",
+    "react-native": "0.58.5",
+    "react-test-renderer": "16.6.3"
   },
   "jest": {
     "preset": "react-native",
@@ -59,6 +60,9 @@
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/Example/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }
