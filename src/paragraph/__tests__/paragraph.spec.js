@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Paragraph from '../paragraph';
+import { Paragraph } from '../paragraph';
 
 describe('Paragraph', () => {
   let props;

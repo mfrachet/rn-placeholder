@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { shallow } from 'enzyme';
-import Line from '../../line/line';
-import Placeholder from '../placeholder';
+import { Line } from '../../line/line';
+import { Placeholder } from '../placeholder';
 
 describe('placeholder', () => {
   let props;

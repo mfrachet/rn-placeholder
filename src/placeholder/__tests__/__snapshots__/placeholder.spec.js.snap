@@ -78,15 +78,17 @@ exports[`placeholder should have a component on the left side when renderLeft is
     }
   }
 >
-  <Text
+  <View
     style={
       Object {
         "marginRight": 12,
       }
     }
   >
-    Left content
-  </Text>
+    <Text>
+      Left content
+    </Text>
+  </View>
   <View
     style={
       Object {
@@ -140,15 +142,17 @@ exports[`placeholder should have a component on the right side when renderRight 
       noMargin={true}
     />
   </View>
-  <Text
+  <View
     style={
       Object {
         "marginLeft": 12,
       }
     }
   >
-    Right content
-  </Text>
+    <Text>
+      Right content
+    </Text>
+  </View>
 </View>
 `;
 
