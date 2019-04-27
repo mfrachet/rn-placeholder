@@ -33,6 +33,8 @@ const makeRoot = animation => {
   return View;
 };
 
+const withView = (fn, props) => <View {...props}>{fn()}</View>;
+
 export const Placeholder = ({
   isReady,
   animation,
@@ -54,7 +56,7 @@ export const Placeholder = ({
 
   return (
     <Root style={styles.container} {...props}>
-      {renderLeft && renderLeft({ style: styles.leftSide })}
+      {renderLeft && withView(renderLeft, { style: styles.leftSide })}
       <View style={styles.centerElement}>
         {childrenArray.map((element, index) =>
           React.cloneElement(element, {
@@ -62,7 +64,7 @@ export const Placeholder = ({
           })
         )}
       </View>
-      {renderRight && renderRight({ style: styles.rightSide })}
+      {renderRight && withView(renderRight, { style: styles.rightSide })}
     </Root>
   );
 };

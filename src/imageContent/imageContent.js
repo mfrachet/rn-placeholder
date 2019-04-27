@@ -15,18 +15,10 @@ export const ImageContent = ({
   firstLineWidth,
   ...props
 }) => {
-  const LeftComponent = mediaProps =>
-    position === "left" ? (
-      <Media hasRadius={hasRadius} {...mediaProps} />
-    ) : (
-      false
-    );
-  const RightComponent = mediaProps =>
-    position === "right" ? (
-      <Media hasRadius={hasRadius} {...mediaProps} />
-    ) : (
-      false
-    );
+  const LeftComponent = () =>
+    position === "left" ? <Media hasRadius={hasRadius} /> : null;
+  const RightComponent = () =>
+    position === "right" ? <Media hasRadius={hasRadius} /> : null;
 
   return (
     <Paragraph
