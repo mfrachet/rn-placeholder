@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Line from '../line';
+import React from "react";
+import { shallow } from "enzyme";
+import { Line } from "../line";
 
-describe('Line', () => {
+describe("Line", () => {
   let props;
 
   const getWrapper = () => shallow(<Line {...props} />);
@@ -11,13 +11,13 @@ describe('Line', () => {
     props = {};
   });
 
-  it('should match snapshot', () => {
+  it("should match snapshot", () => {
     expect(getWrapper()).toMatchSnapshot();
   });
 
-  it('should match snapshot with a bit more props and style', () => {
+  it("should match snapshot with a bit more props and style", () => {
     props.style = { marginTop: 1000 };
-    props.testID = '123';
+    props.testID = "123";
     props.noMargin = true;
 
     expect(getWrapper()).toMatchSnapshot();

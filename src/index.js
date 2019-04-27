@@ -1,16 +1,8 @@
-import connect from "./connect";
-import Paragraph from "./paragraph/paragraph";
-import ImageContent from "./imageContent/imageContent";
-import Line from "./line/line";
-import Placeholder from "./placeholder/placeholder";
-import { Media, Box } from "./shapes";
+import { Placeholder } from "./placeholder/placeholder";
+export { connect } from "./connect";
+export { Paragraph } from "./paragraph/paragraph";
+export { Line } from "./line/line";
+export { Media, Box } from "./shapes";
+export { ImageContent } from "./imageContent/imageContent";
 
-export default {
-  Placeholder,
-  ImageContent,
-  Paragraph,
-  Media,
-  Line,
-  Box,
-  connect
-};
+export default Placeholder;

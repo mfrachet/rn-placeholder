@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Paragraph from "../paragraph/paragraph";
+import { Paragraph } from "../paragraph/paragraph";
 import { Media } from "../shapes";
 
-const ImageContent = ({
+export const ImageContent = ({
   position,
   size,
   hasRadius,
@@ -67,5 +67,3 @@ ImageContent.defaultProps = {
   lastLineWidth: "100%",
   firstLineWidth: "100%"
 };
-
-export default ImageContent;

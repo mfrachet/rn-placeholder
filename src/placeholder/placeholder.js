@@ -33,7 +33,7 @@ const makeRoot = animation => {
   return View;
 };
 
-const Placeholder = ({
+export const Placeholder = ({
   isReady,
   animation,
   customAnimation,
@@ -66,5 +66,3 @@ const Placeholder = ({
     </Root>
   );
 };
-
-export default Placeholder;
