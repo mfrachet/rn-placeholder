@@ -9,7 +9,7 @@ Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://gi
 ---
 
 <p align="center">
-<img height="270" src="./book/placeholder.gif" />
+<img src="./docs/demo.gif" />
 </p>
 
 ---
@@ -18,7 +18,6 @@ Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://gi
 
 - <a href="#usage">How to use it ?</a>
 - [Components available](./docs/COMPONENTS.md)
-- [Creating a custom component](./docs/CUSTOM_COMPONENT.md)
 - [Using default animations](./docs/ANIMATIONS.md#default)
 - [Using a custom animation](./ANIMATIONS.md#custom)
 
@@ -48,7 +47,7 @@ const MyComponent = () => {
     <Placeholder
       isReady={isReady}
       animation="fade"
-      whenReadyRender={ComponentLoaded}
+      whenReadyRender={() => <Component />}
       renderLeft={() => <Media hasRadius />}
       renderRight={() => <Media />}
     >
@@ -61,4 +60,4 @@ const MyComponent = () => {
 };
 ```
 
-When the value of `this.state.isReady` changes to something _existing_, the `ComponentLoaded` component will be rendered
+When the value of `isReady` changes to something _truthy_, the `ComponentLoaded` will be rendered.

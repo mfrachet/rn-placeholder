@@ -1,145 +1,137 @@
 # Components
 
-Navigate the API documentation :
+<p align="center">
+<img src="../docs/demo-apis.gif" />
+</p>
 
-- <a href="#line">Line</a>
-- <a href="#media">Media</a>
-- <a href="#paragraph">Paragraph</a>
-- <a href="#imgcontent">Image content</a>
-- <a href="#box">Box</a>
-- <a href="#custom">Custom components</a>
+## Content
 
-<h2 name="line">Line</h2>
+- [Composable API](#composable-api)
+- [Paragraph](#paragraph)
+- [ImageContent](#imagecontent)
+- [Custom component](#custom-component)
+  - [By composing](#by-composing)
+  - [Using an HoC](#using-an-hoc)
 
-Display a simple line on the screen.
+### Composable API
 
-#### Props available
+```jsx
+import Placeholder, { Line, Media } from "rn-placeholder";
 
-- `textSize: String`: Text size of the Line
-- `color: String`: Color of the line
-- `width: String`: Width of the line, percentage available
+export const Compo = () => {
+  const [isReady, setReady] = useState(false);
 
-#### Example
+  // your logic
 
-```javascript
-<Line color="#ffff00" width="77%" />
-```
-
-<h2 name="media">Media</h2>
-
-Display a shape that represent a media placeholder
-
-#### Props available
-
-- `size: Number`: The size of the media shape (default: `40`)
-- `hasRadius: Boolean`: Is the shape rounded or not ? (default: `false`)
-- `color: String`: Color of the media shape (default: `#efefef`)
-
-#### Example
-
-```javascript
-<Media size={70} color="#0000ff" hasRadius />
-```
-
-<h2 name="paragraph">Paragraph</h2>
-
-Display a set of lines called a Paragraph
-
-#### Props available
-
-- `lineNumber: Number`: Number of line to display (mandatory)
-- `textSize: Number`: Text size of a single Line (default: `12`)
-- `lineSpacing: Number`: Space between the lines (default: `12`)
-- `color: String`: Color of the lines (default: `#efefef`)
-- `width: String`: Width of the lines (default: `100%`)
-- `lastLineWidth: String`: Custom width of the last line (default: `100%`)
-- `firstLineWidth: String`: Custom width of the first line (default: `100%`)
-
-#### Example
-
-```javascript
-<Paragraph
-  lineNumber={3}
-  textSize={16}
-  lineSpacing={5}
-  color="#ff0000"
-  width="100%"
-  lastLineWidth="70%"
-  firstLineWidth="50%"
-/>
-```
-
-<h2 name="imgcontent">Image content</h2>
-
-Display a Media on the left / right part of a Paragraph
-
-#### Props available
-
-- `position: String`: The position of the Media (left / right) (default: `left`)
-- `hasRadius: Boolean`: Is the shape of the media rounded or not ? (default: `false`)
-- `size: Number`: Size of the media (default: `40`)
-- `lineNumber: Number`: Number of line to display (mandatory)
-- `textSize: Number`: Text size of a single Line (default: `12`)
-- `lineSpacing: Number`: Space between the lines (default: `12`)
-- `color: String`: Color of the lines (default: `#efefef`)
-- `width: String`: Width of the lines (default: `100%`)
-- `lastLineWidth: String`: Custom width of the last line (default: `100%`)
-- `firstLineWidth: String`: Custom width of the first line (default: `100%`)
-
-#### Example
-
-```javascript
-<ImageContent
-  position="right"
-  hasRadius
-  lineNumber={5}
-  textSize={14}
-  lineSpacing={5}
-  color="#00ff00"
-  width="100%"
-  lastLineWidth="30%"
-  firstLineWidth="10%"
-/>
-```
-
-<h2 name="box">Box</h2>
-
-Display a generic rectangle shape with customisable width, height, color and border radius
-
-#### Props available
-
-- `height: Number | String`: the height of the component (default: `50`)
-- `width: Number | String`: the width of the component (default: `50`)
-- `radius: Number`: the border radius of the component (default: `0`)
-- `color: String`: the background color of the component (default: `#efefef`)
-
-#### Example
-
-```javascript
-<Box height={50} width="100%" radius={5} color="teal" />
-```
-
-<h2 name="custom">Custom components</h2>
-
-You can create your own placeholder component based on your own ones. Based on that, we're exposing a `connect` function that returns a new `ComponentContainer`.
-
-This container allows you to use the `onReady` props that will automatically display the placeholder children when its value is true. It also gives you access to the `animation` props that works just as described before, and so, you can take advent from the prebuilt animations of this project.
-
-Taken from the [Example/customjs](./Example/customjs) :
-
-```javascript
-import React from "react";
-import { Text } from "react-native";
-import Placeholder from "rn-placeholder";
-
-const customPlaceholder = props => {
-  const style = { backgroundColor: props.bgColor };
   return (
-    <Text style={style}>
-      I m a custom loader with props bgColor = {props.bgColor}
-    </Text>
+    <Placeholder
+      animation="fade"
+      isReady={isReady}
+      whenReadyRender={() => <ComponentLoaded />}
+      renderLeft={() => <Media style={{ backgroundColor: "green" }} />}
+      renderRight={() => <Media hasRadius />}
+    >
+      <Line width="70%" />
+      <Line style={{ backgroundColor: "blue", width: "22%" }} />
+      <Line />
+      <Line width="30%" />
+    </Placeholder>
   );
 };
+```
 
-export default connect(customPlaceholder);
+### Paragraph
+
+```jsx
+import { Paragraph } from "rn-placeholder";
+
+export const Compo = () => {
+  const [isReady, setReady] = useState(false);
+
+  // your logic
+
+  return (
+    <Paragraph
+      animation="fade"
+      lineNumber={3}
+      textSize={16}
+      lineSpacing={5}
+      color="#ff0000"
+      width="100%"
+      lastLineWidth="70%"
+      firstLineWidth="50%"
+      isReady={isReady}
+    >
+      <ComponentLoaded />
+    </Paragraph>
+  );
+};
+```
+
+### ImageContent
+
+```jsx
+import { ImageContent } from "rn-placeholder";
+
+export const Compo = () => {
+  const [isReady, setReady] = useState(false);
+
+  // your logic
+
+  return (
+    <ImageContent
+      animation="fade"
+      position="left"
+      hasRadius
+      lineNumber={5}
+      textSize={14}
+      lineSpacing={5}
+      color="#00ff00"
+      width="100%"
+      lastLineWidth="30%"
+      firstLineWidth="10%"
+      isReady={isReady}
+    >
+      <ComponentLoaded />
+    </ImageContent>
+  );
+};
+```
+
+### Custom component
+
+#### By composing
+
+```jsx
+<Placeholder
+  animation="fade"
+  isReady={isReady}
+  whenReadyRender={() => <ComponentLoaded />}
+  renderLeft={() => <LeftComponent />}
+  renderRight={() => <RightComponent />}
+>
+  <Text>Hello world</Text>
+</Placeholder>
+```
+
+#### Using an HoC
+
+```jsx
+import { connect } from "rn-placeholder";
+
+const TextHoc = connect(() => <Text>Hello world</Text>);
+
+export const Compo = () => {
+  const [isReady, setReady] = useState(false);
+
+  // your logic
+
+  return (
+    <TextHoc
+      animation="fade"
+      isReady={isReady}
+      whenReadyRender={() => <ComponentLoaded />}
+    />
+  );
+};
 ```
