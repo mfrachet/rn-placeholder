@@ -12,6 +12,8 @@ Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://gi
 
 # Content
 
+_This is the content of the v2. If you're still using a version > 2, you should use [this documentation instead](https://github.com/mfrachet/rn-placeholder/tree/v1.3.2)._
+
 - <a href="#usage">How to use it ?</a>
 - [Components available](./docs/COMPONENTS.md)
 - [Using default animations](./docs/ANIMATIONS.md#default)
