@@ -3,35 +3,55 @@ import PropTypes from 'prop-types';
 import { Paragraph } from '../paragraph/paragraph';
 import { Media } from '../shapes';
 
-export const ImageContent = ({
-  position,
-  size,
-  hasRadius,
-  lineNumber,
-  textSize,
-  color,
-  width,
-  lastLineWidth,
-  firstLineWidth,
-  ...props
-}) => {
-  const LeftComponent = () => (position === 'left' ? <Media hasRadius={hasRadius} /> : null);
-  const RightComponent = () => (position === 'right' ? <Media hasRadius={hasRadius} /> : null);
+export class ImageContent extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <Paragraph
-      {...props}
-      lineNumber={lineNumber}
-      textSize={textSize}
-      color={color}
-      width={width}
-      lastLineWidth={lastLineWidth}
-      firstLineWidth={firstLineWidth}
-      renderLeft={LeftComponent}
-      renderRight={RightComponent}
-    />
-  );
-};
+    this.renderLeft = this.renderLeft.bind(this);
+    this.renderRight = this.renderRight.bind(this);
+  }
+
+  renderLeft() {
+    const { position, hasRadius } = this.props;
+
+    return position === 'left' ? <Media hasRadius={hasRadius} /> : null;
+  }
+
+  renderRight() {
+    const { position, hasRadius } = this.props;
+
+    return position === 'right' ? <Media hasRadius={hasRadius} /> : null;
+  }
+
+  render() {
+    const {
+      position,
+      size,
+      hasRadius,
+      lineNumber,
+      textSize,
+      color,
+      width,
+      lastLineWidth,
+      firstLineWidth,
+      ...props
+    } = this.props;
+
+    return (
+      <Paragraph
+        {...props}
+        lineNumber={lineNumber}
+        textSize={textSize}
+        color={color}
+        width={width}
+        lastLineWidth={lastLineWidth}
+        firstLineWidth={firstLineWidth}
+        renderLeft={this.renderLeft}
+        renderRight={this.renderRight}
+      />
+    );
+  }
+}
 
 ImageContent.propTypes = {
   position: PropTypes.string,
