@@ -21,4 +21,11 @@ describe('Paragraph', () => {
   it('should match snapshot', () => {
     expect(getWrapper()).toMatchSnapshot();
   });
+
+  it('should have returned the children', () => {
+    props.children = 'Children string';
+    const instance = getWrapper().instance();
+
+    expect(instance.handleReadyRender()).toBe('Children string');
+  });
 });
