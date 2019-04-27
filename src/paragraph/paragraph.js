@@ -10,6 +10,7 @@ export const Paragraph = ({
   width,
   lastLineWidth,
   firstLineWidth,
+  children,
   ...props
 }) => {
   const lines = [];
@@ -35,7 +36,11 @@ export const Paragraph = ({
     }
   }
 
-  return <Placeholder {...props}>{lines}</Placeholder>;
+  return (
+    <Placeholder {...props} whenReadyRender={() => children}>
+      {lines}
+    </Placeholder>
+  );
 };
 
 Paragraph.propTypes = {
