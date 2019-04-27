@@ -1,5 +1,9 @@
 # Animations
 
+<p align="center">
+<img src="./animation.gif" />
+</p>
+
 ## Default animations
 
 There are two built-in animations inside this library `shine` and `fade`. They can be used by passing them inside the `animation` prop:
@@ -40,7 +44,7 @@ The `ColorAnimation` can be defined this way:
 import React from "react";
 import { Animated } from "react-native";
 
-export const ColorAnimation = ({ children }) => {
+export const ColorAnimation = ({ children, style = {} }) => {
   const animation = new Animated.Value(0);
 
   function start() {
@@ -61,8 +65,10 @@ export const ColorAnimation = ({ children }) => {
     outputRange: ["yellow", "orange", "blue"]
   });
 
-  const style = { backgroundColor, padding: 20 };
+  const newStyle = { ...style, backgroundColor, padding: 20 };
 
-  return <Animated.View style={style}>{children}</Animated.View>;
+  return <Animated.View style={newStyle}>{children}</Animated.View>;
 };
 ```
+
+_Note: when building a custom animation, make sure to pass the style props to the `Animated.View`_

@@ -1,7 +1,7 @@
 # Components
 
 <p align="center">
-<img src="../docs/demo-apis.gif" />
+<img src="./demo-apis.gif" />
 </p>
 
 ## Content
