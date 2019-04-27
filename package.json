@@ -21,8 +21,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" && prettier-eslint --write \"Example/components/**/*.js\"",
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
-    "test:auto": "./node_modules/.bin/jest --watch",
-    "build:doc": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
+    "test:auto": "./node_modules/.bin/jest --watch"
   },
   "husky": {
     "hooks": {
@@ -52,8 +51,7 @@
     "react": "16.6.3",
     "react-dom": "16.8.3",
     "react-native": "0.58.5",
-    "react-test-renderer": "16.6.3",
-    "vuepress": "0.13.1"
+    "react-test-renderer": "16.6.3"
   },
   "jest": {
     "preset": "react-native",

@@ -45,7 +45,7 @@ const MyComponent = () => {
     <Placeholder
       isReady={isReady}
       animation="fade"
-      whenReadyRender={() => <Component />}
+      whenReadyRender={() => <ComponentLoaded />}
       renderLeft={() => <Media hasRadius />}
       renderRight={() => <Media />}
     >
