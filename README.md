@@ -49,8 +49,8 @@ const MyComponent = () => {
       isReady={isReady}
       animation="fade"
       whenReadyRender={ComponentLoaded}
-      renderLeft={mediaProps => <Media hasRadius {...mediaProps} />}
-      renderLeft={mediaProps => <Media {...mediaProps} />}
+      renderLeft={() => <Media hasRadius />}
+      renderRight={() => <Media />}
     >
       <Line width="70%" />
       <Line />
