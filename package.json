@@ -73,9 +73,10 @@
     "setupFiles": [
       "./setup/test.setup.js"
     ],
-    "collectCoverageFrom": [
-      "./src/**",
-      "!**/__tests__/**"
+    "testPathIgnorePatterns": [
+      "<rootDir>/index.js",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
