@@ -1,5 +1,5 @@
 language: node_js
 node_js:
-  - "stable"
+  - 'stable'
 after_script:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

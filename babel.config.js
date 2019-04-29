@@ -3,5 +3,7 @@ module.exports = (api) => {
     ? 'module:metro-react-native-babel-preset'
     : ['@babel/preset-env', { modules: false }];
 
-  return { presets: ['@babel/preset-react', preset] };
+  return {
+    presets: ['@babel/preset-react', preset],
+  };
 };
