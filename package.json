@@ -24,12 +24,13 @@
     "test:auto": "./node_modules/.bin/jest --watch",
     "build:prod": "NODE_ENV=production rollup -c",
     "build:dev": "NODE_ENV=development rollup -c",
+    "build": "yarn build:dev && yarn build:prod",
     "prepublishOnly": "npm run release",
     "release": "npm run build:dev && npm run build:prod"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn test"
+      "pre-commit": "yarn lint && yarn test && yarn build"
     }
   },
   "dependencies": {
