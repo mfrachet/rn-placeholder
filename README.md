@@ -4,57 +4,58 @@
 
 Display some placeholder stuff before rendering your text or media content in React Native.
 
-\_Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
-
-_New documentation available [mfrachet.github.io/rn-placeholder](https://mfrachet.github.io/rn-placeholder/)_
-
----
+Fully compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
 
 <p align="center">
-<img height="270" src="./book/placeholder.gif" />
+<img src="./docs/demo.gif" />
 </p>
-
----
 
 # Content
 
+_This is the content of the v2. If you're still using a version < 2, you should use [this documentation instead](https://github.com/mfrachet/rn-placeholder/tree/v1.3.2)._
+
 - <a href="#usage">How to use it ?</a>
-- [Components available](./API.md)
-- [Creating a custom component](./API.md#custom)
-- [Using default animations](./ANIMATIONS.md#default)
-- [Using a custom animation](./ANIMATIONS.md#custom)
+- [Components available](./docs/COMPONENTS.md)
+- [Using default animations](./docs/ANIMATIONS.md#default)
+- [Using a custom animation](./docs/ANIMATIONS.md#custom-animations)
 
 <h1 name="#usage">Usage</h1>
 
 ### Installation
 
 ```javascript
-$ npm install rn-placeholder --save
+$ yarn add rn-placeholder
 ```
 
 ### In your code
 
-```javascript
-import Placeholder from 'rn-placeholder';
+_This is a new API coming from v2. However, the v1 APIs are still available in [components available](./docs/COMPONENTS.md)_
 
-/*...*/
-render() {
-    return (
-      <View>
-        <Placeholder.ImageContent
-          size={60}
-          animate="fade"
-          lineNumber={4}
-          lineSpacing={5}
-          lastLineWidth="30%"
-          onReady={this.state.isReady}
-        >
-          <Text>Placeholder has finished :D</Text>
-        </Placeholder.ImageContent>
-      </View>
-    );
-  }
-/*...*/
+```jsx
+import Placeholder, { Line, Media } from "rn-placeholder";
+
+const ComponentLoaded = () => <Text>I'm loaded!</Text>;
+
+const MyComponent = () => {
+  const [isReady, setReady] = useState(false);
+
+  // your logic
+
+  return (
+    <Placeholder
+      isReady={isReady}
+      animation="fade"
+      whenReadyRender={() => <ComponentLoaded />}
+      renderLeft={() => <Media hasRadius />}
+      renderRight={() => <Media />}
+    >
+      <Line width="70%" />
+      <Line />
+      <Line />
+      <Line width="30%" />
+    </Placeholder>
+  );
+};
 ```
 
-When the value of `this.state.isReady` changes to something _existing_, the `<Text>` component will be rendered
+When the value of `isReady` changes to something _truthy_, the `ComponentLoaded` will be rendered.

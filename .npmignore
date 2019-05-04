@@ -1,2 +1,3 @@
-./Example
-./book
+docs
+src/**/*.test.js
+src/**/*.spec.js
