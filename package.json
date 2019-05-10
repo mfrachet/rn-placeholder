@@ -4,6 +4,7 @@
   "private": false,
   "license": "MIT",
   "main": "./src/index.js",
+  "types": "index.d.ts",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
   "repository": {
     "type": "git",
