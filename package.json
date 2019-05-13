@@ -21,19 +21,30 @@
     "format": "prettier-eslint --write \"src/**/*.js\" && prettier-eslint --write \"Example/components/**/*.js\"",
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
-    "test:auto": "./node_modules/.bin/jest --watch"
+    "test:auto": "./node_modules/.bin/jest --watch",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build": "yarn build:dev && yarn build:prod",
+    "prepublishOnly": "npm run release",
+    "release": "npm run build:dev && npm run build:prod"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn test"
+      "pre-commit": "yarn lint && yarn test && yarn build"
     }
   },
   "dependencies": {
     "prop-types": "15.6.2"
   },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "24.1.0",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.4",
+    "babel-jest": "^24.4.0",
     "coveralls": "2.13.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
@@ -44,22 +55,29 @@
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
     "husky": "^2.1.0",
-    "jest": "24.1.0",
-    "metro-react-native-babel-preset": "0.52.0",
+    "jest": "^24.4.0",
+    "metro-react-native-babel-preset": "^0.53.0",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
-    "react": "16.6.3",
-    "react-dom": "16.8.3",
-    "react-native": "0.58.5",
-    "react-test-renderer": "16.6.3"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-native": "^0.59.5",
+    "react-test-renderer": "16.4.2",
+    "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-replace": "^2.1.0"
   },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
       "./setup/test.setup.js"
     ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/Example/"
+    "testPathIgnorePatterns": [
+      "<rootDir>/index.js",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
