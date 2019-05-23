@@ -12,15 +12,15 @@ export class ImageContent extends React.Component {
   }
 
   renderLeft() {
-    const { color, position, hasRadius } = this.props;
+    const { color, position, hasRadius, size } = this.props;
 
-    return position === 'left' ? <Media hasRadius={hasRadius} color={color} /> : null;
+    return position === 'left' ? <Media hasRadius={hasRadius} color={color} size={size} /> : null;
   }
 
   renderRight() {
-    const { color, position, hasRadius } = this.props;
+    const { color, position, hasRadius, size } = this.props;
 
-    return position === 'right' ? <Media hasRadius={hasRadius} color={color} /> : null;
+    return position === 'right' ? <Media hasRadius={hasRadius} color={color} size={size} /> : null;
   }
 
   render() {
