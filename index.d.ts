@@ -1,6 +1,6 @@
 declare module 'rn-placeholder' {
   import React from 'react';
-  import { ViewStyle } from 'react-native';
+  import { ViewStyle, ViewProperties } from 'react-native';
 
   export enum PlaceholderAnimation {
     FADE = 'fade',
@@ -10,7 +10,8 @@ declare module 'rn-placeholder' {
   export interface PlaceholderProps {
     animation?: PlaceholderAnimation;
     isReady: boolean;
-    whenReadyRender: () => React.ReactNode;
+    whenReadyRender?: () => React.ReactNode;
+    customAnimation?: () => React.ComponentType<ViewStyle>;
     renderLeft?: () => React.ReactNode;
     renderRight?: () => React.ReactNode;
     children: React.ReactNode;
@@ -18,23 +19,30 @@ declare module 'rn-placeholder' {
 
   export default class Placeholder extends React.Component<PlaceholderProps> {}
 
-  export interface LineProps {
+  interface PlaceholderHOC {
+    <OwnProps>(WrappedComponent: React.Component<OwnProps>): React.FunctionComponent<PlaceholderProps & OwnProps>;
+  } 
+
+  export const connect: PlaceholderHOC;
+
+  export interface LineProps extends ViewProperties {
+    textSize?: number;
+    color?: string;
     width?: number | string;
     style?: ViewStyle;
+    noMargin?: boolean;
   }
 
   export class Line extends React.Component<LineProps> {}
 
-  export interface ParagraphProps {
-    animation?: PlaceholderAnimation;
+  export interface ParagraphProps extends PlaceholderProps {
     lineNumber: number;
-    textSize: number;
+    textSize?: number;
     lineSpacing: number;
-    color: string;
-    width: string;
-    lastLineWidth: string;
-    firstLineWidth: string;
-    isReady: boolean;
+    color?: string;
+    width?: string;
+    lastLineWidth?: string;
+    firstLineWidth:? string;
   }
 
   export class Paragraph extends React.Component<ParagraphProps> {}
