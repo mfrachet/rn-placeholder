@@ -47,10 +47,35 @@ declare module 'rn-placeholder' {
 
   export class Paragraph extends React.Component<ParagraphProps> {}
 
-  export interface MediaProps {
+  export interface MediaProps extends ViewProperties {
     hasRadius?: boolean;
     style?: ViewStyle;
+    color?: string;
+    size?: number;
   }
 
   export class Media extends React.Component<MediaProps> {}
+
+  export interface BoxProps extends ViewProperties {
+    height?: number;
+    width?: number;
+    radius?: number;
+    color?: string;
+  }
+
+  export class Box extends React.Component<BoxProps> {}
+
+
+  export enum ImageContentPosition {
+    LEFT = 'left',
+    RIGHT = 'right'
+  }
+
+  export interface ImageContentProps extends ParagraphProps {
+    position?: ImageContentPosition;
+    size?: number;
+    hasRadius?: boolean;
+  }
+
+  export class ImageContent extends React.Component<ImageContentProps> {}
 }
