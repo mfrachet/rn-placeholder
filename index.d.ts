@@ -42,7 +42,7 @@ declare module 'rn-placeholder' {
     color?: string;
     width?: string;
     lastLineWidth?: string;
-    firstLineWidth:? string;
+    firstLineWidth?: string;
   }
 
   export class Paragraph extends React.Component<ParagraphProps> {}
