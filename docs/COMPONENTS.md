@@ -55,7 +55,6 @@ export const Compo = () => {
       animation="fade"
       lineNumber={3}
       textSize={16}
-      lineSpacing={5}
       color="#ff0000"
       width="100%"
       lastLineWidth="70%"
@@ -85,7 +84,6 @@ export const Compo = () => {
       hasRadius
       lineNumber={5}
       textSize={14}
-      lineSpacing={5}
       color="#00ff00"
       width="100%"
       lastLineWidth="30%"
