@@ -1,10 +1,10 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
-import Animations from "../animation/animations";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import Animations from '../animation/animations';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
+    flexDirection: 'row',
     flex: 1,
     marginHorizontal: 0
   },

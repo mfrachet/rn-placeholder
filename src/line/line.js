@@ -1,15 +1,15 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
 export const Line = ({
   textSize = 12,
-  color = "#efefef",
+  color = '#efefef',
   style,
   noMargin = false,
   ...props
 }) => {
   const height = textSize;
-  const alignSelf = "stretch";
+  const alignSelf = 'stretch';
   const backgroundColor = color;
   const borderRadius = textSize / 4;
   const marginBottom = noMargin ? 0 : textSize;
