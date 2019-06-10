@@ -4,7 +4,7 @@ import { View } from "react-native";
 export const Line = ({
   textSize = 12,
   color = "#efefef",
-  width,
+  useDefaultWidth,
   style,
   noMargin = false,
   ...props
@@ -14,14 +14,14 @@ export const Line = ({
   const backgroundColor = color;
   const borderRadius = textSize / 4;
   const marginBottom = noMargin ? 0 : textSize;
-  const widthProp = width && { width };
+  const lineWidth = useDefaultWidth ? { width: "100%" } : {};
   const computedStyle = {
     height,
     alignSelf,
     backgroundColor,
     borderRadius,
     marginBottom,
-    ...widthProp
+    ...lineWidth
   };
 
   return <View style={[computedStyle, style]} {...props} />;

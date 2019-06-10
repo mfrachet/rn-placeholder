@@ -4,7 +4,6 @@ import Animations from "../animation/animations";
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
     flexDirection: "row",
     flex: 1
   },
@@ -40,10 +39,10 @@ export const Placeholder = ({
   animation,
   customAnimation,
   children,
-  width,
   whenReadyRender: WhenReadyRender,
   renderLeft,
   renderRight,
+  useDefaultWidth = true,
   ...props
 }) => {
   const Root = customAnimation || makeRoot(animation);
@@ -54,9 +53,10 @@ export const Placeholder = ({
 
   const childrenArray = React.Children.toArray(children);
   const sizeOfChildren = childrenArray.length;
-  const containerWidth = (props && props.style && props.style.width) || "100%";
+  const containerWidth = useDefaultWidth ? { width: "100%" } : {};
+  const userStyle = props.style;
   return (
-    <Root style={[styles.container, width && { width }]} {...props}>
+    <Root {...props} style={[styles.container, userStyle, containerWidth]}>
       {renderLeft && withView(renderLeft, { style: styles.leftSide })}
       <View style={styles.centerElement}>
         {childrenArray.map((element, index) =>
