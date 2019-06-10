@@ -1,25 +1,25 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Animations from '../animation/animations';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Animations from "../animation/animations";
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    flexDirection: 'row',
-    flex: 1,
+    width: "100%",
+    flexDirection: "row",
+    flex: 1
   },
   centerElement: {
-    flex: 1,
+    flex: 1
   },
   leftSide: {
-    marginRight: 12,
+    marginRight: 12
   },
   rightSide: {
-    marginLeft: 12,
-  },
+    marginLeft: 12
+  }
 });
 
-const makeRoot = (animation) => {
+const makeRoot = animation => {
   if (animation) {
     const Animation = Animations[animation];
 
@@ -40,6 +40,7 @@ export const Placeholder = ({
   animation,
   customAnimation,
   children,
+  width,
   whenReadyRender: WhenReadyRender,
   renderLeft,
   renderRight,
@@ -53,14 +54,16 @@ export const Placeholder = ({
 
   const childrenArray = React.Children.toArray(children);
   const sizeOfChildren = childrenArray.length;
-
+  const containerWidth = (props && props.style && props.style.width) || "100%";
   return (
-    <Root style={styles.container} {...props}>
+    <Root style={[styles.container, width && { width }]} {...props}>
       {renderLeft && withView(renderLeft, { style: styles.leftSide })}
       <View style={styles.centerElement}>
-        {childrenArray.map((element, index) => React.cloneElement(element, {
-          noMargin: index === sizeOfChildren - 1,
-        }))}
+        {childrenArray.map((element, index) =>
+          React.cloneElement(element, {
+            noMargin: index === sizeOfChildren - 1
+          })
+        )}
       </View>
       {renderRight && withView(renderRight, { style: styles.rightSide })}
     </Root>
