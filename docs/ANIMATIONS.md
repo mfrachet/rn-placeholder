@@ -50,7 +50,9 @@ export const ColorAnimation = ({ children, style = {} }) => {
   function start() {
     return Animated.timing(animation, {
       toValue: 100,
-      duration: 1500
+      duration: 1500,
+      // NOTE: if not set, this will block InteractionManager.runAfterInteractions()
+      isInteraction: false,
     }).start(e => {
       if (e.finished) {
         start();

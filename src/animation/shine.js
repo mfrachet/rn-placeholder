@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const START_VALUE = 0;
 const END_VALUE = 100;
 const DURATION = 750;
+const isInteraction = false;
 
 const styles = StyleSheet.create({
   shine: {
@@ -27,6 +28,7 @@ const Shine = ({ children, ...props }) => {
       Animated.timing(animation, {
         toValue: END_VALUE,
         duration: DURATION,
+        isInteraction,
       }),
     ]).start(e => e.finished && start());
   }

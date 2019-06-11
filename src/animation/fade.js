@@ -6,6 +6,7 @@ const START_VALUE = 0.5;
 const END_VALUE = 1;
 const DURATION = 500;
 const useNativeDriver = true;
+const isInteraction = false;
 
 /**
  * Create a repetitive fadein / fadeout animation
@@ -18,11 +19,13 @@ const Fade = ({ children, style = {}, ...props }) => {
       Animated.timing(animation, {
         toValue: END_VALUE,
         duration: DURATION,
+        isInteraction,
         useNativeDriver,
       }),
       Animated.timing(animation, {
         toValue: START_VALUE,
         duration: DURATION,
+        isInteraction,
         useNativeDriver,
       }),
     ]).start((e) => {
