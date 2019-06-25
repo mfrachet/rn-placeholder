@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn typescript"
+      "pre-commit": "echo 'TODO'"
     }
   },
   "devDependencies": {
@@ -47,6 +47,7 @@
     "husky": "2.1.0",
     "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.54.1",
+    "prettier": "1.18.2",
     "react": "16.6.3",
     "react-native": "0.59.9",
     "react-test-renderer": "16.6.3",

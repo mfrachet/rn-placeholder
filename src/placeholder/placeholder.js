@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Animations from '../animation/animations';
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
+import Animations from '../animation/animations'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,23 +17,23 @@ const styles = StyleSheet.create({
   rightSide: {
     marginLeft: 12,
   },
-});
+})
 
-const makeRoot = (animation) => {
+const makeRoot = animation => {
   if (animation) {
-    const Animation = Animations[animation];
+    const Animation = Animations[animation]
 
     if (!Animation) {
-      throw new Error(`Animation "${animation}" doesn't exist in the library`);
+      throw new Error(`Animation "${animation}" doesn't exist in the library`)
     }
 
-    return Animation;
+    return Animation
   }
 
-  return View;
-};
+  return View
+}
 
-const withView = (fn, props) => <View {...props}>{fn()}</View>;
+const withView = (fn, props) => <View {...props}>{fn()}</View>
 
 export const Placeholder = ({
   isReady,
@@ -45,24 +45,26 @@ export const Placeholder = ({
   renderRight,
   ...props
 }) => {
-  const Root = customAnimation || makeRoot(animation);
+  const Root = customAnimation || makeRoot(animation)
 
   if (isReady) {
-    return WhenReadyRender ? <WhenReadyRender /> : null;
+    return WhenReadyRender ? <WhenReadyRender /> : null
   }
 
-  const childrenArray = React.Children.toArray(children);
-  const sizeOfChildren = childrenArray.length;
+  const childrenArray = React.Children.toArray(children)
+  const sizeOfChildren = childrenArray.length
 
   return (
     <Root style={styles.container} {...props}>
       {renderLeft && withView(renderLeft, { style: styles.leftSide })}
       <View style={styles.centerElement}>
-        {childrenArray.map((element, index) => React.cloneElement(element, {
-          noMargin: index === sizeOfChildren - 1,
-        }))}
+        {childrenArray.map((element, index) =>
+          React.cloneElement(element, {
+            noMargin: index === sizeOfChildren - 1,
+          }),
+        )}
       </View>
       {renderRight && withView(renderRight, { style: styles.rightSide })}
     </Root>
-  );
-};
+  )
+}

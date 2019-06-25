@@ -72,7 +72,7 @@
       "check-finally",
       "check-whitespace"
     ],
-    "semicolon": [true, "never"],
+    "semicolon": [true, "always"],
     "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
     "whitespace": [
       true,
