@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "private": false,
   "license": "MIT",
-  "main": "./src/index.js",
-  "types": "index.d.ts",
+  "main": "lib/commonjs/index.js",
+  "types": "lib/typescript/src/index.d.ts",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
   "repository": {
     "type": "git",
@@ -23,15 +23,11 @@
     "lint": "eslint ./src",
     "test": "./node_modules/.bin/jest --coverage --no-cache",
     "test:auto": "./node_modules/.bin/jest --watch",
-    "build:prod": "NODE_ENV=production rollup -c",
-    "build:dev": "NODE_ENV=development rollup -c",
-    "build": "yarn build:dev && yarn build:prod",
-    "prepublishOnly": "npm run release",
-    "release": "npm run build:dev && npm run build:prod"
+    "prepare": "bob build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn test && yarn build"
+      "pre-commit": "yarn lint && yarn test"
     }
   },
   "dependencies": {
@@ -78,6 +74,22 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  },
+  "react-native": "src/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "typescript"
     ]
   }
 }
