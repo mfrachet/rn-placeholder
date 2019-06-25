@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "jsx": "react-native",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "sourceMap": true
+  },
+  "filesGlob": ["lib/**/*.tsx", "lib/*.tsx", "lib/**/*.ts", "lib/*.ts"],
+  "exclude": ["android", "__tests__", "ios", "build", "node_modules"],
+  "compileOnSave": false
+}

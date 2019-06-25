@@ -15,68 +15,62 @@
     "react-native",
     "ios",
     "android",
-    "expo"
+    "expo",
+    "typescript"
   ],
   "author": "Marvin FRACHET <marvin.frachet@gmail.com> (https://github.com/mfrachet)",
   "scripts": {
     "format": "prettier-eslint --write \"src/**/*.js\" && prettier-eslint --write \"Example/components/**/*.js\"",
-    "lint": "eslint ./src",
-    "test": "./node_modules/.bin/jest --coverage --no-cache",
-    "test:auto": "./node_modules/.bin/jest --watch",
-    "prepare": "bob build"
+    "lint": "tslint --project ./tsconfig.json",
+    "prepare": "bob build",
+    "test": "jest --updateSnapshot",
+    "test:ci": "jest --collectCoverage=true",
+    "test:watch": "jest --watch",
+    "typescript": "tsc --noEmit"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn test"
+      "pre-commit": "yarn typescript"
     }
   },
-  "dependencies": {
-    "prop-types": "15.6.2"
-  },
-  "peerDependencies": {
-    "react": "^16.8.6"
-  },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/runtime": "7.4.5",
     "@react-native-community/bob": "0.5.0",
-    "babel-jest": "^24.4.0",
+    "@types/react": "16.8.22",
+    "@types/react-native": "0.57.63",
+    "babel-jest": "24.8.0",
     "coveralls": "2.13.1",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
-    "enzyme-to-json": "^3.3.5",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
-    "husky": "^2.1.0",
-    "jest": "^24.4.0",
-    "metro-react-native-babel-preset": "^0.53.0",
+    "husky": "2.1.0",
+    "jest": "24.8.0",
+    "metro-react-native-babel-preset": "0.54.1",
     "prettier": "1.14.2",
     "prettier-eslint-cli": "4.7.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-native": "^0.59.5",
-    "react-test-renderer": "16.4.2"
+    "react": "16.6.3",
+    "react-native": "0.59.9",
+    "react-test-renderer": "16.6.3",
+    "tslint": "5.18.0",
+    "typescript": "3.5.2"
   },
   "jest": {
+    "bail": true,
     "preset": "react-native",
-    "setupFiles": [
-      "./setup/test.setup.js"
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native)/"
     ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/index.js",
-      "<rootDir>/node_modules/",
-      "<rootDir>/lib/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/lib/"
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
     ]
   },
   "react-native": "src/index.js",
