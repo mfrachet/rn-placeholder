@@ -1,15 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImageContent render should match snapshot 1`] = `
-<Paragraph
-  animation="fade"
-  color="#ff0000"
-  firstLineWidth="30%"
-  lastLineWidth="50%"
-  lineNumber={8}
-  renderLeft={[Function]}
-  renderRight={[Function]}
-  textSize={13}
-  width="99%"
-/>
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 0.5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginRight": 12,
+      }
+    }
+  >
+    <View
+      hasRadius={true}
+      style={
+        Object {
+          "backgroundColor": "#efefef",
+          "borderRadius": 20,
+          "height": 40,
+          "width": 40,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "30%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 13,
+            "width": "99%",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 3.25,
+            "height": 13,
+            "marginBottom": 0,
+            "width": "50%",
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginLeft": 12,
+      }
+    }
+  />
+</View>
 `;

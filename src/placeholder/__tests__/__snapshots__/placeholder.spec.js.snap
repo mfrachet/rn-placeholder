@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`placeholder should be wrapped with a CustomAnimation when the customAnimation prop is set 1`] = `
-<Component
+<View
   style={
     Object {
       "flex": 1,
@@ -9,6 +9,7 @@ exports[`placeholder should be wrapped with a CustomAnimation when the customAni
       "width": "100%",
     }
   }
+  testID="custom-animation"
 >
   <View
     style={
@@ -17,28 +18,62 @@ exports[`placeholder should be wrapped with a CustomAnimation when the customAni
       }
     }
   >
-    <Line
-      key=".0"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".1"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".2"
-      noMargin={true}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
   </View>
-</Component>
+</View>
 `;
 
 exports[`placeholder should be wrapped with an Animation when animate prop is set to "fade" 1`] = `
-<Fade
+<View
   style={
     Object {
       "flex": 1,
       "flexDirection": "row",
+      "opacity": 0.5,
       "width": "100%",
     }
   }
@@ -50,23 +85,60 @@ exports[`placeholder should be wrapped with an Animation when animate prop is se
       }
     }
   >
-    <Line
-      key=".0"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".1"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".2"
-      noMargin={true}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
   </View>
-</Fade>
+</View>
 `;
 
-exports[`placeholder should display the whenReadyRender when isReady is true 1`] = `<whenReadyRender />`;
+exports[`placeholder should display the whenReadyRender when isReady is true 1`] = `
+<View
+  testID="when-ready-render"
+/>
+`;
 
 exports[`placeholder should have a component on the left side when renderLeft is provided 1`] = `
 <View
@@ -96,17 +168,50 @@ exports[`placeholder should have a component on the left side when renderLeft is
       }
     }
   >
-    <Line
-      key=".0"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".1"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".2"
-      noMargin={true}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
   </View>
 </View>
@@ -129,17 +234,50 @@ exports[`placeholder should have a component on the right side when renderRight 
       }
     }
   >
-    <Line
-      key=".0"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".1"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".2"
-      noMargin={true}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
   </View>
   <View
@@ -173,20 +311,53 @@ exports[`placeholder should match snapshot 1`] = `
       }
     }
   >
-    <Line
-      key=".0"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".1"
-      noMargin={false}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 12,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
-    <Line
-      key=".2"
-      noMargin={true}
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#efefef",
+            "borderRadius": 3,
+            "height": 12,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
     />
   </View>
 </View>
 `;
 
-exports[`placeholder shouldnt display anything when whenReadyRender is undefined 1`] = `""`;
+exports[`placeholder shouldnt display anything when whenReadyRender is undefined 1`] = `null`;

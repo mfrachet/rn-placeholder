@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import { Line } from '../line';
 
 describe('Line', () => {
   let props;
 
-  const getWrapper = () => shallow(<Line {...props} />);
+  const getWrapper = () => renderer.create(<Line {...props} />);
 
   beforeEach(() => {
     props = {};
