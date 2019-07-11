@@ -19,6 +19,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -1776,6 +1777,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -3527,6 +3529,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -5294,6 +5297,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -7053,6 +7057,7 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -9871,6 +9876,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -13234,6 +13240,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -16637,6 +16644,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -18706,6 +18714,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -20114,6 +20123,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -21366,6 +21376,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
@@ -22618,6 +22629,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
             Object {
               "backgroundColor": "white",
               "borderRadius": 3,
+              "elevation": 3,
               "marginBottom": 12,
               "padding": 12,
             },
