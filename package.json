@@ -1,0 +1,45 @@
+{
+  "name": "rn-placeholder",
+  "version": "3.0.0-alpha.1",
+  "main": "lib/index.js",
+  "types": "index.d.ts",
+  "homepage": "https://github.com/mfrachet/rn-placeholder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfrachet/rn-placeholder"
+  },
+  "description": "Display some placeholder stuff before rendering your text or media content in React Native",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "expo"
+  ],
+  "author": "Marvin FRACHET <marvin.frachet@gmail.com> (https://github.com/mfrachet)",
+  "license": "MIT",
+  "scripts": {
+    "test": "tsc --outDir example/placeholder && yarn --cwd ./example test",
+    "build": "tsc --outDir lib",
+    "format": "prettier --write './src/**/*.tsx'",
+    "lint": "tslint -c tslint.json 'src/**/**'",
+    "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",
+    "check:lint": "tsc --noEmit && yarn lint",
+    "postinstall": "yarn --cwd ./example"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.22",
+    "@types/react-native": "^0.57.64",
+    "concurrently": "^4.1.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-native": "^0.59.5",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-native": "^0.59.5"
+  }
+}

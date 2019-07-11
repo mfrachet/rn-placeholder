@@ -1,0 +1,3 @@
+node_modules/**/*
+example/placeholder/**
+example/node_modules
