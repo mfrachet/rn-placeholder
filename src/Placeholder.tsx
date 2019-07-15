@@ -57,5 +57,5 @@ const styles = StyleSheet.create({
   right: {
     marginLeft: SIZES.normal
   },
-  row: { flexDirection: "row" }
+  row: { flexDirection: "row", width: "100%" }
 });
