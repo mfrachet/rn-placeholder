@@ -25,7 +25,7 @@ export const Placeholder: React.FC<IPlaceholder> = ({
   ...props
 }) => {
   const AnimationProvider = Animation ? Animation : View;
-  const ChildAnimation = Animation ? AnimationConsumer : React.Fragment;
+  const ChildAnimation = Animation ? AnimationConsumer : View;
 
   const arrayOfChildren = React.Children.toArray(children);
   const enhancedChildren = arrayOfChildren.map(
