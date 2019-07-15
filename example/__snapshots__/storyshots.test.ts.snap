@@ -47,6 +47,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
               undefined,
               Object {
                 "flexDirection": "row",
+                "width": "100%",
               },
             ]
           }
@@ -1813,6 +1814,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -3557,6 +3559,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
               undefined,
               Object {
                 "flexDirection": "row",
+                "width": "100%",
               },
             ]
           }
@@ -5326,6 +5329,7 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -7086,6 +7090,7 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -7136,7 +7141,9 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -7153,7 +7160,9 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -7172,7 +7181,9 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
             </View>
             <View
               style={
@@ -7191,7 +7202,9 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
                   },
                 ]
               }
-            />
+            >
+              <View />
+            </View>
           </View>
         </View>
         <View
@@ -9906,6 +9919,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
               undefined,
               Object {
                 "flexDirection": "row",
+                "width": "100%",
               },
             ]
           }
@@ -13270,6 +13284,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
               undefined,
               Object {
                 "flexDirection": "row",
+                "width": "100%",
               },
             ]
           }
@@ -16680,6 +16695,7 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -18743,6 +18759,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -18764,7 +18781,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                   },
                 ]
               }
-            />
+            >
+              <View />
+            </View>
             <View
               style={
                 Object {
@@ -18788,7 +18807,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -18805,7 +18826,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -18822,7 +18845,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
             </View>
             <View
               style={
@@ -18841,7 +18866,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                   },
                 ]
               }
-            />
+            >
+              <View />
+            </View>
           </View>
         </View>
         <View
@@ -20152,6 +20179,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -20173,7 +20201,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                   },
                 ]
               }
-            />
+            >
+              <View />
+            </View>
             <View
               style={
                 Object {
@@ -20197,7 +20227,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -20214,7 +20246,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -20231,7 +20265,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
             </View>
           </View>
         </View>
@@ -21405,6 +21441,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -21432,7 +21469,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -21449,7 +21488,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -21466,7 +21507,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
             </View>
             <View
               style={
@@ -21485,7 +21528,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                   },
                 ]
               }
-            />
+            >
+              <View />
+            </View>
           </View>
         </View>
         <View
@@ -22658,6 +22703,7 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                 undefined,
                 Object {
                   "flexDirection": "row",
+                  "width": "100%",
                 },
               ]
             }
@@ -22685,7 +22731,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -22702,7 +22750,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
               <View
                 style={
                   Array [
@@ -22719,7 +22769,9 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
                     },
                   ]
                 }
-              />
+              >
+                <View />
+              </View>
             </View>
           </View>
         </View>
