@@ -24,7 +24,8 @@
     "lint": "tslint -c tslint.json 'src/**/**'",
     "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",
     "check:lint": "tsc --noEmit && yarn lint",
-    "postinstall": "yarn --cwd ./example"
+    "postinstall": "yarn --cwd ./example",
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/react": "^16.8.22",
@@ -33,6 +34,7 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-native": "^0.59.5",
+    "release-it": "^12.3.3",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
