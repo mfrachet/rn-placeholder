@@ -24,7 +24,8 @@
     "lint": "tslint -c tslint.json 'src/**/**'",
     "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",
     "check:lint": "tsc --noEmit && yarn lint",
-    "postinstall": "yarn --cwd ./example"
+    "postinstall": "yarn --cwd ./example",
+    "release": "yarn check:lint && yarn test && yarn build && npm publish"
   },
   "devDependencies": {
     "@types/react": "^16.8.22",
