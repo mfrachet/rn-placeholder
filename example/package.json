@@ -1,0 +1,34 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "test": "jest",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "expo": "^33.0.0",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-web": "^0.11.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-storyshots": "^5.1.9",
+    "@storybook/react-native": "^5.1.9",
+    "@storybook/theming": "^5.1.9",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.19",
+    "@types/react-native": "^0.57.60",
+    "babel-preset-expo": "^5.1.1",
+    "jest-expo": "^33.0.2",
+    "react-native-syntax-highlighter": "^2.0.0",
+    "typescript": "^3.4.5"
+  },
+  "private": true,
+  "jest": {
+    "preset": "jest-expo"
+  }
+}
