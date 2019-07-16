@@ -9,6 +9,8 @@ _This is the V3 of the library. If you're interested, [here's a list of the new 
 
 ![Image of the placeholder in action](./docs/placeholder.gif)
 
+[Here's a Snack application using the module and the different animations, **with copy to clipboard!**](https://snack.expo.io/@mfrachet/84bb31)
+
 # Usage
 
 ## Installation
