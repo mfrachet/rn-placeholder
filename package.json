@@ -1,6 +1,6 @@
 {
   "name": "rn-placeholder",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "main": "lib/index.js",
   "types": "index.d.ts",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
@@ -24,7 +24,6 @@
     "lint": "tslint -c tslint.json 'src/**/**'",
     "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",
     "check:lint": "tsc --noEmit && yarn lint",
-    "postinstall": "yarn --cwd ./example",
     "release": "yarn check:lint && yarn test && yarn build && npm publish"
   },
   "devDependencies": {

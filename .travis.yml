@@ -3,5 +3,6 @@ node_js:
   - "stable"
 before_script:
   - yarn check:lint
+  - yarn --cwd ./example
 after_script:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
