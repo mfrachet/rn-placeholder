@@ -55,8 +55,10 @@ To start the app:
 $ git clone https://github.com/mfrachet/rn-placeholder
 $ cd rn-placeholder
 $ yarn
-$ yarn start
+$ cd ./example && yarn && yarn start
 ```
+
+_You can modify any call of `yarn` by `npm install`_
 
 ## V3 features
 
