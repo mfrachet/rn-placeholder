@@ -3,7 +3,12 @@ import { ScrollView } from "react-native";
 import {
   Placeholder,
   PlaceholderLine,
-  PlaceholderMedia
+  PlaceholderMedia,
+  PlaceholderBlock,
+  Fade,
+  Shine,
+  ShineOverlay,
+  Loader
 } from "../../placeholder";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
@@ -75,6 +80,30 @@ export default () => (
   <PlaceholderLine width={80} />
   <PlaceholderLine />
   <PlaceholderLine width={30} />
+</Placeholder>`}
+      />
+    </Card>
+    <Card>
+      <Title>Custom positionning</Title>
+      <Placeholder>
+        <PlaceholderLine width={80} height={30} style={{ marginBottom: 10 }} />
+        <PlaceholderLine />
+        <PlaceholderBlock style={{ flexDirection: "row" }}>
+          <PlaceholderMedia style={{ flex: 1, marginRight: 10 }} />
+          <PlaceholderMedia style={{ flex: 1, marginRight: 10 }} />
+          <PlaceholderMedia style={{ flex: 1 }} />
+        </PlaceholderBlock>
+      </Placeholder>
+
+      <Code
+        code={`<Placeholder>
+  <PlaceholderLine width={80} height={30} style={{ marginBottom: 10 }} />
+  <PlaceholderLine />
+  <PlaceholderBlock style={{ flexDirection: "row" }}>
+    <PlaceholderMedia style={{ flex: 1, marginRight: 10 }} />
+    <PlaceholderMedia style={{ flex: 1, marginRight: 10 }} />
+    <PlaceholderMedia style={{ flex: 1 }} />
+  </PlaceholderBlock>
 </Placeholder>`}
       />
     </Card>

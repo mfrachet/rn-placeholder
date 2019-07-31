@@ -1,3 +1,4 @@
+export { PlaceholderBlock } from "./PlaceholderBlock";
 export { AnimationConsumer } from "./animations/AnimationConsumer";
 export { Placeholder } from "./Placeholder";
 export { PlaceholderLine } from "./PlaceholderLine";

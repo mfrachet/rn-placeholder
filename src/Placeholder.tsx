@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, ViewProps } from "react-native";
 import { AnimationConsumer } from "./animations/AnimationConsumer";
 import { SIZES } from "./tokens";
+import { PlaceholderBlock } from "./PlaceholderBlock";
 
 export interface IPlaceholderElement {
   Animation?: React.ComponentType;
@@ -27,20 +28,13 @@ export const Placeholder: React.FC<IPlaceholder> = ({
   const AnimationProvider = Animation ? Animation : View;
   const ChildAnimation = Animation ? AnimationConsumer : View;
 
-  const arrayOfChildren = React.Children.toArray(children);
-  const enhancedChildren = arrayOfChildren.map(
-    (child: JSX.Element, index: number) =>
-      React.cloneElement(child, {
-        Animation: ChildAnimation,
-        hasMargin: index !== arrayOfChildren.length - 1
-      })
-  );
-
   return (
     <AnimationProvider>
       <View style={[style, styles.row]} {...props}>
         {Left && <Left style={styles.left} Animation={ChildAnimation} />}
-        <View style={styles.full}>{enhancedChildren}</View>
+        <PlaceholderBlock style={styles.full} Animation={ChildAnimation}>
+          {children}
+        </PlaceholderBlock>
         {Right && <Right style={styles.right} Animation={ChildAnimation} />}
       </View>
     </AnimationProvider>
