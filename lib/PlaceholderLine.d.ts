@@ -1,11 +1,10 @@
 import React from "react";
 import { ViewProps } from "react-native";
-import { IPlaceholderElement } from "./Placeholder";
-export interface ILine extends IPlaceholderElement, ViewProps {
+export interface ILine extends ViewProps {
     height?: number;
     color?: string;
     width?: number;
-    hasMargin?: boolean;
+    noMargin?: boolean;
     style?: ViewProps["style"];
 }
 export declare const PlaceholderLine: React.FC<ILine>;

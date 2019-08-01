@@ -1,11 +1,8 @@
 import React from "react";
 import { ViewProps } from "react-native";
-export interface IPlaceholderElement {
-    Animation?: React.ComponentType;
-}
 export interface IPlaceholder extends ViewProps {
     Animation?: React.ComponentType;
-    Left?: React.ComponentType<ViewProps & IPlaceholderElement>;
-    Right?: React.ComponentType<ViewProps & IPlaceholderElement>;
+    Left?: React.ComponentType<ViewProps>;
+    Right?: React.ComponentType<ViewProps>;
 }
 export declare const Placeholder: React.FC<IPlaceholder>;

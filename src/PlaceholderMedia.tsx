@@ -1,10 +1,9 @@
 import React from "react";
 import { StyleSheet, View, ViewProps } from "react-native";
-import { IPlaceholderElement } from "./Placeholder";
+import { AnimationConsumer } from "./animations/AnimationConsumer";
 import { COLORS, SIZES } from "./tokens";
 
-export interface IMedia extends IPlaceholderElement, ViewProps {
-  Animation?: React.ComponentType;
+export interface IMedia extends ViewProps {
   /* The media size (height / width), default is 40  */
   size?: number;
   /* Defines if the media is rounded or not, default is false */
@@ -16,7 +15,6 @@ export interface IMedia extends IPlaceholderElement, ViewProps {
 }
 
 export const PlaceholderMedia: React.FC<IMedia> = ({
-  Animation = React.Fragment,
   size = SIZES.xxl,
   isRound = false,
   color = COLORS.primary,
@@ -31,7 +29,7 @@ export const PlaceholderMedia: React.FC<IMedia> = ({
 
   return (
     <View style={[computedStyles, style, styles.media]}>
-      <Animation />
+      <AnimationConsumer />
     </View>
   );
 };

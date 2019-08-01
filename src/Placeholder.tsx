@@ -1,19 +1,15 @@
 import React from "react";
 import { StyleSheet, View, ViewProps } from "react-native";
-import { AnimationConsumer } from "./animations/AnimationConsumer";
+import { Raw } from "./animations/Raw";
 import { SIZES } from "./tokens";
-
-export interface IPlaceholderElement {
-  Animation?: React.ComponentType;
-}
 
 export interface IPlaceholder extends ViewProps {
   /* An optional component that animates the placeholder */
   Animation?: React.ComponentType;
   /* An optional component to display on the left */
-  Left?: React.ComponentType<ViewProps & IPlaceholderElement>;
+  Left?: React.ComponentType<ViewProps>;
   /* An optional component to display on the right */
-  Right?: React.ComponentType<ViewProps & IPlaceholderElement>;
+  Right?: React.ComponentType<ViewProps>;
 }
 
 export const Placeholder: React.FC<IPlaceholder> = ({
@@ -24,24 +20,14 @@ export const Placeholder: React.FC<IPlaceholder> = ({
   Animation,
   ...props
 }) => {
-  const AnimationProvider = Animation ? Animation : View;
-  const ChildAnimation = Animation ? AnimationConsumer : View;
-
-  const arrayOfChildren = React.Children.toArray(children);
-  const enhancedChildren = arrayOfChildren.map(
-    (child: JSX.Element, index: number) =>
-      React.cloneElement(child, {
-        Animation: ChildAnimation,
-        hasMargin: index !== arrayOfChildren.length - 1
-      })
-  );
+  const AnimationProvider = Animation || Raw;
 
   return (
     <AnimationProvider>
       <View style={[style, styles.row]} {...props}>
-        {Left && <Left style={styles.left} Animation={ChildAnimation} />}
-        <View style={styles.full}>{enhancedChildren}</View>
-        {Right && <Right style={styles.right} Animation={ChildAnimation} />}
+        {Left && <Left style={styles.left} />}
+        <View style={styles.full}>{children}</View>
+        {Right && <Right style={styles.right} />}
       </View>
     </AnimationProvider>
   );
