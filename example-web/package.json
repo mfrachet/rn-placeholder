@@ -2,7 +2,7 @@
   "name": "rn-web",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://mfrachet.github.io/rn-placeholder",
+  "homepage": "https://mfrachet.github.io/rn-placeholder",
   "dependencies": {
     "prismjs": "^1.17.1",
     "react": "^16.8.6",
