@@ -29,13 +29,13 @@ export const App = () => (
 
       <Code
         code={`<Placeholder
-Left={PlaceholderMedia}
-Right={PlaceholderMedia}
-Animation={Fade}
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={Fade}
 >
-<PlaceholderLine width={80} />
-<PlaceholderLine />
-<PlaceholderLine width={30} />
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
 </Placeholder>`}
       />
     </Card>
@@ -54,13 +54,13 @@ Animation={Fade}
 
       <Code
         code={`<Placeholder
-Left={PlaceholderMedia}
-Right={PlaceholderMedia}
-Animation={Loader}
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={Loader}
 >
-<PlaceholderLine width={80} />
-<PlaceholderLine />
-<PlaceholderLine width={30} />
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
 </Placeholder>`}
       />
     </Card>
@@ -79,13 +79,13 @@ Animation={Loader}
 
       <Code
         code={`<Placeholder
-Left={PlaceholderMedia}
-Right={PlaceholderMedia}
-Animation={Shine}
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={Shine}
 >
-<PlaceholderLine width={80} />
-<PlaceholderLine />
-<PlaceholderLine width={30} />
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
 </Placeholder>`}
       />
     </Card>
@@ -104,13 +104,13 @@ Animation={Shine}
 
       <Code
         code={`<Placeholder
-Left={PlaceholderMedia}
-Right={PlaceholderMedia}
-Animation={ShineOverlay}
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={ShineOverlay}
 >
-<PlaceholderLine width={80} />
-<PlaceholderLine />
-<PlaceholderLine width={30} />
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
 </Placeholder>`}
       />
     </Card>
