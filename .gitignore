@@ -1,3 +1,4 @@
 node_modules/**/*
 example/placeholder/**
 example/node_modules
+example-web/node_modules
