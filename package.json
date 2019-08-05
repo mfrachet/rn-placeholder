@@ -23,8 +23,10 @@
     "format": "prettier --write './src/**/*.tsx'",
     "lint": "tslint -c tslint.json 'src/**/**'",
     "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",
+    "start:web": "yarn --cwd ./example-web start",
     "check:lint": "tsc --noEmit && yarn lint",
-    "release": "yarn check:lint && yarn test && yarn build && npm publish"
+    "release": "yarn check:lint && yarn test && yarn build && npm publish",
+    "generate:docs": "yarn --cwd ./example-web build && mv ./example-web/build ./docs "
   },
   "devDependencies": {
     "@types/react": "^16.8.22",
