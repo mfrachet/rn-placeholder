@@ -4,7 +4,7 @@
 Display some placeholder stuff before rendering your text or media content in React Native. Compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
 
 - [Snack application **with copy to clipboard!**](https://snack.expo.io/@mfrachet/84bb31)
-- [Usage with react-native-web\*\*](https://mfrachet.github.io/rn-placeholder)
+- [Usage with react-native-web](https://mfrachet.github.io/rn-placeholder)
 
 ---
 
