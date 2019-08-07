@@ -7037,6 +7037,1775 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           </View>
         </View>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 3,
+              "elevation": 3,
+              "marginBottom": 12,
+              "padding": 12,
+            },
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "fontSize": 20,
+              "fontWeight": "500",
+              "marginBottom": 24,
+              "textAlign": "center",
+            }
+          }
+        >
+          Progressive
+        </Text>
+        <View
+          style={
+            Array [
+              undefined,
+              Object {
+                "flexDirection": "row",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#efefef",
+                  "borderRadius": 3,
+                  "height": 40,
+                  "width": 40,
+                },
+                Object {
+                  "marginRight": 12,
+                },
+                Object {
+                  "overflow": "hidden",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.1)",
+                  "height": "100%",
+                  "position": "absolute",
+                  "right": "0%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "borderRadius": 3,
+                    "height": 12,
+                    "marginBottom": 12,
+                    "width": "80%",
+                  },
+                  undefined,
+                  Object {
+                    "overflow": "hidden",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0,0,0,0.1)",
+                    "height": "100%",
+                    "position": "absolute",
+                    "right": "0%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "borderRadius": 3,
+                    "height": 12,
+                    "marginBottom": 12,
+                    "width": "100%",
+                  },
+                  undefined,
+                  Object {
+                    "overflow": "hidden",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0,0,0,0.1)",
+                    "height": "100%",
+                    "position": "absolute",
+                    "right": "0%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#efefef",
+                    "borderRadius": 3,
+                    "height": 12,
+                    "marginBottom": 12,
+                    "width": "30%",
+                  },
+                  undefined,
+                  Object {
+                    "overflow": "hidden",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0,0,0,0.1)",
+                    "height": "100%",
+                    "position": "absolute",
+                    "right": "0%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#efefef",
+                  "borderRadius": 3,
+                  "height": 40,
+                  "width": 40,
+                },
+                Object {
+                  "marginLeft": 12,
+                },
+                Object {
+                  "overflow": "hidden",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.1)",
+                  "height": "100%",
+                  "position": "absolute",
+                  "right": "0%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 3,
+              "marginTop": 24,
+            }
+          }
+        >
+          <RCTScrollView
+            horizontal={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 3,
+                "margin": 8,
+                "marginTop": 24,
+                "overflow": "scroll",
+                "padding": 16,
+              }
+            }
+          >
+            <View>
+              <RCTScrollView
+                style={Object {}}
+              >
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &lt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Placeholder
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Left
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        PlaceholderMedia
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Right
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        PlaceholderMedia
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Animation
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Progressive
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &lt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        PlaceholderLine
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        width
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        80
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        /&gt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &lt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        PlaceholderLine
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        /&gt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                          
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &lt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        PlaceholderLine
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        width
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        30
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        /&gt;
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "black",
+                        "fontFamily": "Menlo-Regular",
+                        "fontSize": 12,
+                        "height": 17,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "black",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "black",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &lt;/
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        Placeholder
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        &gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                </View>
+              </RCTScrollView>
+            </View>
+          </RCTScrollView>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2196F3",
+                "borderRadius": 30,
+                "margin": 12,
+                "opacity": 1,
+                "padding": 12,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Copy code
+            </Text>
+          </View>
+        </View>
+      </View>
     </View>
   </RCTScrollView>
 </View>
