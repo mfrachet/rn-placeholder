@@ -7,7 +7,8 @@ import {
   Fade,
   Shine,
   ShineOverlay,
-  Loader
+  Loader,
+  Progressive
 } from "rn-placeholder";
 import { Card } from "./components/Card";
 import { Code } from "./components/Code";
@@ -107,6 +108,31 @@ export const App = () => (
   Left={PlaceholderMedia}
   Right={PlaceholderMedia}
   Animation={ShineOverlay}
+>
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
+</Placeholder>`}
+      />
+    </Card>
+
+    <Card>
+      <Title>Progressive</Title>
+      <Placeholder
+        Left={PlaceholderMedia}
+        Right={PlaceholderMedia}
+        Animation={Progressive}
+      >
+        <PlaceholderLine width={80} />
+        <PlaceholderLine />
+        <PlaceholderLine width={30} />
+      </Placeholder>
+
+      <Code
+        code={`<Placeholder
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={Progressive}
 >
   <PlaceholderLine width={80} />
   <PlaceholderLine />

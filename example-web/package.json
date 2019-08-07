@@ -9,7 +9,7 @@
     "react-dom": "^16.8.6",
     "react-native-web": "^0.11.5",
     "react-scripts": "3.0.1",
-    "rn-placeholder": "^3.0.0-alpha.5"
+    "rn-placeholder": "^3.0.0-alpha"
   },
   "scripts": {
     "start": "react-scripts start",

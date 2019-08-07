@@ -8469,10 +8469,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rn-placeholder@^3.0.0-alpha.5:
-  version "3.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/rn-placeholder/-/rn-placeholder-3.0.0-alpha.5.tgz#de4b4f7250d8f0bdc0d7cb357b2f481ad087817d"
-  integrity sha512-KL+p+rdPdL9cqZwF+tguLI5urUXm6wLZ86KWw2iPBaBiyAwhI1iqQusHAbYmGrPF4yx9HlzRRFgCc+awItgI2A==
+rn-placeholder@^3.0.0-alpha:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/rn-placeholder/-/rn-placeholder-3.0.0.tgz#d51063cfc20cf702547205b936d934e92c4941b0"
+  integrity sha512-ydlIDoth4uvj9PPEOZLZxgNtNJlmUR49IGFtRKM7FWcKuMG2hC89kIPa8xRCO5vfxSDPwMGTyshYGGsQXOJJNA==
 
 rsvp@^4.8.4:
   version "4.8.5"
