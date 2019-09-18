@@ -9,6 +9,8 @@ const isInteraction = false;
 export interface IShine extends ViewProps {
   /* Animation duration, default is 750 */
   duration?: number;
+  /* Reverse animation direction */
+  reverse?: boolean;
 }
 
 export class Shine extends React.Component<IShine> {
@@ -24,10 +26,12 @@ export class Shine extends React.Component<IShine> {
   }
 
   public render() {
-    const { children, style } = this.props;
+    const { children, style, reverse } = this.props;
+
+    const inputRange = reverse? [END_VALUE, START_VALUE]: [START_VALUE, END_VALUE];
 
     const left = this.animation.interpolate({
-      inputRange: [START_VALUE, END_VALUE],
+      inputRange,
       outputRange: ["0%", "100%"]
     });
 
