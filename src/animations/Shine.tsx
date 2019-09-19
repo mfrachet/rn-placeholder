@@ -28,11 +28,11 @@ export class Shine extends React.Component<IShine> {
   public render() {
     const { children, style, reverse } = this.props;
 
-    const outputRange = reverse? ["100%", "0%"]: ["0%", "100%"];
+    const outputRange = ["0%", "100%"];
 
     const left = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: outputRange
+      outputRange: reverse? outputRange.reverse(): outputRange
     });
 
     return (

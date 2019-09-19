@@ -8,6 +8,8 @@ const isInteraction = false;
 export interface IShine {
   /* Animation duration, default is 750 */
   duration?: number;
+  /* Reverse animation direction */
+  reverse?: boolean;
 }
 
 export class ShineOverlay extends React.Component<IShine> {
@@ -23,11 +25,13 @@ export class ShineOverlay extends React.Component<IShine> {
   }
 
   public render() {
-    const { children } = this.props;
+    const { children, reverse } = this.props;
+
+    const outputRange = ["0%", "100%"];
 
     const left = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"]
+      outputRange: reverse? outputRange.reverse(): outputRange
     });
 
     return (
