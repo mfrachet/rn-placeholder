@@ -1,0 +1,94 @@
+---
+path: "/components"
+date: 2017-07-12T17:12:33.962Z
+title: "Components"
+order: 3
+---
+
+import { Snippet } from "./components/Snippet"
+import {
+  Placeholder,
+  PlaceholderLine,
+  PlaceholderMedia,
+  Fade,
+} from "rn-placeholder"
+
+# Available components
+
+There are only three components exposed by the library
+
+- [Placeholder](#placeholder)
+- [PlaceholderLine](#placeholderline)
+- [PlaceholderMedia](#placeholdermedia)
+
+## Placeholder
+
+It's the wrapper around all of the other components. Using alone will not produce anything interesting. You have put some line or media inside to make it powerful.
+
+It accepts all the props of a [React Native View](https://facebook.github.io/react-native/docs/view.html) plus:
+
+- **Animation**: An optional animation component
+- **Left**: An optional component to display on the left side
+- **Right**: An optional component to display on the right side
+
+## PlaceholderLine
+
+A `PlaceholderLine` is one of the two basic and visual components of a placeholder.
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder>
+      <PlaceholderLine width={80} />
+      <PlaceholderLine
+	style={{backgroundColor: 'green'}}
+	/>
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+  }}
+/>
+
+## PlaceholderMedia
+
+A `PlaceholderMedia` is the second of the two basic and visual components of a placeholder. It can be used a single placeholder like following:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder>
+      <PlaceholderMedia />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderMedia,
+  }}
+/>
+
+But they become really cool components when associated with the `Placeholder` and the `PlaceholderLine` ones:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder
+      Left={PlaceholderMedia}
+      Right={PlaceholderMedia}
+    >
+      <PlaceholderLine width={80} />
+      <PlaceholderLine />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    PlaceholderMedia,
+  }}
+/>

@@ -1,0 +1,141 @@
+---
+path: "/migrating-from-previous-version"
+date: 2017-07-12T17:12:33.962Z
+title: "Migration"
+order: 2
+---
+
+import { Snippet } from "./components/Snippet"
+import { Code } from "./components/Code"
+import {
+  Placeholder,
+  PlaceholderMedia,
+  PlaceholderLine,
+  Fade,
+} from "rn-placeholder"
+
+# Migrating from a previous version?
+
+If you have used earlier versions than v3, you were probably familiar with syntaxes like:
+
+<Code>
+  {`
+<Placeholder.ImageContent
+  size={60}
+  animate="fade"
+  lineNumber={4}
+  lineSpacing={5}
+  lastLineWidth="30%"
+  onReady={this.state.isReady}
+>
+  <Text>Placeholder has finished :D</Text>
+</Placeholder.ImageContent>
+`}
+</Code>
+
+In this snippet, there are few caveats and this page aims to sum up **the reasons why the API has changed**:
+
+- [The animate prop](#the-animate-prop)
+- [The firstLineWidth and lastLineWidth props](#the-firstlinewidth-and-lastlinewidth-props)
+- [The onReady / whenReadyRender props](#the-onready--whenreadyrender-props)
+
+## The animate prop
+
+In previous versions, the animate prop was accepting a string. This seemed pretty good to me when I've designed the library at first but it breaks the composability nature of React.
+
+For example, each time I wanted to create a new animation, I had to create a string matching a specific component directly inside the codebase, and I had to release a new version so that people can benefit from it.
+
+Moreover, to allow people to customize animations and to create new ones, I added another prop called `customAnimation`.
+
+This created a lot of conditional logic that was not necessary.
+
+Instead of relying on different props (and thus having some unecessary conditional logic), it's now possible to inject an animation through the `Animation` prop of the `Placeholder` component. What's great about this is that you can inject the different built-in animations or simply create your own one for your specific purpose using only one prop.
+
+_By the way, don't hesitate to create a pull request if you think that your new animation can have an impact for the community!_
+
+<Snippet
+  scope={{ Placeholder, PlaceholderLine, Fade }}
+  code={`function App() {
+  return (
+    <Placeholder Animation={Fade}>
+      <PlaceholderLine width={80} />
+    </Placeholder>
+  )
+}
+ `}
+/>
+
+## The firstLineWidth and lastLineWidth props
+
+These two props aimed to modify the actual width of the first and last lines of a certain paragraphs. But what if I want to have total control of the number and the width of each of the lines?
+
+It wasn't people. We could only modify the first and last width only, and everything else would have been full size. Customizing each line on height, color and border radius was also a pain.
+
+With the new API, it's possible to customize each line independently and to create the better placeholder for your need:
+
+<Snippet
+  scope={{ Placeholder, PlaceholderLine }}
+  code={`function App() {
+  return (
+    <Placeholder>
+      <PlaceholderLine width={80} />
+      <PlaceholderLine />
+      <PlaceholderLine
+        width={30}
+        style={{ backgroundColor: "red" }}
+      />
+    </Placeholder>
+ )
+}
+ `}
+/>
+
+## The onReady / whenReadyRender props
+
+This was the way to display or hide the placeholder at the beginning and there are two reasons that made me move this prop out:
+
+### Not that much difference
+
+The first one is that it's not really different to write:
+
+<Code>
+  {`
+const isDisplayed = true;\n
+function App() {
+  return <Placeholder onReady={isDisplayed} />;
+}\n\n
+// We even earn some space!
+function App2() {
+  return isDisplayed && <Placeholder />;
+}
+`}
+</Code>
+
+But it extract at least one computation or one condition checking from the library and it has allowed to be focused on the Placeholder components and animations and not on when to display them.
+
+### Suspense will arrive (one day) on React Native
+
+[Suspense](https://reactjs.org/docs/react-api.html#suspense) is a "new" feature introduced in React with the [lazy](https://reactjs.org/docs/code-splitting.html) and [memo](https://reactjs.org/docs/react-api.html#reactmemo) functions some time ago. It will play an important role on making asynchronous operations and displaying loading components.
+
+To be short, the Suspense component can be used this way:
+
+<Code>
+  {`
+function App() {
+  return (
+    <Suspense
+      fallback={
+        <Placeholder>
+          <PlaceholderLine />
+        </Placeholder>
+      }
+    >
+      <ComponentThatMakeAsynchronousOperation />
+      {/* During the async computation, the fallback prop will be displayed instead of the children */}
+    </Suspense>
+  )
+}
+`}
+</Code>
+
+while this feature is available for the web, it's not shipped in React Native but we can presume that it will arrive soon and the new API allows to play with it.

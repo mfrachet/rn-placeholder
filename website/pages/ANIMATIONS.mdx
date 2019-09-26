@@ -1,0 +1,176 @@
+---
+path: "/animations"
+date: 2017-07-12T17:12:33.962Z
+title: "Animations"
+order: 4
+---
+
+import { Snippet } from "./components/Snippet"
+import {
+  Placeholder,
+  PlaceholderLine,
+  PlaceholderMedia,
+  Fade,
+  ShineOverlay,
+  Shine,
+  Loader,
+  Progressive,
+} from "rn-placeholder"
+
+# Available animations
+
+There are some built-in animations inside the library but you can create your own one if you need a specific one.
+
+- [Fade](#fade)
+- [ShineOverlay](#shineoverlay)
+- [Shine](#shine)
+- [Loader](#loader)
+- [Progressive](#progressive)
+- [Tweaking existing animations](#tweaking-existing-animations)
+- [Build your own one](#build-your-own-one)
+
+## Fade
+
+This is the base animation that makes the placeholder become clearer on a specified interval:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder Animation={Fade}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    Fade,
+  }}
+/>
+
+## ShineOverlay
+
+This applies a tiny overlay from left to right of the placeholder. It's pretty neat but it has the drawback to only work without style customization: only on white background with gray lines.
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder Animation={ShineOverlay}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    ShineOverlay,
+  }}
+/>
+
+## Shine
+
+The shine animation is an attempt to overcome the overlay problem of the [ShineOverlay](#shineoverlay) animation by animating only the differnt part of the placeholder. It also has some drawbakcs.
+Since each component has a different width, the animation is more or less quick dependending on the host size. For this kind of animation to perfectly work, it would be necessary to determine when the left size placeholder has finished animating and only then start to animate the next one.
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder Animation={Shine}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    Shine,
+  }}
+/>
+
+## Loader
+
+A simple placeholder animation based on the standard loader ([ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator)) of each platforms.
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder Animation={Loader}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    Loader,
+  }}
+/>
+
+## Progressive
+
+I'm feel a bit guilty about that but I've stolen the idea from a design system and I can't remember which one. But I like the way it behaves:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder Animation={Progressive}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    Progressive,
+  }}
+/>
+
+## Tweaking existing animations
+
+It's possible to tweak a specific animation by passing it additional props. However keep in mind that it's important to spread the props from the `Animation` render function. Else you will be in strange behaviors:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder
+    Animation={(props) => (
+      <Loader {...props}
+        size="large"
+        color="#00ff00" />
+      )}>
+      <PlaceholderLine width={70} />
+      <PlaceholderLine width={50} />
+      <PlaceholderLine width={80} />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    Loader,
+  }}
+/>
+
+## Build your own one
+
+You can build your own animation and pass it to the `Animation` prop of the `Placeholder` component.
+
+In fact, what you can build is a `Provider` of value for animations.
+
+I suggest you take a look at the implementation of the [`Progressive` animation implementation](https://github.com/mfrachet/rn-placeholder/blob/master/src/animations/Progressive.tsx) and try to create something that look like this, and then pass it to the `Animation` prop.

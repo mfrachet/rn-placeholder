@@ -1,0 +1,51 @@
+---
+path: "/"
+date: 2017-07-12T17:12:33.962Z
+title: "Usage"
+order: 1
+---
+
+import { Snippet } from "./components/Snippet"
+import {
+  Placeholder,
+  PlaceholderLine,
+  PlaceholderMedia,
+  Fade,
+} from "rn-placeholder"
+
+[![Build Status](https://travis-ci.org/mfrachet/rn-placeholder.svg?branch=master)](https://travis-ci.org/mfrachet/rn-placeholder)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Display some placeholder stuff before rendering your text or media content in React Native. Compatible with [Expo](https://expo.io/) and [react-native-web](https://github.com/necolas/react-native-web).
+
+## Installation
+
+```javascript
+$ yarn add rn-placeholder
+```
+
+## In your code
+
+Import different components or animations and combine them to create the placeholder that fits your need:
+
+<Snippet
+  code={`function App() {
+  return (
+    <Placeholder
+      Animation={Fade}
+      Left={PlaceholderMedia}
+      Right={PlaceholderMedia}
+    >
+      <PlaceholderLine width={80} />
+      <PlaceholderLine />
+      <PlaceholderLine width={30} />
+    </Placeholder>
+    )
+}`}
+  scope={{
+    Placeholder,
+    PlaceholderLine,
+    PlaceholderMedia,
+    Fade,
+  }}
+/>
