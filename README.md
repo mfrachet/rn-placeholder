@@ -8,7 +8,7 @@ Display some placeholder stuff before rendering your text or media content in Re
 
 ---
 
-![Image of the placeholder in action](./documentation/placeholder.gif)
+![Image of the placeholder in action](./assets/placeholder.gif)
 
 # Usage
 

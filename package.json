@@ -26,7 +26,7 @@
     "start:web": "yarn --cwd ./example-web start",
     "check:lint": "tsc --noEmit && yarn lint",
     "release": "yarn check:lint && yarn test && yarn build && npm publish",
-    "generate:docs": "yarn --cwd ./example-web build && mv ./example-web/build ./docs "
+    "generate:docs": "yarn --cwd ./website build && mv ./website/public ./docs"
   },
   "devDependencies": {
     "@types/react": "^16.8.22",
