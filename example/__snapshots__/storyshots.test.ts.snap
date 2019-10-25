@@ -16044,6 +16044,144 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
                     <Text
                       style={
                         Object {
+                          "color": "#690",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#690",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        duration
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        =
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        {
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        300
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#999",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#999",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                        }
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#905",
+                          "fontFamily": "Menlo-Regular",
+                          "fontSize": 12,
+                          "height": 17,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#905",
+                            "fontFamily": "Menlo-Regular",
+                            "fontSize": 12,
+                            "height": 17,
+                          }
+                        }
+                      >
+                         
+                      </Text>
+                    </Text>
+                    <Text
+                      style={
+                        Object {
                           "color": "#999",
                           "fontFamily": "Menlo-Regular",
                           "fontSize": 12,
