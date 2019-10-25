@@ -52,7 +52,7 @@ Left={props => (
       <Title color="white">Custom Fade animation</Title>
       <Placeholder
         Animation={props => (
-          <Fade {...props} style={{ backgroundColor: "blue" }} />
+          <Fade {...props} style={{ backgroundColor: "blue" }} duration={300} />
         )}
         Left={props => (
           <PlaceholderMedia {...props} style={[props.style, darkStyle]} />
@@ -66,7 +66,7 @@ Left={props => (
       <Code
         code={`<Placeholder
 Animation={props => (
-    <Fade {...props} style={{ backgroundColor: "blue" }} />
+    <Fade {...props} style={{ backgroundColor: "blue" }} duration={300} />
 )}
 Left={props => (
     <PlaceholderMedia {...props} style={[props.style, darkStyle]} />
