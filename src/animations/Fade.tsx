@@ -4,14 +4,22 @@ import { Provider } from "./context";
 
 const START_VALUE = 0.5;
 const END_VALUE = 1;
-const DURATION = 500;
 const useNativeDriver = true;
 const isInteraction = false;
 
-export class Fade extends React.Component<ViewProps> {
+export interface IFade extends ViewProps {
+  /* Animation duration, default is 500 */
+  duration?: number;
+}
+
+export class Fade extends React.Component<IFade> {
+  public static defaultProps = {
+    duration: 500
+  };
+
   private animation: Animated.Value;
 
-  constructor(props: ViewProps) {
+  constructor(props: IFade) {
     super(props);
 
     this.animation = new Animated.Value(START_VALUE);
@@ -33,15 +41,16 @@ export class Fade extends React.Component<ViewProps> {
   }
 
   private start() {
+    const { duration } = this.props;
     Animated.sequence([
       Animated.timing(this.animation, {
-        duration: DURATION,
+        duration,
         isInteraction,
         toValue: END_VALUE,
         useNativeDriver
       }),
       Animated.timing(this.animation, {
-        duration: DURATION,
+        duration,
         isInteraction,
         toValue: START_VALUE,
         useNativeDriver
