@@ -37,7 +37,7 @@
     "react-live": "^2.2.0",
     "react-native-web": "^0.11.7",
     "rn-placeholder": "^3.0.0",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "babel-plugin-react-native-web": "^0.11.7",
