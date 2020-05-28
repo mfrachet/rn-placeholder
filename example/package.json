@@ -16,16 +16,16 @@
     "react-native-web": "^0.11.4"
   },
   "devDependencies": {
-    "@storybook/addon-storyshots": "^5.1.9",
-    "@storybook/react-native": "^5.1.9",
-    "@storybook/theming": "^5.1.9",
-    "@types/node": "^12.0.10",
-    "@types/react": "^16.8.19",
-    "@types/react-native": "^0.57.60",
-    "babel-preset-expo": "^5.1.1",
-    "jest-expo": "^33.0.2",
+    "@storybook/addon-storyshots": "^5.3.19",
+    "@storybook/react-native": "^5.3.19",
+    "@storybook/theming": "^5.3.19",
+    "@types/node": "^14.0.5",
+    "@types/react": "^16.9.35",
+    "@types/react-native": "^0.62.12",
+    "babel-preset-expo": "^8.2.1",
+    "jest-expo": "^37.0.0",
     "react-native-syntax-highlighter": "^2.0.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.9.3"
   },
   "private": true,
   "jest": {

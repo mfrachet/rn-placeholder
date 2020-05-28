@@ -25,7 +25,7 @@ import {
   Placeholder,
   PlaceholderMedia,
   PlaceholderLine,
-  Fade
+  Fade,
 } from "rn-placeholder";
 
 const App = () => (
@@ -67,7 +67,7 @@ $ cd ./example && yarn && yarn start
 $ git clone https://github.com/mfrachet/rn-placeholder
 $ cd rn-placeholder
 $ yarn
-$ cd ./example-web && yarn && yarn start
+$ cd ./example-web && yarn && cd ../ && yarn start # yarn start should be run at the root of the project
 ```
 
 The web app is also available in this github pages: https://mfrachet.github.com/rn-placeholder.
