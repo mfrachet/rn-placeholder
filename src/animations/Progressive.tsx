@@ -29,7 +29,7 @@ export class Progressive extends React.Component<IProgressive> {
 
     const right = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"]
+      outputRange: ["0%", "100%"],
     });
 
     return (
@@ -37,7 +37,7 @@ export class Progressive extends React.Component<IProgressive> {
         value={[
           styles.animationStyle,
           style,
-          { right, backgroundColor: color }
+          { right, backgroundColor: color },
         ]}
       >
         {children}
@@ -50,14 +50,16 @@ export class Progressive extends React.Component<IProgressive> {
       Animated.timing(this.animation, {
         duration: DURATION,
         isInteraction,
-        toValue: END_VALUE
+        toValue: END_VALUE,
+        useNativeDriver: false,
       }),
       Animated.timing(this.animation, {
         duration: DURATION,
         isInteraction,
-        toValue: START_VALUE
-      })
-    ]).start(e => {
+        toValue: START_VALUE,
+        useNativeDriver: false,
+      }),
+    ]).start((e) => {
       if (e.finished) {
         this.start();
       }
@@ -69,6 +71,6 @@ const styles = StyleSheet.create({
   animationStyle: {
     height: "100%",
     position: "absolute",
-    width: "100%"
-  }
+    width: "100%",
+  },
 });

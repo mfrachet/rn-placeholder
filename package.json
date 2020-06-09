@@ -1,6 +1,6 @@
 {
   "name": "rn-placeholder",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
