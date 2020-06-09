@@ -27,7 +27,7 @@ export class ShineOverlay extends React.Component<IShine> {
 
     const left = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"]
+      outputRange: ["0%", "100%"],
     });
 
     return (
@@ -44,8 +44,9 @@ export class ShineOverlay extends React.Component<IShine> {
     Animated.timing(this.animation, {
       duration: this.props.duration || 750,
       isInteraction,
-      toValue: END_VALUE
-    }).start(e => {
+      toValue: END_VALUE,
+      useNativeDriver: false,
+    }).start((e) => {
       if (e.finished) {
         this.start();
       }
@@ -59,6 +60,6 @@ const styles = StyleSheet.create({
     height: "100%",
     opacity: 0.4,
     position: "absolute",
-    width: 30
-  }
+    width: 30,
+  },
 });
