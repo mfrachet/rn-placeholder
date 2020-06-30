@@ -24,7 +24,7 @@ export const Placeholder: React.FC<IPlaceholder> = ({
 
   return (
     <AnimationProvider>
-      <View style={[style, styles.row]} {...props}>
+      <View style={[styles.row, style]} {...props}>
         {Left && <Left style={styles.left} />}
         <View style={styles.full}>{children}</View>
         {Right && <Right style={styles.right} />}
