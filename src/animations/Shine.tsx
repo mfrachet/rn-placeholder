@@ -26,13 +26,16 @@ export class Shine extends React.Component<IShine> {
   public render() {
     const { children, style } = this.props;
 
-    const left = this.animation.interpolate({
+    const translateX = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"],
+      outputRange: ["0%", "250%"],
+      extrapolateRight: "extend"
     });
 
     return (
-      <Provider value={[styles.shine, { left }, style]}>{children}</Provider>
+      <Provider value={[styles.shine, { transform: [{ translateX }] }, style]}>
+        {children}
+      </Provider>
     );
   }
 
@@ -43,8 +46,8 @@ export class Shine extends React.Component<IShine> {
       duration: this.props.duration || 750,
       isInteraction,
       toValue: END_VALUE,
-      useNativeDriver: false,
-    }).start((e) => {
+      useNativeDriver: true
+    }).start(e => {
       if (e.finished) {
         this.start();
       }
@@ -57,6 +60,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     height: "100%",
     opacity: 0.5,
-    width: "40%",
-  },
+    width: "40%"
+  }
 });

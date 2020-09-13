@@ -10,10 +10,14 @@ export interface IShine {
   duration?: number;
 }
 
-export class ShineOverlay extends React.Component<IShine> {
+export class ShineOverlay extends React.Component<IShine, { width: number }> {
   private animation: Animated.Value;
   constructor(props: IShine) {
     super(props);
+
+    this.state = {
+      width: 0
+    };
 
     this.animation = new Animated.Value(0);
   }
@@ -25,15 +29,19 @@ export class ShineOverlay extends React.Component<IShine> {
   public render() {
     const { children } = this.props;
 
-    const left = this.animation.interpolate({
+    const translateX = this.animation.interpolate({
       inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"],
+      outputRange: [0, this.state.width]
     });
 
     return (
-      <View>
+      <View
+        onLayout={e => this.setState({ width: e.nativeEvent.layout.width })}
+      >
         {children}
-        <Animated.View style={[styles.shine, { left }]} />
+        <Animated.View
+          style={[styles.shine, { transform: [{ translateX }] }]}
+        />
       </View>
     );
   }
@@ -45,8 +53,8 @@ export class ShineOverlay extends React.Component<IShine> {
       duration: this.props.duration || 750,
       isInteraction,
       toValue: END_VALUE,
-      useNativeDriver: false,
-    }).start((e) => {
+      useNativeDriver: true
+    }).start(e => {
       if (e.finished) {
         this.start();
       }
@@ -60,6 +68,6 @@ const styles = StyleSheet.create({
     height: "100%",
     opacity: 0.4,
     position: "absolute",
-    width: 30,
-  },
+    width: 30
+  }
 });
