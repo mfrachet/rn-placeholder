@@ -9,11 +9,11 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^33.0.0",
-    "react": "16.8.3",
-    "react-dom": "^16.8.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-web": "^0.11.4"
+    "expo": "~38.0.8",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
+    "react-native-web": "~0.11.7"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "^5.1.9",
@@ -23,7 +23,7 @@
     "@types/react": "^16.8.19",
     "@types/react-native": "^0.57.60",
     "babel-preset-expo": "^5.1.1",
-    "jest-expo": "^33.0.2",
+    "jest-expo": "^38.0.2",
     "react-native-syntax-highlighter": "^2.0.0",
     "typescript": "^3.4.5"
   },
