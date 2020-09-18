@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, StyleSheet, View } from "react-native";
 
 const START_VALUE = 0;
@@ -30,6 +30,10 @@ export const ShineOverlay: React.FC<ShineOverlayProps> = ({
       }
     });
   };
+
+  useEffect(() => {
+    start();
+  }, []);
 
   const left = animation.current.interpolate({
     inputRange: [START_VALUE, END_VALUE],
