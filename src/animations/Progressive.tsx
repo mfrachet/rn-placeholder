@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Animated, StyleSheet, ViewProps } from "react-native";
 import { AnimationContext } from "./context";
 
@@ -7,53 +7,26 @@ const END_VALUE = 100;
 const DURATION = 750;
 const isInteraction = false;
 
-export interface IProgressive extends ViewProps {
+export interface ProgressiveProps extends ViewProps {
   color?: string;
 }
 
-export class Progressive extends React.Component<IProgressive> {
-  private animation: Animated.Value;
+export const Progressive: React.FC<ProgressiveProps> = ({
+  style,
+  color = "rgba(0,0,0,0.1)",
+  children,
+}) => {
+  const animation = useRef(new Animated.Value(START_VALUE));
 
-  constructor(props: IProgressive) {
-    super(props);
-
-    this.animation = new Animated.Value(START_VALUE);
-  }
-
-  public componentDidMount() {
-    this.start();
-  }
-
-  public render() {
-    const { children, style, color = "rgba(0,0,0,0.1)" } = this.props;
-
-    const right = this.animation.interpolate({
-      inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"],
-    });
-
-    return (
-      <AnimationContext.Provider
-        value={[
-          styles.animationStyle,
-          style,
-          { right, backgroundColor: color },
-        ]}
-      >
-        {children}
-      </AnimationContext.Provider>
-    );
-  }
-
-  private start() {
+  const start = () => {
     Animated.sequence([
-      Animated.timing(this.animation, {
+      Animated.timing(animation.current, {
         duration: DURATION,
         isInteraction,
         toValue: END_VALUE,
         useNativeDriver: false,
       }),
-      Animated.timing(this.animation, {
+      Animated.timing(animation.current, {
         duration: DURATION,
         isInteraction,
         toValue: START_VALUE,
@@ -61,11 +34,28 @@ export class Progressive extends React.Component<IProgressive> {
       }),
     ]).start((e) => {
       if (e.finished) {
-        this.start();
+        start();
       }
     });
-  }
-}
+  };
+
+  React.useEffect(() => {
+    start();
+  }, []);
+
+  const right = animation.current.interpolate({
+    inputRange: [START_VALUE, END_VALUE],
+    outputRange: ["0%", "100%"],
+  });
+
+  return (
+    <AnimationContext.Provider
+      value={[styles.animationStyle, style, { right, backgroundColor: color }]}
+    >
+      {children}
+    </AnimationContext.Provider>
+  );
+};
 
 const styles = StyleSheet.create({
   animationStyle: {
