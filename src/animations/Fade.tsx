@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Animated, ViewProps } from "react-native";
 import { AnimationContext } from "./context";
 
@@ -7,58 +7,52 @@ const END_VALUE = 1;
 const useNativeDriver = true;
 const isInteraction = false;
 
-export interface IFade extends ViewProps {
+export interface FadeProps extends ViewProps {
   /* Animation duration, default is 500 */
   duration?: number;
 }
 
-export class Fade extends React.Component<IFade> {
-  public static defaultProps = {
-    duration: 500
-  };
+export const Fade: React.FC<FadeProps> = ({
+  duration = 500,
+  children,
+  style,
+}) => {
+  const animation = useRef(new Animated.Value(START_VALUE));
 
-  private animation: Animated.Value;
-
-  constructor(props: IFade) {
-    super(props);
-
-    this.animation = new Animated.Value(START_VALUE);
-  }
-
-  public componentDidMount() {
-    this.start();
-  }
-
-  public render() {
-    const { children, style } = this.props;
-    const animationStyle = {
-      backgroundColor: "#dfdfdf",
-      height: "100%",
-      opacity: this.animation
-    };
-
-    return <AnimationContext.Provider value={[animationStyle, style]}>{children}</AnimationContext.Provider>;
-  }
-
-  private start() {
-    const { duration } = this.props;
+  const start = () => {
     Animated.sequence([
-      Animated.timing(this.animation, {
+      Animated.timing(animation.current, {
         duration,
         isInteraction,
         toValue: END_VALUE,
-        useNativeDriver
+        useNativeDriver,
       }),
-      Animated.timing(this.animation, {
+      Animated.timing(animation.current, {
         duration,
         isInteraction,
         toValue: START_VALUE,
-        useNativeDriver
-      })
-    ]).start(e => {
+        useNativeDriver,
+      }),
+    ]).start((e) => {
       if (e.finished) {
-        this.start();
+        start();
       }
     });
-  }
-}
+  };
+
+  React.useEffect(() => {
+    start();
+  }, []);
+
+  const animationStyle = {
+    backgroundColor: "#dfdfdf",
+    height: "100%",
+    opacity: animation.current,
+  };
+
+  return (
+    <AnimationContext.Provider value={[animationStyle, style]}>
+      {children}
+    </AnimationContext.Provider>
+  );
+};
