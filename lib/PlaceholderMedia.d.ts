@@ -1,9 +1,9 @@
 import React from "react";
 import { ViewProps } from "react-native";
-export interface IMedia extends ViewProps {
+export interface PlaceholderMediaProps extends ViewProps {
     size?: number;
     isRound?: boolean;
     color?: string;
     style?: ViewProps["style"];
 }
-export declare const PlaceholderMedia: React.FC<IMedia>;
+export declare const PlaceholderMedia: React.FC<PlaceholderMediaProps>;

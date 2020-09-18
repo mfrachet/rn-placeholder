@@ -1,6 +1,6 @@
 {
   "name": "rn-placeholder",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "homepage": "https://github.com/mfrachet/rn-placeholder",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "scripts": {
     "test": "tsc --outDir example/placeholder && yarn --cwd ./example test",
-    "build": "yarn lint && yarn test && tsc --outDir lib && yarn generate:docs",
+    "build": "yarn lint && yarn test && tsc --outDir lib",
     "format": "prettier --write './src/**/*.tsx'",
     "lint": "tslint -c tslint.json 'src/**/**'",
     "start": "concurrently \"tsc -w --outDir example/placeholder\" \"yarn --cwd ./example start\"",

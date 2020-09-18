@@ -1,4 +1,3 @@
-export { AnimationConsumer } from "./animations/AnimationConsumer";
 export { Placeholder } from "./Placeholder";
 export { PlaceholderLine } from "./PlaceholderLine";
 export { PlaceholderMedia } from "./PlaceholderMedia";

@@ -1,2 +1,3 @@
 import React from "react";
-export declare const Consumer: React.ExoticComponent<React.ConsumerProps<{}>>, Provider: React.ProviderExoticComponent<React.ProviderProps<{}>>;
+export declare const AnimationContext: React.Context<{}>;
+export declare const useAnimation: () => {};

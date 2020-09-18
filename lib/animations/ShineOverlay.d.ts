@@ -1,11 +1,5 @@
 import React from "react";
-export interface IShine {
+export interface ShineOverlayProps {
     duration?: number;
 }
-export declare class ShineOverlay extends React.Component<IShine> {
-    private animation;
-    constructor(props: IShine);
-    componentDidMount(): void;
-    render(): JSX.Element;
-    private start;
-}
+export declare const ShineOverlay: React.FC<ShineOverlayProps>;
