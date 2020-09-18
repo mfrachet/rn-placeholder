@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, View, ViewProps } from "react-native";
-import { AnimationConsumer } from "./animations/AnimationConsumer";
+import { Animated, StyleSheet, View, ViewProps } from "react-native";
+import { useAnimation } from "./animations/context";
 import { COLORS, SIZES } from "./tokens";
 
-export interface ILine extends ViewProps {
+export interface PlaceholderLineProps extends ViewProps {
   /* The line height, default is 12  */
   height?: number;
   /* The line color, default is #efefef  */
@@ -16,12 +16,12 @@ export interface ILine extends ViewProps {
   style?: ViewProps["style"];
 }
 
-export const PlaceholderLine: React.FC<ILine> = ({
+export const PlaceholderLine: React.FC<PlaceholderLineProps> = ({
   height = SIZES.normal,
   color = COLORS.primary,
   width = 100,
   noMargin = false,
-  style
+  style,
 }) => {
   const backgroundColor = color;
   const borderRadius = height / 4;
@@ -32,18 +32,20 @@ export const PlaceholderLine: React.FC<ILine> = ({
     borderRadius,
     height,
     marginBottom,
-    width: `${width}%`
+    width: `${width}%`,
   };
+
+  const animationStyle = useAnimation();
 
   return (
     <View style={[computedStyle, style, styles.line]}>
-      <AnimationConsumer />
+      <Animated.View style={animationStyle} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   line: {
-    overflow: "hidden"
-  }
+    overflow: "hidden",
+  },
 });

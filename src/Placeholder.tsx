@@ -3,7 +3,7 @@ import { StyleSheet, View, ViewProps } from "react-native";
 import { Raw } from "./animations/Raw";
 import { SIZES } from "./tokens";
 
-export interface IPlaceholder extends ViewProps {
+export interface PlaceholderProps extends ViewProps {
   /* An optional component that animates the placeholder */
   Animation?: React.ComponentType;
   /* An optional component to display on the left */
@@ -12,7 +12,7 @@ export interface IPlaceholder extends ViewProps {
   Right?: React.ComponentType<ViewProps>;
 }
 
-export const Placeholder: React.FC<IPlaceholder> = ({
+export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
   style,
   Left,
@@ -35,13 +35,13 @@ export const Placeholder: React.FC<IPlaceholder> = ({
 
 const styles = StyleSheet.create({
   full: {
-    flex: 1
+    flex: 1,
   },
   left: {
-    marginRight: SIZES.normal
+    marginRight: SIZES.normal,
   },
   right: {
-    marginLeft: SIZES.normal
+    marginLeft: SIZES.normal,
   },
-  row: { flexDirection: "row", width: "100%" }
+  row: { flexDirection: "row", width: "100%" },
 });

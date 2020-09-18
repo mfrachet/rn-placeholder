@@ -8,10 +8,10 @@ interface ISizes {
 }
 
 export const COLORS: IColors = {
-  primary: "#efefef"
+  primary: "#efefef",
 };
 
 export const SIZES: ISizes = {
   normal: 12,
-  xxl: 40
+  xxl: 40,
 };

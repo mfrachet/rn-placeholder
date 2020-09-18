@@ -1,58 +1,52 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, StyleSheet, View } from "react-native";
 
 const START_VALUE = 0;
 const END_VALUE = 100;
 const isInteraction = false;
 
-export interface IShine {
+export interface ShineOverlayProps {
   /* Animation duration, default is 750 */
   duration?: number;
 }
 
-export class ShineOverlay extends React.Component<IShine> {
-  private animation: Animated.Value;
-  constructor(props: IShine) {
-    super(props);
+export const ShineOverlay: React.FC<ShineOverlayProps> = ({
+  duration,
+  children,
+}) => {
+  const animation = useRef(new Animated.Value(START_VALUE));
 
-    this.animation = new Animated.Value(0);
-  }
+  const start = () => {
+    animation.current.setValue(START_VALUE);
 
-  public componentDidMount() {
-    this.start();
-  }
-
-  public render() {
-    const { children } = this.props;
-
-    const left = this.animation.interpolate({
-      inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"],
-    });
-
-    return (
-      <View>
-        {children}
-        <Animated.View style={[styles.shine, { left }]} />
-      </View>
-    );
-  }
-
-  private start() {
-    this.animation.setValue(START_VALUE);
-
-    Animated.timing(this.animation, {
-      duration: this.props.duration || 750,
+    Animated.timing(animation.current, {
+      duration: duration || 750,
       isInteraction,
       toValue: END_VALUE,
       useNativeDriver: false,
     }).start((e) => {
       if (e.finished) {
-        this.start();
+        start();
       }
     });
-  }
-}
+  };
+
+  useEffect(() => {
+    start();
+  }, []);
+
+  const left = animation.current.interpolate({
+    inputRange: [START_VALUE, END_VALUE],
+    outputRange: ["0%", "100%"],
+  });
+
+  return (
+    <View>
+      {children}
+      <Animated.View style={[styles.shine, { left }]} />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   shine: {

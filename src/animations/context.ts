@@ -1,3 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
+export const AnimationContext = React.createContext({});
 
-export const { Consumer, Provider } = React.createContext({});
+export const useAnimation = () => useContext(AnimationContext);

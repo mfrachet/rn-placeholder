@@ -1,56 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, StyleSheet, ViewProps } from "react-native";
-import { Provider } from "./context";
+import { AnimationContext } from "./context";
 
 const START_VALUE = 0;
 const END_VALUE = 100;
 const isInteraction = false;
 
-export interface IShine extends ViewProps {
+export interface ShineProps extends ViewProps {
   /* Animation duration, default is 750 */
   duration?: number;
 }
 
-export class Shine extends React.Component<IShine> {
-  private animation: Animated.Value;
-  constructor(props: IShine) {
-    super(props);
+export const Shine: React.FC<ShineProps> = ({ duration, children, style }) => {
+  const animation = useRef(new Animated.Value(START_VALUE));
 
-    this.animation = new Animated.Value(0);
-  }
+  const start = () => {
+    animation.current.setValue(START_VALUE);
 
-  public componentDidMount() {
-    this.start();
-  }
-
-  public render() {
-    const { children, style } = this.props;
-
-    const left = this.animation.interpolate({
-      inputRange: [START_VALUE, END_VALUE],
-      outputRange: ["0%", "100%"],
-    });
-
-    return (
-      <Provider value={[styles.shine, { left }, style]}>{children}</Provider>
-    );
-  }
-
-  private start() {
-    this.animation.setValue(START_VALUE);
-
-    Animated.timing(this.animation, {
-      duration: this.props.duration || 750,
+    Animated.timing(animation.current, {
+      duration: duration || 750,
       isInteraction,
       toValue: END_VALUE,
       useNativeDriver: false,
     }).start((e) => {
       if (e.finished) {
-        this.start();
+        start();
       }
     });
-  }
-}
+  };
+
+  useEffect(() => {
+    start();
+  }, []);
+
+  const left = animation.current.interpolate({
+    inputRange: [START_VALUE, END_VALUE],
+    outputRange: ["0%", "100%"],
+  });
+
+  return (
+    <AnimationContext.Provider value={[styles.shine, { left }, style]}>
+      {children}
+    </AnimationContext.Provider>
+  );
+};
 
 const styles = StyleSheet.create({
   shine: {
