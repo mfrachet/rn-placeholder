@@ -9,9 +9,17 @@ const isInteraction = false;
 export interface ShineProps extends ViewProps {
   /* Animation duration, default is 750 */
   duration?: number;
+
+  /* Play the animation in reverse mod */
+  reverse: boolean;
 }
 
-export const Shine: React.FC<ShineProps> = ({ duration, children, style }) => {
+export const Shine: React.FC<ShineProps> = ({
+  duration,
+  children,
+  style,
+  reverse,
+}) => {
   const animation = useRef(new Animated.Value(START_VALUE));
 
   const start = () => {
@@ -35,7 +43,7 @@ export const Shine: React.FC<ShineProps> = ({ duration, children, style }) => {
 
   const left = animation.current.interpolate({
     inputRange: [START_VALUE, END_VALUE],
-    outputRange: ["0%", "100%"],
+    outputRange: reverse ? ["100%", "0%"] : ["0%", "100%"],
   });
 
   return (

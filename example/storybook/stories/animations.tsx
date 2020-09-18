@@ -8,7 +8,7 @@ import {
   PlaceholderMedia,
   Progressive,
   Shine,
-  ShineOverlay
+  ShineOverlay,
 } from "../../placeholder";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
@@ -92,6 +92,31 @@ export default () => (
     </Card>
 
     <Card>
+      <Title>Shine Reverse</Title>
+      <Placeholder
+        Left={PlaceholderMedia}
+        Right={PlaceholderMedia}
+        Animation={(props) => <Shine {...props} reverse={true} />}
+      >
+        <PlaceholderLine width={80} />
+        <PlaceholderLine />
+        <PlaceholderLine width={30} />
+      </Placeholder>
+
+      <Code
+        code={`<Placeholder
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={(props) => <Shine {...props} reverse={true} />}
+>
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
+</Placeholder>`}
+      />
+    </Card>
+
+    <Card>
       <Title>ShineOverlay</Title>
       <Placeholder
         Left={PlaceholderMedia}
@@ -108,6 +133,31 @@ export default () => (
   Left={PlaceholderMedia}
   Right={PlaceholderMedia}
   Animation={ShineOverlay}
+>
+  <PlaceholderLine width={80} />
+  <PlaceholderLine />
+  <PlaceholderLine width={30} />
+</Placeholder>`}
+      />
+    </Card>
+
+    <Card>
+      <Title>ShineOverlay Reverse</Title>
+      <Placeholder
+        Left={PlaceholderMedia}
+        Right={PlaceholderMedia}
+        Animation={(props) => <ShineOverlay {...props} reverse={true} />}
+      >
+        <PlaceholderLine width={80} />
+        <PlaceholderLine />
+        <PlaceholderLine width={30} />
+      </Placeholder>
+
+      <Code
+        code={`<Placeholder
+  Left={PlaceholderMedia}
+  Right={PlaceholderMedia}
+  Animation={(props) => <ShineOverlay {...props} reverse={true} />}
 >
   <PlaceholderLine width={80} />
   <PlaceholderLine />

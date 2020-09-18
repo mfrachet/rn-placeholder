@@ -8,11 +8,15 @@ const isInteraction = false;
 export interface ShineOverlayProps {
   /* Animation duration, default is 750 */
   duration?: number;
+
+  /* Play the animation in reverse mod */
+  reverse?: boolean;
 }
 
 export const ShineOverlay: React.FC<ShineOverlayProps> = ({
   duration,
   children,
+  reverse,
 }) => {
   const animation = useRef(new Animated.Value(START_VALUE));
 
@@ -37,7 +41,7 @@ export const ShineOverlay: React.FC<ShineOverlayProps> = ({
 
   const left = animation.current.interpolate({
     inputRange: [START_VALUE, END_VALUE],
-    outputRange: ["0%", "100%"],
+    outputRange: reverse ? ["100%", "0%"] : ["0%", "100%"],
   });
 
   return (
