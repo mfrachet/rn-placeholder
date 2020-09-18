@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, StyleSheet, ViewProps } from "react-native";
-import { Provider } from "./context";
+import { AnimationContext } from "./context";
 
 const START_VALUE = 0;
 const END_VALUE = 100;
@@ -32,7 +32,7 @@ export class Shine extends React.Component<IShine> {
     });
 
     return (
-      <Provider value={[styles.shine, { left }, style]}>{children}</Provider>
+      <AnimationContext.Provider value={[styles.shine, { left }, style]}>{children}</AnimationContext.Provider>
     );
   }
 

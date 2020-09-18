@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, View, ViewProps } from "react-native";
-import { AnimationConsumer } from "./animations/AnimationConsumer";
+import { Animated, StyleSheet, View, ViewProps } from "react-native";
+import { useAnimation } from "./animations/context";
 import { COLORS, SIZES } from "./tokens";
 
 export interface IMedia extends ViewProps {
@@ -27,9 +27,11 @@ export const PlaceholderMedia: React.FC<IMedia> = ({
     width: size
   };
 
+  const animationStyle = useAnimation()
+
   return (
     <View style={[computedStyles, style, styles.media]}>
-      <AnimationConsumer />
+       <Animated.View style={animationStyle} />
     </View>
   );
 };

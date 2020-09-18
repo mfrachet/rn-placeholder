@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, ViewProps } from "react-native";
-import { Provider } from "./context";
+import { AnimationContext } from "./context";
 
 const START_VALUE = 0.5;
 const END_VALUE = 1;
@@ -37,7 +37,7 @@ export class Fade extends React.Component<IFade> {
       opacity: this.animation
     };
 
-    return <Provider value={[animationStyle, style]}>{children}</Provider>;
+    return <AnimationContext.Provider value={[animationStyle, style]}>{children}</AnimationContext.Provider>;
   }
 
   private start() {

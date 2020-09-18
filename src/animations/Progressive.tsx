@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, StyleSheet, ViewProps } from "react-native";
-import { Provider } from "./context";
+import { AnimationContext } from "./context";
 
 const START_VALUE = 0;
 const END_VALUE = 100;
@@ -33,7 +33,7 @@ export class Progressive extends React.Component<IProgressive> {
     });
 
     return (
-      <Provider
+      <AnimationContext.Provider
         value={[
           styles.animationStyle,
           style,
@@ -41,7 +41,7 @@ export class Progressive extends React.Component<IProgressive> {
         ]}
       >
         {children}
-      </Provider>
+      </AnimationContext.Provider>
     );
   }
 

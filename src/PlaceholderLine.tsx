@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, View, ViewProps } from "react-native";
-import { AnimationConsumer } from "./animations/AnimationConsumer";
+import { Animated, StyleSheet, View, ViewProps } from "react-native";
+import { useAnimation } from "./animations/context";
 import { COLORS, SIZES } from "./tokens";
 
 export interface ILine extends ViewProps {
@@ -35,9 +35,11 @@ export const PlaceholderLine: React.FC<ILine> = ({
     width: `${width}%`
   };
 
+  const animationStyle = useAnimation()
+
   return (
     <View style={[computedStyle, style, styles.line]}>
-      <AnimationConsumer />
+       <Animated.View style={animationStyle} />
     </View>
   );
 };
