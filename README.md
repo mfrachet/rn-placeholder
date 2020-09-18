@@ -5,6 +5,7 @@ Display some placeholder stuff before rendering your text or media content in Re
 
 - [Snack application **with copy to clipboard!**](https://snack.expo.io/@mfrachet/84bb31)
 - [Usage with react-native-web](https://mfrachet.github.io/rn-placeholder)
+- [The N Props syndrome (post)](https://mfrachet.github.io/the-n-props-syndrome): explaining the transition between v2 and v3
 
 ---
 
