@@ -44,11 +44,11 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -1742,7 +1742,6 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -1813,11 +1812,11 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             style={
               Array [
-                undefined,
                 Object {
                   "flexDirection": "row",
                   "width": "100%",
                 },
+                undefined,
               ]
             }
           >
@@ -3497,7 +3496,6 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -3560,11 +3558,11 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -5268,7 +5266,6 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -5332,11 +5329,11 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             style={
               Array [
-                undefined,
                 Object {
                   "flexDirection": "row",
                   "width": "100%",
                 },
+                undefined,
               ]
             }
           >
@@ -7013,7 +7010,6 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -7076,11 +7072,11 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -8784,7 +8780,6 @@ exports[`Storyshots rn-placeholder Animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -8865,11 +8860,11 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -11624,7 +11619,6 @@ exports[`Storyshots rn-placeholder Custom Line and Media 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -11707,11 +11701,11 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -15009,7 +15003,6 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -15074,11 +15067,11 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -18554,7 +18547,6 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -18625,11 +18617,11 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
           <View
             style={
               Array [
-                undefined,
                 Object {
                   "flexDirection": "row",
                   "width": "100%",
                 },
+                undefined,
               ]
             }
           >
@@ -20609,7 +20601,6 @@ exports[`Storyshots rn-placeholder Custom animations 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -20691,11 +20682,11 @@ exports[`Storyshots rn-placeholder Custom shapes 1`] = `
           <View
             style={
               Array [
-                undefined,
                 Object {
                   "flexDirection": "row",
                   "width": "100%",
                 },
+                undefined,
               ]
             }
           >
@@ -23702,7 +23693,6 @@ exports[`Storyshots rn-placeholder Custom shapes 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -23783,11 +23773,11 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -25150,7 +25140,6 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -25213,11 +25202,11 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -26420,7 +26409,6 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -26483,11 +26471,11 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -27690,7 +27678,6 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -27753,11 +27740,11 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
         <View
           style={
             Array [
-              undefined,
               Object {
                 "flexDirection": "row",
                 "width": "100%",
               },
+              undefined,
             ]
           }
         >
@@ -28800,7 +28787,6 @@ exports[`Storyshots rn-placeholder Line and Media 1`] = `
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
