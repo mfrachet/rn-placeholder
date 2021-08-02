@@ -12,6 +12,8 @@ export interface PlaceholderMediaProps extends ViewProps {
   color?: string;
   /* Customize the style of the underlying View component */
   style?: ViewProps["style"];
+  /* Customize the style of the animation View component (for change animation color) */
+  animationStyleProps?: ViewProps["style"];
 }
 
 export const PlaceholderMedia: React.FC<PlaceholderMediaProps> = ({
@@ -19,6 +21,7 @@ export const PlaceholderMedia: React.FC<PlaceholderMediaProps> = ({
   isRound = false,
   color = COLORS.primary,
   style,
+  animationStyleProps,
 }) => {
   const computedStyles = {
     backgroundColor: color,
@@ -31,7 +34,7 @@ export const PlaceholderMedia: React.FC<PlaceholderMediaProps> = ({
 
   return (
     <View style={[computedStyles, style, styles.media]}>
-      <Animated.View style={animationStyle} />
+      <Animated.View style={[animationStyle, animationStyleProps]} />
     </View>
   );
 };
