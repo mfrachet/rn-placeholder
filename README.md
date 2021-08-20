@@ -1,3 +1,5 @@
+**This project is looking for motivated maintainers, see [this issue](https://github.com/mfrachet/rn-placeholder/issues/179) for more information.**
+
 [![Build Status](https://travis-ci.org/mfrachet/rn-placeholder.svg?branch=master)](https://travis-ci.org/mfrachet/rn-placeholder)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
