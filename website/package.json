@@ -22,7 +22,7 @@
     "gatsby": "^2.13.73",
     "gatsby-plugin-catch-links": "^2.1.7",
     "gatsby-plugin-emotion": "^4.1.4",
-    "gatsby-plugin-mdx": "^1.0.36",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-react-native-web": "2.0.0-beta.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
