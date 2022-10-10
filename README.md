@@ -73,7 +73,7 @@ $ yarn
 $ cd ./example-web && yarn && yarn start
 ```
 
-The web app is also available in this github pages: https://mfrachet.github.com/rn-placeholder.
+The web app is also available in this github pages: https://mfrachet.github.io/rn-placeholder.
 
 ## V3 features
 
